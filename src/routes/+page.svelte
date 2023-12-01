@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>PhotoFolder 🖼️</title>
+  <title>OneFolder</title>
 </svelte:head>
 
 <!-- HERO DESKTOP -->
@@ -20,7 +20,7 @@
       All your photos in one folder
     </h1>
     <p class="text-2xl text-[#444] px-4 mt-5">
-      PhotoFolder takes advantage of <span class="font-bold">open formats</span>
+      OneFolder takes advantage of <span class="font-bold">open formats</span>
       to give the features of Google/Apple Photos without the lock-in.
     </p>
 
@@ -32,7 +32,7 @@
         class="inline-flex bg-[#313131] !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1489EC] to-[#0569d3]"
       >
         Join waitlist
-        <img src="/arrow.svg" alt="PhotoFolder logo" class=" ml-2 rounded" />
+        <img src="/arrow.svg" alt="OneFolder logo" class=" ml-2 rounded" />
       </a>
       <br />
       <br />
@@ -43,7 +43,7 @@
     <!-- <img src="/landing/hero-image.webp" class=" mt-10 m-auto" alt="example of a plate" /> -->
     <img
       src="/hero-image-5.webp"
-      alt="PhotoFolder logo"
+      alt="OneFolder logo"
       class="-mt-[6rem] md:-mt-32 -ml-3 m-auto w-[2100px]"
     />
   </div>
@@ -63,7 +63,7 @@
     <!-- <img src="/landing/hero-image.webp" class=" mt-10 m-auto" alt="example of a plate" /> -->
     <img
       src="/youtube-thumbnail.webp"
-      alt="PhotoFolder logo"
+      alt="OneFolder logo"
       class="w-full max-w-[600px] rounded-lg shadow-lg"
     />
     <p class="text-xl px-4 mt-5 underline text-[#005DC4]">
@@ -79,7 +79,7 @@
 <!-- EXPLENATION -->
 <div class=" max-w-3xl my-16 m-auto text-center leading-10">
   <p class="text-3xl md:text-4xl drop-shadow-lg text-[#333] px-4">
-    PhotoFolder stores all in a
+    OneFolder stores all in a
     <span
       class="font-bold text-[#005cc4] fill-[#458cdd] border-[#458cddca] px-3 pb-1 rounded-full inline-flex items-center border-2"
     >
@@ -228,7 +228,7 @@
   <div class="px-4">
     <img
       src="/files.webp"
-      alt="PhotoFolder logo"
+      alt="OneFolder logo"
       class="  m-auto w-full max-w-[700px]"
     />
   </div>
@@ -259,7 +259,7 @@
   <div class="px-4">
     <img
       src="/calendar.webp"
-      alt="PhotoFolder logo"
+      alt="OneFolder logo"
       class="  m-auto w-full max-w-[700px]"
     />
   </div>
@@ -290,7 +290,7 @@
   <div class="px-4">
     <img
       src="/map.webp"
-      alt="PhotoFolder logo"
+      alt="OneFolder logo"
       class="  m-auto w-full max-w-[700px]"
     />
   </div>
@@ -323,7 +323,7 @@
   <div class="px-4">
     <img
       src="/faces.webp"
-      alt="PhotoFolder logo"
+      alt="OneFolder logo"
       class="  m-auto w-full max-w-[700px]"
     />
   </div>
@@ -364,7 +364,7 @@
     class="inline-flex bg-[#313131] !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1489EC] to-[#0569d3]"
   >
     Join waitlist
-    <img src="/arrow.svg" alt="PhotoFolder logo" class=" ml-2 rounded" />
+    <img src="/arrow.svg" alt="OneFolder logo" class=" ml-2 rounded" />
   </a>
   <br />
   <br />

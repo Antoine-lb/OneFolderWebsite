@@ -13,7 +13,7 @@
       <img src="/photofolder-logo.svg" alt="logo" class="w-20 md:w-24" />
 
       <p class="text-3xl md:text-4xl drop-shadow-lg pl-2 font-bold text-[#333]">
-        PhotoFolder
+        OneFolder
       </p>
       <p class="text-3xl md:text-4xl drop-shadow-lg pl-2 text-[#555]">Blog</p>
     </a>
