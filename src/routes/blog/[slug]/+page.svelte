@@ -50,6 +50,7 @@
   :global(.article-body p) {
     margin-bottom: calc(var(--spacing-unit) * 3);
   }
+
   :global(.article-body h2) {
     font-size: 1.7rem;
     font-weight: 700 !important;
@@ -57,6 +58,17 @@
     margin-bottom: calc(var(--spacing-unit) * 2);
     color: var(--color-text-primary);
   }
+
+  :global(.article-body code) {
+    background: #005dc422;
+    border: 1px solid #005dc4;
+    color: #0051ad;
+    word-wrap: break-word;
+    box-decoration-break: clone;
+    padding: 0.1rem 0.3rem 0rem;
+    border-radius: 0.4rem;
+  }
+
   :global(
       .article-body h1 a,
       .article-body h2 a,
@@ -67,6 +79,7 @@
     ) {
     color: var(--color-text-primary);
   }
+
   :global(.article-body a) {
     color: var(--brand-primary);
   }

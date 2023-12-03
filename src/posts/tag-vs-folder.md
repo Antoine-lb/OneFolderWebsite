@@ -16,13 +16,15 @@ The concept of "folders" in computing dates back to 1958 with the [Electronic Re
 
 A file can exist in only one folder at a time. Folders follow a top-down hierarchy, where top folders represent broad categories and lower ones become more specific.
 
-Consider this scenario: You have a folder for ideas for your home renovation. You find a picture with a fantastic paint color for the kitchen and add it to `ideas home renovation/kitchen`. Now, imagine finding a table suitable for both the bedroom and the living room. The struggle begins:
+Consider this scenario: You have a folder for ideas for your home renovation. You find a picture with a fantastic paint color for the kitchen and add it to `ideas/kitchen`.
 
-- living room
-- bedroom
-- ideas home renovation
-- create a new folder called "living room and bedroom"
-- duplicate the picture and add it to living room and bedroom
+Now, imagine finding a table suitable for both the bedroom and the living room. The struggle begins:
+
+- added to the `living-room` folder
+- added to the `bedroom`
+- not clasifying it and leave it in the `ideas` folder
+- create a new folder called `living room and bedroom`
+- duplicate the picture and add it to `living-room` and `bedroom`
 
 All these options seem less than ideal. Why can't you simply place the picture in both the bedroom and living room without duplicating it? This decision-making process is a constant hassle with folders and often results in difficulty finding what you need.
 
