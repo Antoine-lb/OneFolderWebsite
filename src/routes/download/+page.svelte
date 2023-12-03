@@ -71,6 +71,4 @@
       Android App
     </div>
   </div>
-
-  <img src="/bottom-images.webp" alt="images stack" class="w-full" />
 </div>

@@ -1,6 +1,8 @@
 <script lang="ts">
   import { page } from "$app/stores";
   import "../app.css";
+
+  export let data;
 </script>
 
 <main>
@@ -10,6 +12,21 @@
 <!-- <footer>
 	<img src="/bottom-images.webp" alt="images stack" class="w-full -mt-24" />
 </footer> -->
+
+<br />
+<br />
+<footer class="flex justify-center">
+  <div class="flex justify-center flex-col">
+    <a href="/blog" class=" !text-[#005DC4]"> Blog </a>
+    more from our blog:
+    {#each data.posts as post}
+      <a href={`/blog/${post.slug}`} class=" !text-[#005DC4]">
+        {post.title}
+      </a>
+    {/each}
+  </div>
+</footer>
+<img src="/bottom-images.webp" alt="images stack" class="w-full" />
 
 <style>
   :global(:root) {

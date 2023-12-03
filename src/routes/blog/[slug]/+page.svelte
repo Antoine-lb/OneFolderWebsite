@@ -47,7 +47,7 @@
     font-size: 20px;
   }
 
-  :global(.article-body h3) {
+  :global(.article-body h2) {
     font-size: 1.5rem;
     font-weight: 700 !important;
     margin-top: calc(var(--spacing-unit) * 8);

@@ -10,7 +10,7 @@
 </script>
 
 <PageHead
-  title="Home"
+  title="Blog"
   description="An awesome blog about development with Svelte"
 />
 

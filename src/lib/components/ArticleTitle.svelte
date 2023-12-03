@@ -21,7 +21,7 @@
     </a>
   </h3>
 {:else}
-  <h2
+  <h1
     class="heading heading text-2xl md:text-4xl drop-shadow font-bold text-[#333]"
     class:large={!slug}
     {id}
@@ -29,11 +29,11 @@
     <a {href}>
       {title}
     </a>
-  </h2>
+  </h1>
 {/if}
 
 <style>
-  h2 {
+  h1 {
     margin: 0;
   }
 

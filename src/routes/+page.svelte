@@ -370,7 +370,7 @@
   <br />
 </div>
 
-<div class="flex flex-col items-center text-center mt-10">
+<!-- <div class="flex flex-col items-center text-center mt-10">
   <h3 class="text-4xl mt-12 drop-shadow-lg text-[#333] px-4 font-bold mb-4">
     Can you help us ?
   </h3>
@@ -387,6 +387,4 @@
   <a class="" href="https://github.com/PhotoFolder/PhotoFolder" target="_blank">
     <img src="/star-us.webp" alt="images stack" class="w-[325px] ml-6 -mt-6" />
   </a>
-</div>
-
-<img src="/bottom-images.webp" alt="images stack" class="w-full -mt-24" />
+</div> -->
