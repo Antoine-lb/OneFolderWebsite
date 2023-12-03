@@ -5,6 +5,6 @@
   const formattedDate = new Date(date).toDateString();
 </script>
 
-<p>
+<p class="mb-3 mt-2">
   <span class=" text-[#666] font-mono pl-1">{formattedDate}</span>
 </p>

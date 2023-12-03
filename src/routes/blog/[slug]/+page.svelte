@@ -48,13 +48,44 @@
   }
 
   :global(.article-body h2) {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 700 !important;
     margin-top: calc(var(--spacing-unit) * 8);
     margin-bottom: calc(var(--spacing-unit) * 4);
   }
 
-  footer {
-    margin-top: calc(var(--spacing-unit) * 8);
+  /* LIST  */
+  :global(.article-body ul, .article-body ol) {
+    padding: 20px 30px;
+    list-style: inside;
+  }
+
+  /* UNORDERED LIST - BULLET LIST */
+  :global(.article-body ul li) {
+    list-style-type: none;
+  }
+  :global(.article-body ul li::before) {
+    content: "\2022";
+    color: #888;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+  /* ORDERED LIST - NUMBER LIST */
+  :global(.article-body ol li) {
+    list-style-type: none;
+    counter-increment: list;
+    position: relative;
+  }
+
+  :global(.article-body ol li::after) {
+    content: counter(list) ".";
+    position: absolute;
+    left: -2.5em;
+    width: 2em;
+    text-align: right;
+    color: #888;
   }
 </style>
