@@ -34,6 +34,7 @@
     --color-background: #e5e5e5;
     --color-text-primary: #212121;
     --color-text-secondary: #5a5a5a;
+    --brand-primary: #005dc4;
   }
 
   :global(a, a:visited, a:active) {

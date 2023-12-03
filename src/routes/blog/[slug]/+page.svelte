@@ -47,11 +47,28 @@
     font-size: 20px;
   }
 
+  :global(.article-body p) {
+    margin-bottom: calc(var(--spacing-unit) * 3);
+  }
   :global(.article-body h2) {
     font-size: 1.7rem;
     font-weight: 700 !important;
     margin-top: calc(var(--spacing-unit) * 8);
-    margin-bottom: calc(var(--spacing-unit) * 4);
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    color: var(--color-text-primary);
+  }
+  :global(
+      .article-body h1 a,
+      .article-body h2 a,
+      .article-body h3 a,
+      .article-body h4 a,
+      .article-body h5 a,
+      .article-body h6 a
+    ) {
+    color: var(--color-text-primary);
+  }
+  :global(.article-body a) {
+    color: var(--brand-primary);
   }
 
   /* LIST  */
