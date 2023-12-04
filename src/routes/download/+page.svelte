@@ -1,8 +1,66 @@
 <script lang="ts">
-  const RELEASE_VERSION = "1.0.0-rc.5";
-  const RELEASE_LINK_MAC = `releases/PhotoFolder-${RELEASE_VERSION}.dmg`;
-  const RELEASE_LINK_WINDOWS = `#`;
-  const RELEASE_LINK_LINUX = `#`;
+  import { onMount } from "svelte";
+
+  const REPO_LINK = "https://github.com/PhotoFolder/OneFolder/releases/latest";
+  const REPO_LINK_API =
+    "https://api.github.com/repos/PhotoFolder/OneFolder/releases/latest";
+
+  let windowsDownloadLink: HTMLElement | null;
+  let macDownloadLink: HTMLElement | null;
+  let linuxDownloadLink: HTMLElement | null;
+
+  onMount(() => {
+    windowsDownloadLink = document.getElementById("download-windows");
+    macDownloadLink = document.getElementById("download-mac");
+    linuxDownloadLink = document.getElementById("download-linux");
+    highlightOSButton();
+    setDownloadLinks();
+  });
+  // Highlight download button for user's platform
+  function highlightOSButton() {
+    var ua = navigator.userAgent;
+    var link;
+    if (ua.indexOf("Win") !== -1) {
+      link = windowsDownloadLink;
+    } else if (ua.indexOf("Mac") !== -1) {
+      link = macDownloadLink;
+    } else if (ua.indexOf("Linux") !== -1) {
+      link = linuxDownloadLink;
+    }
+    if (link) {
+      link.classList.remove("alt");
+      link.classList.add("strong");
+    }
+  }
+
+  async function setDownloadLinks() {
+    const response = await fetch(REPO_LINK_API, {
+      method: "GET",
+      headers: {
+        Accept: "application/vnd.github.v3+json",
+      },
+    });
+    const json = await response.json();
+    const assets = json.assets;
+    for (let i = 0; i < assets.length; i++) {
+      const asset = assets[i];
+      if (
+        asset.content_type.startsWith("application") &&
+        asset.name.startsWith("OneFolder-") &&
+        windowsDownloadLink &&
+        macDownloadLink &&
+        linuxDownloadLink
+      ) {
+        if (asset.name.endsWith(".exe")) {
+          windowsDownloadLink.href = asset.browser_download_url;
+        } else if (asset.name.endsWith(".dmg")) {
+          macDownloadLink.href = asset.browser_download_url;
+        } else if (asset.name.endsWith(".AppImage")) {
+          linuxDownloadLink.href = asset.browser_download_url;
+        }
+      }
+    }
+  }
 </script>
 
 <div class="  flex flex-col justify-between">
@@ -31,34 +89,32 @@
       >
     </span>
   </h1>
-  <div class="text-[#444] max-w-sm m-auto text-lg">
-    <h2>Instructions on how to install:</h2>
-    <p class="ml-4">1. Open the dmg file</p>
-    <p class="ml-4">2. Drag OneFolder in Applications</p>
-    <p class="ml-4">
-      3. <span class="font-bold">Rigth click</span> on the OneFolder icon in the
-      applications folder
-    </p>
-    <p class="ml-4">4. Click in "open"</p>
-    <p class="ml-4">5. And "Open" again</p>
-  </div>
+
   <div class="flex flex-col items-center mt-12 gap-3">
     <a
       class="inline-flex bg-[#313131] text-[#f3f3ec] p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1489EC] to-[#0569d3]"
-      href={RELEASE_LINK_MAC}>Download for Mac </a
+      id="download-mac"
+      href={REPO_LINK}
     >
+      Download for Mac 
+    </a>
     <p class="text-[#777] -mt-2 italic">intel/silicon</p>
     <p class="text-[#555555] mt-7 italic">comming very very soon:</p>
-    <div
+    <a
+      id="download-windows"
+      href={REPO_LINK}
       class="inline-flex bg-[#fff] text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center cursor-progress"
     >
       Download for Windows
-    </div>
-    <div
+    </a>
+    <a
+      id="download-linux"
+      href={REPO_LINK}
       class="inline-flex bg-[#fff] text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center cursor-progress"
     >
       Download for Linux
-    </div>
+    </a>
+
     <p class="text-[#555555] mt-8 italic">comming not so soon:</p>
     <div
       class="inline-flex bg-[#fff] text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center cursor-progress"
