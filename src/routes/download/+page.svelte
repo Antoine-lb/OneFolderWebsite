@@ -103,14 +103,26 @@
     <a
       id="download-windows"
       href={REPO_LINK}
-      class="inline-flex bg-[#fff] text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center cursor-progress"
+      class="hidden bg-[#fff] !text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center cursor-progress"
     >
       Download for Windows
     </a>
     <a
       id="download-linux"
       href={REPO_LINK}
-      class="inline-flex bg-[#fff] text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center cursor-progress"
+      class="hidden bg-[#fff] !text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center cursor-progress"
+    >
+      Download for Linux
+    </a>
+    <a
+      id="download-windows"
+      class="inline-flex bg-[#fff] !text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center cursor-progress"
+    >
+      Download for Windows
+    </a>
+    <a
+      id="download-linux"
+      class="inline-flex bg-[#fff] !text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center cursor-progress"
     >
       Download for Linux
     </a>
