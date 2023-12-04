@@ -1,5 +1,5 @@
 ---
-title: "Tags vs. Folders – Stop using folders to organize you files"
+title: "Tags vs. Folders – Stop using folders to organize your files"
 description: "Folders are outdated for file organization; embrace tags to efficiently manage and retrieve your files without the hassle of rigid hierarchies."
 author: "Antoine"
 date: "2023-12-02"
