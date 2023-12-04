@@ -6,17 +6,27 @@ date: "2023-12-02"
 published: true
 ---
 
+<script>
+  import ArticleImage from '$lib/components/ArticleImage.svelte'
+</script>
+
 Let's make a bold claim right off the bat: Folders are a highly ineffective way to organize your files; tags are far superior.
 
 ## Why Do Computers Use Folders?
 
-The concept of "folders" in computing dates back to 1958 with the [Electronic Recording Machine, Accounting](https://en.wikipedia.org/wiki/Electronic_Recording_Machine,_Accounting "Electronic Recording Machine, Accounting") (ERMA) Mark 1 computer. Back then, it made sense, mirroring our real-world practice of putting files into folders to manage large amounts of documents. But here's the catch – it's been 65 years, and things have evolved.
+The concept of "folders" in computing dates back to 1958 with the [Electronic Recording Machine, Accounting](https://en.wikipedia.org/wiki/Electronic_Recording_Machine,_Accounting "Electronic Recording Machine, Accounting") (ERMA) Mark 1 computer.
+
+Back then, it made sense, mirroring our real-world practice of putting files into folders to manage large amounts of documents. But here's the catch – it's been 65 years, and things have evolved.
+
+<ArticleImage rotation={1} caption="ERMA Machine 1958" src="/blog/tag-vs-folder/ERMA.webp" alt="folder structure with ideas for home renovation" extraClasses="rotate-5"/>
 
 ## The Problem with Folders
 
 A file can exist in only one folder at a time. Folders follow a top-down hierarchy, where top folders represent broad categories and lower ones become more specific.
 
-Consider this scenario: You have a folder for ideas for your home renovation. You find a picture with a fantastic paint color for the kitchen and add it to `ideas/kitchen`.
+**Consider this scenario:** You have a folder for ideas for your home renovation. You find a picture with a fantastic paint color for the kitchen and add it to `ideas/kitchen`.
+
+<ArticleImage rotation={-2} caption='home renovation folder' src="/blog/tag-vs-folder/file-structure.webp" alt="folder structure with ideas for home renovation" />
 
 Now, imagine finding a table suitable for both the bedroom and the living room. The struggle begins:
 
