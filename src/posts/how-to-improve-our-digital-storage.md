@@ -1,3 +1,12 @@
+---
+title: "How to improve our digital storage"
+description: "
+The article critiques current digital storage systems for their lack of personalization and accessibility, calling for a user-centric approach to file management. This insightful piece challenges us to rethink how we store and value our possessions in an increasingly digital world"
+author: "Niko"
+date: "2023-12-02"
+published: true
+---
+
 # How should we organize our files?
 I just saw *Perfect Days* at the movie theater Louxor. This movie presents the life of a cleaner from the foundation The Tokyo Toilet (amazing design reference, by the way). One thing you have to know about this movie is how space matters—the space we occupy and the space around us. 
 
