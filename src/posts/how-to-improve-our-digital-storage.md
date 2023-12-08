@@ -7,6 +7,10 @@ date: "2023-12-02"
 published: true
 ---
 
+<script>
+  import ArticleImage from '$lib/components/ArticleImage.svelte'
+</script>
+
 # How should we organize our files?
 I just saw *Perfect Days* at the movie theater Louxor. This movie presents the life of a cleaner from the foundation The Tokyo Toilet (amazing design reference, by the way). One thing you have to know about this movie is how space matters—the space we occupy and the space around us. 
 
