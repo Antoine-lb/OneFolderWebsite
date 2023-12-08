@@ -6,10 +6,7 @@
 </script>
 
 <div class="flex justify-center pb-7">
-  <div
-    class={`p-4  shadow-xl inline-block bg-[#efefef]`}
-    style={`transform: rotate(${rotation}deg);`}
-  >
+  <div class={`p-4  shadow-xl inline-block bg-[#efefef]`}>
     <img {src} {alt} />
     {#if caption}
       <span class="caption flex justify-center pt-4">
