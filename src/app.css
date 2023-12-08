@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 /* @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Hedvig+Letters+Serif:opsz@12..24&display=swap"); */
+
+html {
+  scroll-behavior: smooth;
+}

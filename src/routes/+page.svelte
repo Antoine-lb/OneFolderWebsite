@@ -1,6 +1,71 @@
 <script lang="ts">
   // import { base } from '$app/paths';
   import { CTA_URL, YOUTUBE_URL } from "$lib/constants";
+
+  import { onMount } from "svelte";
+
+  const REPO_LINK = "https://github.com/PhotoFolder/OneFolder/releases/latest";
+  const REPO_LINK_API =
+    "https://api.github.com/repos/PhotoFolder/OneFolder/releases/latest";
+
+  let windowsDownloadLink: HTMLElement | null;
+  let macDownloadLink: HTMLElement | null;
+  let linuxDownloadLink: HTMLElement | null;
+
+  onMount(() => {
+    windowsDownloadLink = document.getElementById("download-windows");
+    macDownloadLink = document.getElementById("download-mac");
+    linuxDownloadLink = document.getElementById("download-linux");
+    highlightOSButton();
+    setDownloadLinks();
+  });
+  // Highlight download button for user's platform
+  function highlightOSButton() {
+    var ua = navigator.userAgent;
+    var link;
+    if (ua.indexOf("Win") !== -1) {
+      link = windowsDownloadLink;
+    } else if (ua.indexOf("Mac") !== -1) {
+      link = macDownloadLink;
+    } else if (ua.indexOf("Linux") !== -1) {
+      link = linuxDownloadLink;
+    }
+    if (link) {
+      link.classList.remove("alt");
+      link.classList.add("strong");
+    }
+  }
+
+  async function setDownloadLinks() {
+    const response = await fetch(REPO_LINK_API, {
+      method: "GET",
+      headers: {
+        Accept: "application/vnd.github.v3+json",
+      },
+    });
+    const json = await response.json();
+    const assets = json.assets;
+    for (let i = 0; i < assets.length; i++) {
+      const asset = assets[i];
+      if (
+        asset.content_type.startsWith("application") &&
+        asset.name.startsWith("OneFolder-") &&
+        windowsDownloadLink &&
+        macDownloadLink &&
+        linuxDownloadLink
+      ) {
+        if (asset.name.endsWith(".exe")) {
+          windowsDownloadLink.href = asset.browser_download_url;
+        } else if (asset.name.endsWith(".dmg")) {
+          macDownloadLink.href = asset.browser_download_url;
+        } else if (asset.name.endsWith(".AppImage")) {
+          linuxDownloadLink.href = asset.browser_download_url;
+        }
+      }
+    }
+  }
+
+  let downloadDiv: HTMLElement | null;
 </script>
 
 <svelte:head>
@@ -25,15 +90,17 @@
     </p>
 
     <div class="pl-4 mt-8 md:mt-12">
-      <a
-        href={CTA_URL}
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
         class="inline-flex bg-[#313131] !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1489EC] to-[#0569d3]"
+        on:click={() => {
+          if (downloadDiv) {
+            window.scrollTo(downloadDiv.offsetLeft, downloadDiv.offsetTop);
+          }
+        }}
       >
-        Join waitlist
+        Download for free
         <img src="/arrow.svg" alt="OneFolder logo" class=" ml-2 rounded" />
-      </a>
+      </button>
       <br />
       <br />
     </div>
@@ -356,18 +423,30 @@
 <br />
 <br />
 
-<div class="m-auto text-center">
+<div class="flex flex-col items-center mt-12 gap-3" bind:this={downloadDiv}>
   <a
-    href={CTA_URL}
-    target="_blank"
-    rel="noopener noreferrer"
-    class="inline-flex bg-[#313131] !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1489EC] to-[#0569d3]"
+    class="inline-flex bg-[#313131] text-[#f3f3ec] p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1489EC] to-[#0569d3]"
+    id="download-mac"
+    href={REPO_LINK}
   >
-    Join waitlist
-    <img src="/arrow.svg" alt="OneFolder logo" class=" ml-2 rounded" />
+    Download for Mac 
   </a>
-  <br />
-  <br />
+  <p class="text-[#777] -mt-2 italic">intel/silicon</p>
+  <p class="text-[#555555] mt-7 italic">comming very very soon:</p>
+  <a
+    id="download-windows"
+    href="https://forms.gle/e3PbMuEpA5QySroAA"
+    class=" bg-[#fff] !text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center"
+  >
+    Joint the waitlist for Windows
+  </a>
+  <a
+    id="download-linux"
+    href="https://forms.gle/vu47a5Bkk67XaSDc6"
+    class=" bg-[#fff] !text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center"
+  >
+    Joint the waitlist for Linux
+  </a>
 </div>
 
 <!-- <div class="flex flex-col items-center text-center mt-10">
