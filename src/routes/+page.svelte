@@ -423,7 +423,11 @@
 <br />
 <br />
 
-<div class="flex flex-col items-center mt-12 gap-3" bind:this={downloadDiv}>
+<div
+  class="flex flex-col items-center mt-12 gap-3"
+  bind:this={downloadDiv}
+  id="downloadDiv"
+>
   <a
     class="inline-flex bg-[#313131] text-[#f3f3ec] p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1489EC] to-[#0569d3]"
     id="download-mac"

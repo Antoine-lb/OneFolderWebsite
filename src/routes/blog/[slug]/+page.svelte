@@ -28,12 +28,12 @@
 <br />
 <div class="m-auto text-center">
   <a
-    href={CTA_URL}
+    href="/#downloadDiv"
     target="_blank"
     rel="noopener noreferrer"
     class="inline-flex bg-[#313131] !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1489EC] to-[#0569d3]"
   >
-    Join waitlist
+    Try OneFolder for free
     <img src="/arrow.svg" alt="OneFolder logo" class=" ml-2 rounded" />
   </a>
   <br />
