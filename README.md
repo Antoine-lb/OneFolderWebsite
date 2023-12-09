@@ -7,6 +7,11 @@
 - Tags in music
 - Face Detection
 - Face detection in digikam vs onefolder
+- best way to store your artistic assets
+- how to keep a stable file orginization throu several drives
+- save money on cloud cloud expenses
+- duplication
+- image optimization
 
 ## how to run
 
