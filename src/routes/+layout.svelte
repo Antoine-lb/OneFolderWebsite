@@ -15,8 +15,17 @@
 
 <br />
 <br />
-<footer class="flex justify-center">
-  <div class="flex justify-center flex-col">
+<footer class="flex text-white justify-center bg-black py-14">
+  <div class="max-w-2xl text-center">
+    <h3 class="text-4xl font-extrabold">
+      Built for <span class="italic">sustainability</span>
+    </h3>
+    <p class="text-lg mt-3">
+      All software comes to an end, it's inevitable. But files have to last
+      forever. That's why our top priority is to create OneFolder so that you
+      can access your photos after OneFolder has disappeared.
+    </p>
+    <!-- <div class="flex justify-center flex-col">
     <a href="/blog" class=" !text-[#005DC4]"> Blog </a>
     more from our blog:
     {#each data.posts as post}
@@ -24,15 +33,15 @@
         {post.title}
       </a>
     {/each}
+  </div> -->
   </div>
+  <br />
+  <br />
+  <br />
+  <br />
 </footer>
 
 <!-- <img src="/bottom-images.webp" alt="images stack" class="w-full" /> -->
-
-<br />
-<br />
-<br />
-<br />
 
 <style>
   :global(:root) {
