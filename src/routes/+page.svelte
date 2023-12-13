@@ -1,6 +1,6 @@
 <script lang="ts">
   // import { base } from '$app/paths';
-  import { CTA_URL, YOUTUBE_URL } from "$lib/constants";
+  import { CALENDLY_URL, CTA_URL, YOUTUBE_URL } from "$lib/constants";
 
   import { onMount } from "svelte";
 
@@ -423,27 +423,20 @@
 <br />
 <br />
 
-<!-- <div
+<div
   class="flex flex-col items-center mt-12 gap-3"
   bind:this={downloadDiv}
   id="downloadDiv"
 >
   <a
-    class="inline-flex bg-[#313131] text-[#f3f3ec] p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1489EC] to-[#0569d3]"
-    id="download-mac"
-    href={REPO_LINK}
+    class="inline-flex font-bold !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[#FF5543]"
+    href={CTA_URL}
+    target="_blank"
   >
-    Download for Mac 
+    Get early access 🌼
   </a>
-  <p class="text-[#777] -mt-2 italic">intel/silicon</p>
-  <p class="text-[#555555] mt-7 italic">comming very very soon:</p>
-  <a
-    id="download-windows"
-    href="https://forms.gle/e3PbMuEpA5QySroAA"
-    class=" bg-[#fff] !text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center"
-  >
-    Joint the waitlist for Windows
-  </a>
+  <p class="text-[#555555] mb-8 italic">Mac/Windows</p>
+
   <a
     id="download-linux"
     href="https://forms.gle/vu47a5Bkk67XaSDc6"
@@ -451,7 +444,7 @@
   >
     Joint the waitlist for Linux
   </a>
-</div> -->
+</div>
 
 <div class="flex flex-col items-center text-center mt-10">
   <h3 class="text-4xl mt-12 drop-shadow-lg text-[#333] px-4 font-bold mb-4">
@@ -479,11 +472,7 @@
   <p class="text-2xl drop-shadow-lg text-[#333] px-4">
     Click on that flower to book a quick call with me on my calendly.
   </p>
-  <a
-    class=""
-    href="https://calendly.com/photofolder/photofolder-feedback"
-    target="_blank"
-  >
+  <a class="" href={CALENDLY_URL} target="_blank">
     <img
       src="/logo_flower_orange.png"
       alt="images stack"

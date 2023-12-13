@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores";
+  import { CTA_URL } from "$lib/constants";
   import "../app.css";
 
   export let data;
@@ -18,7 +19,7 @@
 <footer class="flex text-white justify-center bg-black py-14">
   <div class="max-w-2xl text-center">
     <h3 class="text-4xl font-extrabold">
-      Built for <span class="italic">sustainability</span>
+      Built for the <span class="italic">long term</span>
     </h3>
     <p class="text-lg mt-3">
       All software comes to an end, it's inevitable. But files have to last
@@ -27,16 +28,13 @@
     </p>
 
     <br />
-    <button
+    <a
       class="inline-flex font-bold !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[#FF5543]"
-      on:click={() => {
-        if (downloadDiv) {
-          window.scrollTo(downloadDiv.offsetLeft, downloadDiv.offsetTop);
-        }
-      }}
+      href={CTA_URL}
+      target="_blank"
     >
       Get early access 🌼
-    </button>
+    </a>
     <!-- <div class="flex justify-center flex-col">
     <a href="/blog" class=" !text-[#005DC4]"> Blog </a>
     more from our blog:
