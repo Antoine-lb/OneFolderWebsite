@@ -61,7 +61,7 @@
   >
     <!-- <img src="/landing/hero-image.webp" class=" mt-10 m-auto" alt="example of a plate" /> -->
     <img
-      src="/youtube-thumbnail.webp"
+      src="/thumbnail.webp"
       alt="OneFolder logo"
       class="w-full max-w-[600px] rounded-lg shadow-lg"
     />
