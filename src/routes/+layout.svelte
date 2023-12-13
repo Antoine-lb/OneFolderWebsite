@@ -25,6 +25,18 @@
       forever. That's why our top priority is to create OneFolder so that you
       can access your photos after OneFolder has disappeared.
     </p>
+
+    <br />
+    <button
+      class="inline-flex font-bold !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[#FF5543]"
+      on:click={() => {
+        if (downloadDiv) {
+          window.scrollTo(downloadDiv.offsetLeft, downloadDiv.offsetTop);
+        }
+      }}
+    >
+      Get early access 🌼
+    </button>
     <!-- <div class="flex justify-center flex-col">
     <a href="/blog" class=" !text-[#005DC4]"> Blog </a>
     more from our blog:
