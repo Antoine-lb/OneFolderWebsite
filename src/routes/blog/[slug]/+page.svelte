@@ -26,7 +26,8 @@
 
 <br />
 <br />
-<div class="m-auto text-center">
+
+<!-- <div class="m-auto text-center">
   <a
     href="/#downloadDiv"
     target="_blank"
@@ -38,7 +39,7 @@
   </a>
   <br />
   <br />
-</div>
+</div> -->
 
 <style>
   .article-body {

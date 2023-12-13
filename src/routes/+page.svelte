@@ -477,8 +477,7 @@
     Wanna get in touch ?
   </h3>
   <p class="text-2xl drop-shadow-lg text-[#333] px-4">
-    Click on that flower to share your personnal habits or request <br /> that will
-    help One Folder get better.
+    Click on that flower to book a quick call with me on my calendly.
   </p>
   <a class="" href="https://github.com/OneFolderApp/OneFolder" target="_blank">
     <img
