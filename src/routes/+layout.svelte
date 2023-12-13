@@ -26,7 +26,13 @@
     {/each}
   </div>
 </footer>
-<img src="/bottom-images.webp" alt="images stack" class="w-full" />
+
+<!-- <img src="/bottom-images.webp" alt="images stack" class="w-full" /> -->
+
+<br />
+<br />
+<br />
+<br />
 
 <style>
   :global(:root) {
