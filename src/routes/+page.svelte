@@ -399,7 +399,7 @@
   <img
     src="/arrow-2.svg"
     alt="images stack"
-    class="h-[100px] ml-64 rotate-[30deg]"
+    class="h-[100px] ml-64 rotate-[37deg]"
   />
   <a class="-mt-24" href={CALENDLY_URL} target="_blank">
     <img

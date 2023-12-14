@@ -67,9 +67,9 @@
   <div class="px-4">
     <!-- <img src="/landing/hero-image.webp" class=" mt-10 m-auto" alt="example of a plate" /> -->
     <img
-      src="/hero-image-5.webp"
+      src="/hero-image-7.webp"
       alt="OneFolder logo"
-      class="-mt-[6rem] md:-mt-32 m-auto w-[600px]"
+      class="-mt-[1.5rem] md:-mt-8 m-auto w-[600px]"
     />
   </div>
   <h1 class="font-bold text-[#444] text-4xl text-center my-8">
@@ -92,21 +92,22 @@
 
   <div class="flex flex-col items-center mt-12 gap-3">
     <a
-      class="inline-flex bg-[#313131] text-[#f3f3ec] p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1489EC] to-[#0569d3]"
-      id="download-mac"
-      href={REPO_LINK}
-    >
-      Download for Mac 
-    </a>
-    <p class="text-[#777] -mt-2 italic">intel/silicon</p>
-    <p class="text-[#555555] mt-7 italic">comming very very soon:</p>
-    <a
       id="download-windows"
       href={REPO_LINK}
-      class="hidden bg-[#fff] !text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center cursor-progress"
+      class="inline-flex text-[#f3f3ec] p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[#FF5543]"
     >
       Download for Windows
     </a>
+    <a
+      class="inline-flex text-[#f3f3ec] p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[#FF5543]"
+      id="download-mac"
+      href={REPO_LINK}
+    >
+      Download for Mac
+    </a>
+    <p class="text-[#777] -mt-2 italic">intel/silicon</p>
+    <p class="text-[#555555] mt-7 italic">comming very very soon:</p>
+
     <a
       id="download-linux"
       href={REPO_LINK}
@@ -114,12 +115,7 @@
     >
       Download for Linux
     </a>
-    <a
-      id="download-windows"
-      class="inline-flex bg-[#fff] !text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center cursor-progress"
-    >
-      Download for Windows
-    </a>
+
     <a
       id="download-linux"
       class="inline-flex bg-[#fff] !text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center cursor-progress"
