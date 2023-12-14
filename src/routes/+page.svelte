@@ -368,9 +368,10 @@
   >
     Joint the waitlist for Linux
   </a>
+  <p class="text-[#555555] mb-8 italic">Coming very soon</p>
 </div>
 
-<div class="flex flex-col items-center text-center mt-10">
+<!-- <div class="flex flex-col items-center text-center mt-10">
   <h3 class="text-4xl mt-12 drop-shadow-lg text-[#333] px-4 font-bold mb-4">
     Open Source Transparency
   </h3>
@@ -387,7 +388,7 @@
   <a class="" href="https://github.com/OneFolderApp/OneFolder" target="_blank">
     <img src="/star-us.webp" alt="images stack" class="w-[325px] ml-6 -mt-6" />
   </a>
-</div>
+</div> -->
 
 <div class="flex flex-col items-center text-center mt-10">
   <h3 class="text-4xl mt-12 drop-shadow-lg text-[#333] px-4 font-bold mb-4">
