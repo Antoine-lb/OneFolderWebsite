@@ -394,13 +394,18 @@
     Wanna get in touch ?
   </h3>
   <p class="text-2xl drop-shadow-lg text-[#333] px-4">
-    Click on that flower to book a quick call with me on my calendly.
+    Click on that flower to book a quick <br /> call with me on my calendly.
   </p>
-  <a class="" href={CALENDLY_URL} target="_blank">
+  <img
+    src="/arrow-2.svg"
+    alt="images stack"
+    class="h-[100px] ml-64 rotate-[30deg]"
+  />
+  <a class="-mt-24" href={CALENDLY_URL} target="_blank">
     <img
       src="/logo_flower_orange.png"
       alt="images stack"
-      class="w-[225px] mt-6 hover:scale-105 hover:rotate-6 transition-all"
+      class="w-[155px] mt-6 hover:scale-105 hover:rotate-6 transition-all"
     />
   </a>
 </div>
