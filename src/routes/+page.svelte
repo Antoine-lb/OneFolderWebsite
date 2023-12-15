@@ -395,7 +395,7 @@
     Wanna get in touch ?
   </h3>
   <p class="text-2xl drop-shadow-lg text-[#333] px-4">
-    Click on that flower to book a quick <br /> call with me on my calendly.
+    Click on that flower to book a quick <br />
   </p>
   <img
     src="/arrow-2.svg"
