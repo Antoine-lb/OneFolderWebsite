@@ -19,9 +19,10 @@
     >
       All your photos in <span class="italic">one folder</span>
     </h1>
-    <p class="text-2xl text-[#444] px-4 mt-5">
-      OneFolder takes advantage of <span class="font-bold">open formats</span>
-      to give the features of Google/Apple Photos without the lock-in.
+    <p class="text-2xl text-[#444] px-4 mt-5 w-[400px]">
+      The open-source alternative to Google Photos that <span class="font-bold"
+        >runs locally</span
+      >
     </p>
 
     <div class="pl-4 mt-8 md:mt-12">
@@ -390,7 +391,7 @@
   </a>
 </div> -->
 
-<div class="flex flex-col items-center text-center mt-10">
+<!-- <div class="flex flex-col items-center text-center mt-10">
   <h3 class="text-4xl mt-12 drop-shadow-lg text-[#333] px-4 font-bold mb-4">
     Wanna get in touch ?
   </h3>
@@ -409,4 +410,4 @@
       class="w-[155px] mt-6 hover:scale-105 hover:rotate-6 transition-all"
     />
   </a>
-</div>
+</div> -->
