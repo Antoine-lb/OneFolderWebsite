@@ -7,7 +7,7 @@
 <div class=" min-h-[80vh]">
   <nav class="flex flex-col md:flex-row justify-between max-w-[75ch] m-auto">
     <a href="/blog" class=" flex items-center justify-center">
-      <img src="/photofolder-logo.svg" alt="logo" class="w-20 md:w-24" />
+      <img src="/logo.webp" alt="logo" class="w-20 md:w-24" />
 
       <p class="text-3xl md:text-4xl drop-shadow-lg pl-2 font-bold text-[#333]">
         OneFolder

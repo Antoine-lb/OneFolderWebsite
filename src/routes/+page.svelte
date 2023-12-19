@@ -1,6 +1,7 @@
 <script lang="ts">
   // import { base } from '$app/paths';
   import { CALENDLY_URL, CTA_URL, YOUTUBE_URL } from "$lib/constants";
+  // import Navbar from "$lib/Navbar.svelte";
 </script>
 
 <svelte:head>
