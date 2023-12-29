@@ -251,7 +251,7 @@
     >
   </h2>
   <p class="text-xl md:text-2xl text-[#444] mt-1 mb-4">
-    Hirachy of tags makes it easy to find your files
+    Heirachy of tags makes it easy to find your files
   </p>
   <div class="px-4">
     <img
