@@ -1,6 +1,7 @@
 <script lang="ts">
   // import { base } from '$app/paths';
-  import { CALENDLY_URL, CTA_URL, YOUTUBE_URL } from "$lib/constants";
+  import LandingBlock from "$lib/components/LandingBlock.svelte";
+  import { CTA_URL, CANNY_URL } from "$lib/constants";
   // import Navbar from "$lib/Navbar.svelte";
 </script>
 
@@ -12,21 +13,14 @@
 <!-- HERO -->
 <!-- HERO -->
 <div class="flex flex-col-reverse max-w-6xl mt-5 m-auto justify-center">
-  <div class="md:mt-10 max-w-2xl m-auto text-center">
-    <h1
-      class="text-3xl md:text-5xl mt-3 md:mt-0 drop-shadow-lg px-4 font-bold text-[#333]"
-    >
-      Software comes and goes, my photos stay <span class="italic">forever</span
-      >
+  <div class="md:mt-10 m-auto text-center">
+    <h1 class="title-font text-8xl drop-shadow-lg px-4 font-bold text-[#333]">
+      OneFolder
     </h1>
-    <p class="text-xl md:text-2xl text-[#444] px-4 mt-5">
-      Built for the long term - OneFolder uses image metadata to browse your
-      files
-    </p>
 
-    <div class="pl-4 mt-8 md:mt-12">
+    <div class="pl-4 mt-8 md:mt-3">
       <a
-        class="m-auto mt-5 inline-flex font-bold !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[#FF5543]"
+        class="m-auto mt-5 inline-flex font-bold !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-full text-2xl items-center shadow-xl bg-[#FF5543]"
         href={CTA_URL}
         target="_blank"
       >
@@ -36,6 +30,10 @@
       <br />
       <br />
     </div>
+
+    <p class="text-3xl text-[#333] px-4 mt-5">
+      File explorer made for <br /> pictures. No more Google <br /> Photos lock-in.
+    </p>
   </div>
 
   <div class="px-4 -md:-mr-14">
@@ -52,390 +50,63 @@
 <br />
 <br />
 
+<div class="grid grid-cols-2 gap-6 max-w-5xl m-auto">
+  <LandingBlock
+    title="All in your file's metadata"
+    description="Tags, faces and locations are not in a separate database. They are stored in the file's metadata. OneFolder runs locally, but you can sync your files with any cloud provider or on a USB drive. You can do everything with your files, they are yours!"
+    thumbnail="/landing-v3-thumbnails/metadata.webp"
+    alt="Screenshot of the app a bike with tags 'Bike', 'Santiago', 'Summer'."
+  />
+  <LandingBlock
+    title="Tags organization"
+    description="Tags allow you to store and find your images faster. No more waste of time to decide which folder is the best, or create copies. All of that without losing your hierarchy organization."
+    thumbnail="/landing-v3-thumbnails/tags.webp"
+    alt="Screenshot of multiple images with tags"
+  />
+  <LandingBlock
+    title="Faces identification"
+    description="You can add faces to your image's metadata. Soon, you could even automate face detection. The same as Google or Apple do, but without losing privacy and full control."
+    thumbnail="/landing-v3-thumbnails/faces.webp"
+    alt="A dog (pug) with a selection of his face"
+  />
+  <LandingBlock
+    title="Additional description"
+    description="All the information that doesn't fit in the file's metadata (following the standard), can be stored in an additional description. Like that, you will never forget a story or an anecdote attached to a memory."
+    thumbnail="/landing-v3-thumbnails/description.webp"
+    alt="Old Photo with multiple people and a description of 'tate in hall au vin 1920"
+  />
+  <LandingBlock
+    title="Calendar view"
+    description="Add more depth to your file storage with this Calendar view. Another way to store and find our photos, closer to the way we live."
+    thumbnail="/landing-v3-thumbnails/calendar.webp"
+    alt="A calndar with December 2023 and multiple stacks of images to show when they were taken"
+  />
+  <LandingBlock
+    title="Map view"
+    description="Enjoy the map view to find your files at the same where they were created. OneFolder gives you the perfect box to store your memories."
+    thumbnail="/landing-v3-thumbnails/map.webp"
+    alt="A map of Chile with multiple stack of images to show where they were taken"
+  />
+</div>
+
+<br />
+<br />
+
+<p class="title-font text-5xl text-center text-[#333]">
+  Are you missing <br />
+  something ?
+</p>
+
 <div class="flex justify-center">
   <a
-    href={YOUTUBE_URL}
-    class="inline-flex justify-center flex-col text-center px-5"
+    class="m-auto mt-5 inline-flex !no-underline p-2 px-3 hover:px-4 transition-all rounded-full text-xl items-center shadow border border-gray-300"
+    href={CANNY_URL}
     target="_blank"
-    rel="noopener noreferrer"
   >
-    <!-- <img src="/landing/hero-image.webp" class=" mt-10 m-auto" alt="example of a plate" /> -->
-    <img
-      src="/thumbnail.webp"
-      alt="OneFolder logo"
-      class="w-full max-w-[600px] rounded-lg shadow-lg"
-    />
-    <p class="text-xl px-4 mt-5 underline text-[#005DC4]">
-      Everything explained in <br />300 seconds
-    </p>
+    Share my dream feature
   </a>
 </div>
-<br />
-<br />
 
-<!-- EXPLENATION -->
-<!-- EXPLENATION -->
-<!-- EXPLENATION -->
-<div class=" max-w-3xl my-16 m-auto text-center leading-10">
-  <p class="text-3xl md:text-4xl drop-shadow-lg text-[#333] px-4">
-    OneFolder stores all in a
-    <span
-      class="font-bold text-[#005cc4] fill-[#458cdd] pb-1 rounded-full inline-flex items-center"
-    >
-      regular folder
-      <svg
-        class="inline ml-2"
-        xmlns="http://www.w3.org/2000/svg"
-        height="1em"
-        viewBox="0 0 512 512"
-      >
-        <path
-          d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"
-        />
-      </svg>
-    </span>
-  </p>
-  <p class="text-3xl md:text-4xl mt-12 drop-shadow-lg text-[#333] px-4">
-    <span
-      class="font-bold text-[#ff5900] fill-[#ff5900AA] rounded-full inline-flex items-center"
-    >
-      Tags
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        height="1em"
-        width="1em"
-        class="inline ml-2"
-        viewBox="0 0 512 512"
-        ><path
-          d="M345 39.1L472.8 168.4c52.4 53 52.4 138.2 0 191.2L360.8 472.9c-9.3 9.4-24.5 9.5-33.9 .2s-9.5-24.5-.2-33.9L438.6 325.9c33.9-34.3 33.9-89.4 0-123.7L310.9 72.9c-9.3-9.4-9.2-24.6 .2-33.9s24.6-9.2 33.9 .2zM0 229.5V80C0 53.5 21.5 32 48 32H197.5c17 0 33.3 6.7 45.3 18.7l168 168c25 25 25 65.5 0 90.5L277.3 442.7c-25 25-65.5 25-90.5 0l-168-168C6.7 262.7 0 246.5 0 229.5zM144 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"
-        /></svg
-      >
-    </span>,
-    <span
-      class="font-bold text-[#800080] fill-[#800080AA] rounded-full inline-flex items-center"
-    >
-      faces
-
-      <svg
-        class="inline ml-2"
-        xmlns="http://www.w3.org/2000/svg"
-        height="1em"
-        viewBox="0 0 512 512"
-        ><path
-          d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
-        /></svg
-      >
-    </span>
-    and
-    <span
-      class="font-bold text-[#15803d] fill-[#15803dAA] rounded-full inline-flex items-center"
-    >
-      locations
-      <svg
-        class="inline ml-2"
-        xmlns="http://www.w3.org/2000/svg"
-        height="1em"
-        viewBox="0 0 512 512"
-        ><path
-          d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
-        /></svg
-      >
-    </span>
-    are not in a separate database. They are stored in the
-
-    <span
-      class=" px-3 pb-1 font-bold text-[#313131] fill-[#313131BB] rounded-full inline-flex items-center"
-    >
-      file's metadata
-
-      <svg
-        class="inline ml-2 h-8"
-        xmlns="http://www.w3.org/2000/svg"
-        height="1em"
-        viewBox="0 0 512 512"
-        ><path
-          d="M48 256C48 141.1 141.1 48 256 48c63.1 0 119.6 28.1 157.8 72.5c8.6 10.1 23.8 11.2 33.8 2.6s11.2-23.8 2.6-33.8C403.3 34.6 333.7 0 256 0C114.6 0 0 114.6 0 256v40c0 13.3 10.7 24 24 24s24-10.7 24-24V256zm458.5-52.9c-2.7-13-15.5-21.3-28.4-18.5s-21.3 15.5-18.5 28.4c2.9 13.9 4.5 28.3 4.5 43.1v40c0 13.3 10.7 24 24 24s24-10.7 24-24V256c0-18.1-1.9-35.8-5.5-52.9zM256 80c-19 0-37.4 3-54.5 8.6c-15.2 5-18.7 23.7-8.3 35.9c7.1 8.3 18.8 10.8 29.4 7.9c10.6-2.9 21.8-4.4 33.4-4.4c70.7 0 128 57.3 128 128v24.9c0 25.2-1.5 50.3-4.4 75.3c-1.7 14.6 9.4 27.8 24.2 27.8c11.8 0 21.9-8.6 23.3-20.3c3.3-27.4 5-55 5-82.7V256c0-97.2-78.8-176-176-176zM150.7 148.7c-9.1-10.6-25.3-11.4-33.9-.4C93.7 178 80 215.4 80 256v24.9c0 24.2-2.6 48.4-7.8 71.9C68.8 368.4 80.1 384 96.1 384c10.5 0 19.9-7 22.2-17.3c6.4-28.1 9.7-56.8 9.7-85.8V256c0-27.2 8.5-52.4 22.9-73.1c7.2-10.4 8-24.6-.2-34.2zM256 160c-53 0-96 43-96 96v24.9c0 35.9-4.6 71.5-13.8 106.1c-3.8 14.3 6.7 29 21.5 29c9.5 0 17.9-6.2 20.4-15.4c10.5-39 15.9-79.2 15.9-119.7V256c0-28.7 23.3-52 52-52s52 23.3 52 52v24.9c0 36.3-3.5 72.4-10.4 107.9c-2.7 13.9 7.7 27.2 21.8 27.2c10.2 0 19-7 21-17c7.7-38.8 11.6-78.3 11.6-118.1V256c0-53-43-96-96-96zm24 96c0-13.3-10.7-24-24-24s-24 10.7-24 24v24.9c0 59.9-11 119.3-32.5 175.2l-5.9 15.3c-4.8 12.4 1.4 26.3 13.8 31s26.3-1.4 31-13.8l5.9-15.3C267.9 411.9 280 346.7 280 280.9V256z"
-        /></svg
-      >
-    </span>
-  </p>
-  <p class="text-3xl md:text-4xl mt-12 drop-shadow-lg text-[#333] px-4">
-    Sync with any
-    <span
-      class="font-bold text-[#005cc4] fill-[#458cdd] rounded-full inline-flex items-center"
-    >
-      cloud
-
-      <svg
-        class="inline ml-2"
-        xmlns="http://www.w3.org/2000/svg"
-        height="1em"
-        viewBox="0 0 640 512"
-        ><path
-          d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"
-        /></svg
-      >
-    </span>
-    provider or on a
-    <span
-      class="font-bold text-[#068000] fill-[#068000AA] rounded-full inline-flex items-center"
-    >
-      USB drive
-      <svg
-        class="inline ml-2"
-        xmlns="http://www.w3.org/2000/svg"
-        height="1em"
-        viewBox="0 0 640 512"
-        ><path
-          d="M641.5 256c0 3.1-1.7 6.1-4.5 7.5L547.9 317c-1.4.8-2.8 1.4-4.5 1.4-1.4 0-3.1-.3-4.5-1.1-2.8-1.7-4.5-4.5-4.5-7.8v-35.6H295.7c25.3 39.6 40.5 106.9 69.6 106.9H392V354c0-5 3.9-8.9 8.9-8.9H490c5 0 8.9 3.9 8.9 8.9v89.1c0 5-3.9 8.9-8.9 8.9h-89.1c-5 0-8.9-3.9-8.9-8.9v-26.7h-26.7c-75.4 0-81.1-142.5-124.7-142.5H140.3c-8.1 30.6-35.9 53.5-69 53.5C32 327.3 0 295.3 0 256s32-71.3 71.3-71.3c33.1 0 61 22.8 69 53.5 39.1 0 43.9 9.5 74.6-60.4C255 88.7 273 95.7 323.8 95.7c7.5-20.9 27-35.6 50.4-35.6 29.5 0 53.5 23.9 53.5 53.5s-23.9 53.5-53.5 53.5c-23.4 0-42.9-14.8-50.4-35.6H294c-29.1 0-44.3 67.4-69.6 106.9h310.1v-35.6c0-3.3 1.7-6.1 4.5-7.8 2.8-1.7 6.4-1.4 8.9.3l89.1 53.5c2.8 1.1 4.5 4.1 4.5 7.2z"
-        /></svg
-      >
-    </span>. They are just files!
-  </p>
-</div>
-
-<br />
-<br />
-<br />
-
-<!-- FILE -->
-<!-- FILE -->
-<!-- FILE -->
-<!-- <div
-  class="flex flex-col max-w-4xl mt-5 m-auto justify-center items-center text-center mb-16"
->
-  <h2
-    class="text-5xl drop-shadow-lg px-4 font-bold text-[#005cc4] fill-[#458cdd] flex justify-center"
-  >
-    Just files <svg
-      class="inline ml-2"
-      xmlns="http://www.w3.org/2000/svg"
-      height="1em"
-      viewBox="0 0 512 512"
-    >
-      <path
-        d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"
-      />
-    </svg>
-  </h2>
-  <p class="text-xl md:text-2xl text-[#444] mt-1 mb-4">
-    Browse your files the way you are used to
-  </p>
-  <div class="px-4">
-    <img
-      src="/files.webp"
-      alt="OneFolder logo"
-      class="  m-auto w-full max-w-[700px]"
-    />
-  </div>
-</div> -->
-
-<!-- TAGS -->
-<!-- TAGS -->
-<!-- TAGS -->
-<div
-  class="flex flex-col max-w-4xl mt-5 m-auto justify-center items-center text-center mb-16"
->
-  <h2
-    class="text-5xl drop-shadow-lg px-4 font-bold text-[#005cc4] fill-[#458cdd] flex justify-center"
-  >
-    Tags <svg
-      xmlns="http://www.w3.org/2000/svg"
-      height="1em"
-      width="1em"
-      class="inline ml-2"
-      viewBox="0 0 512 512"
-      ><path
-        d="M345 39.1L472.8 168.4c52.4 53 52.4 138.2 0 191.2L360.8 472.9c-9.3 9.4-24.5 9.5-33.9 .2s-9.5-24.5-.2-33.9L438.6 325.9c33.9-34.3 33.9-89.4 0-123.7L310.9 72.9c-9.3-9.4-9.2-24.6 .2-33.9s24.6-9.2 33.9 .2zM0 229.5V80C0 53.5 21.5 32 48 32H197.5c17 0 33.3 6.7 45.3 18.7l168 168c25 25 25 65.5 0 90.5L277.3 442.7c-25 25-65.5 25-90.5 0l-168-168C6.7 262.7 0 246.5 0 229.5zM144 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"
-      /></svg
-    >
-  </h2>
-  <p class="text-xl md:text-2xl text-[#444] mt-1 mb-4">
-    Heirachy of tags makes it easy to find your files
-  </p>
-  <div class="px-4">
-    <img
-      src="screens2/tags-screen.webp"
-      alt="OneFolder tags screen"
-      class="  m-auto w-full max-w-[700px]"
-    />
-  </div>
-</div>
-
-<!-- CALENDAR -->
-<!-- CALENDAR -->
-<!-- CALENDAR -->
-<div
-  class="flex flex-col max-w-4xl mt-5 m-auto justify-center items-center text-center mb-16"
->
-  <h2
-    class="text-5xl drop-shadow-lg px-4 font-bold text-red-800 fill-[#DA302F] flex justify-center"
-  >
-    Calendar
-
-    <svg
-      class="inline ml-2 opacity-80"
-      xmlns="http://www.w3.org/2000/svg"
-      height="1em"
-      viewBox="0 0 448 512"
-      ><path
-        d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"
-      /></svg
-    >
-  </h2>
-  <p class="text-xl md:text-2xl text-[#444] mt-1 mb-4">Same as on your phone</p>
-  <div class="px-4">
-    <img
-      src="screens2/calendar-screen.webp"
-      alt="OneFolder calendar screenshot"
-      class="  m-auto w-full max-w-[700px]"
-    />
-  </div>
-</div>
-
-<!-- MAP -->
-<!-- MAP -->
-<!-- MAP -->
-<div
-  class="flex flex-col max-w-4xl mt-5 m-auto justify-center items-center text-center mb-16"
->
-  <h2
-    class="text-5xl drop-shadow-lg px-4 font-bold text-[#15803d] fill-[#15803dAA] flex justify-center"
-  >
-    Map
-
-    <svg
-      class="inline ml-2"
-      xmlns="http://www.w3.org/2000/svg"
-      height="1em"
-      viewBox="0 0 512 512"
-      ><path
-        d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
-      /></svg
-    >
-  </h2>
-  <p class="text-xl md:text-2xl text-[#444] mt-1 mb-4">Search geographically</p>
-  <div class="px-4">
-    <img
-      src="screens2/map-screen.webp"
-      alt="OneFolder map screenshot"
-      class="  m-auto w-full max-w-[700px]"
-    />
-  </div>
-</div>
-
-<!-- FACES -->
-<!-- FACES -->
-<!-- FACES -->
-<div
-  class="flex flex-col max-w-4xl mt-5 m-auto justify-center items-center text-center mb-16"
->
-  <h2
-    class="text-5xl drop-shadow-lg px-4 font-bold text-[#800080] fill-[#800080AA] flex justify-center"
-  >
-    Faces
-
-    <svg
-      class="inline ml-2"
-      xmlns="http://www.w3.org/2000/svg"
-      height="1em"
-      viewBox="0 0 512 512"
-      ><path
-        d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
-      /></svg
-    >
-  </h2>
-  <p class="text-xl md:text-2xl text-[#444] mt-1 mb-4">
-    Auto-detects faces, or manually add them
-  </p>
-  <div class="px-4">
-    <img
-      src="screens2/faces-screen.webp"
-      alt="OneFolder faces screenshot"
-      class="  m-auto w-full max-w-[700px]"
-    />
-  </div>
-</div>
-
-<!-- <h3
-  class="text-4xl mt-12 drop-shadow-lg text-[#333] px-4 font-bold mb-4 text-center"
->
-  “Softwares come and go, <br class="hidden md:block" /> but my jpegs stay forever”
-</h3>
-
-<p class="text-center text-xl mb-4 text-[#444]">
-  Reactions to our <a
-    class="underline text-[#1382E6]"
-    href="https://www.reddit.com/r/ObsidianMD/comments/17po4vc/obsidian_for_pictures/"
-    target="_blank"
-  >
-    reddit post
-  </a>.
+<p class="title-font text-3xl text-center text-[#333]">
+  May be you should still
 </p>
-<img
-  src="/reddit-comments.webp"
-  alt="images stack"
-  class="m-auto w-full max-w-[950px] px-5"
-/>
-<br />
-<br /> -->
-
-<div class="flex flex-col items-center mt-12 gap-3">
-  <a
-    class="inline-flex font-bold !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[#FF5543]"
-    href={CTA_URL}
-    target="_blank"
-  >
-    Get early access 🌼
-  </a>
-  <p class="text-[#555555] mb-8 italic">Mac/Windows</p>
-
-  <a
-    id="download-linux"
-    href="https://forms.gle/vu47a5Bkk67XaSDc6"
-    class=" bg-[#fff] !text-[#646464] border-2 border-[#7f7f7f] border-dashed p-2 px-3 rounded-xl text-2xl items-center"
-  >
-    Joint the waitlist for Linux
-  </a>
-  <p class="text-[#555555] mb-8 italic">Coming very soon</p>
-</div>
-
-<!-- <div class="flex flex-col items-center text-center mt-10">
-  <h3 class="text-4xl mt-12 drop-shadow-lg text-[#333] px-4 font-bold mb-4">
-    Open Source Transparency
-  </h3>
-  <p class="text-2xl drop-shadow-lg text-[#333] px-4">
-    All our code is accessible in <a
-      class="underline text-[#1382E6]"
-      href="https://github.com/OneFolderApp/OneFolder"
-      target="_blank"
-    >
-      github
-    </a>
-    and if you <br />want to help you can star us
-  </p>
-  <a class="" href="https://github.com/OneFolderApp/OneFolder" target="_blank">
-    <img src="/star-us.webp" alt="images stack" class="w-[325px] ml-6 -mt-6" />
-  </a>
-</div> -->
-
-<!-- <div class="flex flex-col items-center text-center mt-10">
-  <h3 class="text-4xl mt-12 drop-shadow-lg text-[#333] px-4 font-bold mb-4">
-    Wanna get in touch ?
-  </h3>
-  <p class="text-2xl drop-shadow-lg text-[#333] px-4">
-    Click on that flower to book a quick <br />
-  </p>
-  <img
-    src="/arrow-2.svg"
-    alt="images stack"
-    class="h-[100px] ml-64 rotate-[37deg]"
-  />
-  <a class="-mt-24" href={CALENDLY_URL} target="_blank">
-    <img
-      src="/logo_flower_orange.png"
-      alt="images stack"
-      class="w-[155px] mt-6 hover:scale-105 hover:rotate-6 transition-all"
-    />
-  </a>
-</div> -->
