@@ -30,13 +30,15 @@
     </p>
 
     <br />
-    <a
-      class="inline-flex font-bold !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[#FF5543]"
-      href={CTA_URL}
-      target="_blank"
-    >
-      Get early access 🌼
-    </a>
+    <div class="flex items-center flex-col">
+      <a
+        class="cta-button !text-white !no-underline px-5 py-3 text-2xl hover:px-6 transition-all"
+        href={CTA_URL}
+        target="_blank"
+      >
+        Give it a try 🌼
+      </a>
+    </div>
     <div class="flex text-left flex-col md:flex-row gap-8 justify-center mt-16">
       <div class="flex flex-col justify-start text-left">
         {#each data.posts as post}

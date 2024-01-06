@@ -20,8 +20,10 @@
 <!-- HERO -->
 <!-- HERO -->
 <div class="flex flex-col-reverse max-w-6xl mt-5 m-auto justify-center">
-  <div class="-mt-4 m-auto text-center">
-    <h1 class="title-font text-9xl drop-shadow-lg px-4 font-bold text-[#333]">
+  <div class="md:-mt-4 m-auto text-center">
+    <h1
+      class="title-font text-7xl md:text-9xl drop-shadow-lg px-4 font-bold text-[#333]"
+    >
       OneFolder
     </h1>
 
@@ -38,7 +40,8 @@
     <br />
 
     <p class="text-3xl text-[#333] px-4 mt-5">
-      File explorer made for <br /> pictures. No more Google <br /> Photos lock-in.
+      File explorer made for <br /> pictures. No more Google
+      <br class="hidden md:block" /> Photos lock-in.
     </p>
   </div>
 
@@ -56,7 +59,7 @@
 <br />
 <br />
 
-<div class="grid grid-cols-2 gap-6 max-w-5xl m-auto">
+<div class="grid md:grid-cols-2 gap-6 max-w-5xl m-auto p-2">
   <LandingBlock
     title="All in your file's metadata"
     description="Tags, faces and locations are not in a separate database. They are stored in the file's metadata. OneFolder runs locally, but you can sync your files with any cloud provider or on a USB drive. You can do everything with your files, they are yours!"
@@ -134,7 +137,7 @@
 <br />
 <p class="text-center text-2xl font-semibold text-[#333]">Learn more</p>
 <br />
-<div class="grid grid-cols-2 gap-6 max-w-2xl m-auto">
+<div class="grid md:grid-cols-2 gap-6 max-w-2xl m-auto p-2">
   <LearnMoreBlock
     headerImage="/landing-v3-learn-more/youtube.svg"
     altHeader="Youtube logo and icon"
