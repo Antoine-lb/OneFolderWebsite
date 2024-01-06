@@ -1,5 +1,6 @@
 export const CTA_URL = "https://forms.gle/UPmNKp9FncKYnvcW7";
 export const YOUTUBE_URL = "https://www.youtube.com/watch?v=paH_91aXrc4";
+export const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@AntoineLeBaux";
 export const CALENDLY_URL =
   "https://calendly.com/photofolder/photofolder-feedback";
 export const CANNY_URL = "https://onefolder.canny.io/feedback";

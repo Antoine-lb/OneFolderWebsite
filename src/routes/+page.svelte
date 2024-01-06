@@ -1,7 +1,14 @@
 <script lang="ts">
   // import { base } from '$app/paths';
   import LandingBlock from "$lib/components/LandingBlock.svelte";
-  import { CTA_URL, CANNY_URL } from "$lib/constants";
+  import LearnMoreBlock from "$lib/components/LearnMoreBlock.svelte";
+  import {
+    CTA_URL,
+    CANNY_URL,
+    YOUTUBE_URL,
+    YOUTUBE_CHANNEL_URL,
+    GITHUB_LINK,
+  } from "$lib/constants";
   // import Navbar from "$lib/Navbar.svelte";
 </script>
 
@@ -13,23 +20,22 @@
 <!-- HERO -->
 <!-- HERO -->
 <div class="flex flex-col-reverse max-w-6xl mt-5 m-auto justify-center">
-  <div class="md:mt-10 m-auto text-center">
-    <h1 class="title-font text-8xl drop-shadow-lg px-4 font-bold text-[#333]">
+  <div class="-mt-4 m-auto text-center">
+    <h1 class="title-font text-9xl drop-shadow-lg px-4 font-bold text-[#333]">
       OneFolder
     </h1>
 
-    <div class="pl-4 mt-8 md:mt-3">
-      <a
-        class="m-auto mt-5 inline-flex font-bold !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-full text-2xl items-center shadow-xl bg-[#FF5543]"
-        href={CTA_URL}
-        target="_blank"
-      >
-        Get early access
-        <img src="/arrow.svg" alt="OneFolder logo" class=" ml-2 rounded" />
-      </a>
-      <br />
-      <br />
-    </div>
+    <br />
+    <br />
+    <a
+      class="cta-button !text-white !no-underline px-5 py-3 text-2xl hover:px-6 transition-all"
+      href={CTA_URL}
+      target="_blank"
+    >
+      Give it a try 🌼
+    </a>
+    <p class="mt-3 text-gray-500 italic">(free and open source)</p>
+    <br />
 
     <p class="text-3xl text-[#333] px-4 mt-5">
       File explorer made for <br /> pictures. No more Google <br /> Photos lock-in.
@@ -92,7 +98,7 @@
 <br />
 <br />
 
-<p class="title-font text-5xl text-center text-[#333]">
+<p class="title-font text-5xl text-center text-[#444]">
   Are you missing <br />
   something ?
 </p>
@@ -107,6 +113,42 @@
   </a>
 </div>
 
-<p class="title-font text-3xl text-center text-[#333]">
+<br />
+<br />
+
+<p class="title-font text-3xl text-center text-[#444] mb-3">
   May be you should still
 </p>
+<div class="flex items-center flex-col">
+  <a
+    class="cta-button !text-white !no-underline px-5 py-3 text-2xl hover:px-6 transition-all"
+    href={CTA_URL}
+    target="_blank"
+  >
+    Give it a try 🌼
+  </a>
+  <p class=" text-gray-500 italic">(free and open source)</p>
+  <br />
+</div>
+
+<br />
+<p class="text-center text-2xl font-semibold text-[#333]">Learn more</p>
+<br />
+<div class="grid grid-cols-2 gap-6 max-w-2xl m-auto">
+  <LearnMoreBlock
+    headerImage="/landing-v3-learn-more/youtube.svg"
+    altHeader="Youtube logo and icon"
+    description="Discover all our project updates and our video tutorial."
+    thumbnail="/landing-v3-learn-more/youtube-thumbnail.webp"
+    altThumbnail="Two thumbnails from our youtube channel"
+    link={YOUTUBE_CHANNEL_URL}
+  />
+  <LearnMoreBlock
+    headerImage="/landing-v3-learn-more/github.svg"
+    altHeader="Github logo and icon"
+    description="Our code and our roadmap are public, and you can even contribute to them."
+    thumbnail="/landing-v3-learn-more/github-contributions.svg"
+    altThumbnail="A subset of a Github contribution graph"
+    link={GITHUB_LINK}
+  />
+</div>
