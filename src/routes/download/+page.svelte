@@ -68,7 +68,7 @@
   <img src="/flower.webp" alt="OneFolder logo" class=" w-[170px]" />
 </div>
 
-<div class="max-w-lg m-auto font-mono text-lg">
+<div class="max-w-lg m-auto font-mono text-lg px-4">
   <h1 class="title-font text-5xl drop-shadow-lg font-bold text-[#333] mb-2">
     Before you start:
   </h1>
