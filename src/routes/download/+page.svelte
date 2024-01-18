@@ -1,38 +1,22 @@
 <script lang="ts">
   import { LINUX_WAIT_LIST } from "$lib/constants";
   import { onMount } from "svelte";
+  import { enhance } from "$app/forms";
+
+  /** @type {import('./$types').ActionData} */
+  export let form;
 
   const REPO_LINK = "https://github.com/PhotoFolder/OneFolder/releases/latest";
   const REPO_LINK_API =
     "https://api.github.com/repos/PhotoFolder/OneFolder/releases/latest";
 
-  let windowsDownloadLink: HTMLElement | null;
-  let macDownloadLink: HTMLElement | null;
-  let linuxDownloadLink: HTMLElement | null;
+  let windowsLink = REPO_LINK;
+  let macLink = REPO_LINK;
+  let linuxLink = REPO_LINK;
 
   onMount(() => {
-    windowsDownloadLink = document.getElementById("download-windows");
-    macDownloadLink = document.getElementById("download-mac");
-    linuxDownloadLink = document.getElementById("download-linux");
-    highlightOSButton();
     setDownloadLinks();
   });
-  // Highlight download button for user's platform
-  function highlightOSButton() {
-    var ua = navigator.userAgent;
-    var link;
-    if (ua.indexOf("Win") !== -1) {
-      link = windowsDownloadLink;
-    } else if (ua.indexOf("Mac") !== -1) {
-      link = macDownloadLink;
-    } else if (ua.indexOf("Linux") !== -1) {
-      link = linuxDownloadLink;
-    }
-    if (link) {
-      link.classList.remove("alt");
-      link.classList.add("strong");
-    }
-  }
 
   async function setDownloadLinks() {
     const response = await fetch(REPO_LINK_API, {
@@ -47,71 +31,92 @@
       const asset = assets[i];
       if (
         asset.content_type.startsWith("application") &&
-        asset.name.startsWith("OneFolder-") &&
-        windowsDownloadLink &&
-        macDownloadLink &&
-        linuxDownloadLink
+        asset.name.startsWith("OneFolder-")
       ) {
         if (asset.name.endsWith(".exe")) {
-          windowsDownloadLink.href = asset.browser_download_url;
+          windowsLink = asset.browser_download_url;
         } else if (asset.name.endsWith(".dmg")) {
-          macDownloadLink.href = asset.browser_download_url;
+          macLink = asset.browser_download_url;
         } else if (asset.name.endsWith(".AppImage")) {
-          linuxDownloadLink.href = asset.browser_download_url;
+          linuxLink = asset.browser_download_url;
         }
       }
     }
   }
 </script>
 
+<nav class="p-4">
+  <a href="/" class="font-mono underline-offset-4 text-[#333]"
+    >{`< `}Back to home page</a
+  >
+</nav>
+
 <div class="flex justify-center p-6">
   <img src="/flower.webp" alt="OneFolder logo" class=" w-[170px]" />
 </div>
 
-<div class="max-w-lg m-auto font-mono text-lg px-4">
-  <h1 class="title-font text-5xl drop-shadow-lg font-bold text-[#333] mb-2">
-    Before you start:
-  </h1>
+<div
+  class="max-w-lg m-auto font-mono text-lg px-4 underline-offset-4 text-[#333]"
+>
+  <p class="">Hello 👋</p>
+  <p class="">Two things to remember:</p>
   <p>
-    <b>1. Backups</b>
+    <b>Backups</b>
     - No matter how battel tested a software can be, always have backups.
   </p>
   <br />
   <p>
-    <b>2. Feedback</b> - We put a lot of time and energy on this, the only thing
-    we ask is for people to
+    <b>Feedback</b> - We put a lot of time and energy on this,
     <a
       target="_blank"
       href="https://onefolder.canny.io/feedback"
-      class="underline">tell us</a
-    > the things they like (and don't).
+      class="underline">feedback</a
+    > is very much appreciated.
   </p>
   <br />
+
   <p>here are the links:</p>
-  <p>
-    • <a id="download-windows" href={REPO_LINK} class="underline">
-      ⬇️ Download for Windows
-    </a>
-  </p>
-  <p>
-    • <a class="underline" id="download-mac" href={REPO_LINK}>
-      ⬇️ Download for Mac (intel and silicon)
-    </a>
-  </p>
+  <div class="leading-8">
+    <p>
+      • <a
+        on:click={() => {
+          fetch("/hello?m=⬇️ Download Windows");
+        }}
+        id="download-windows"
+        href={windowsLink}
+        class="underline"
+      >
+        ⬇️ Download for Windows
+      </a>
+    </p>
+    <p>
+      • <a
+        on:click={() => {
+          fetch("/hello?m=⬇️ Download Mac");
+        }}
+        class="underline"
+        id="download-mac"
+        href={macLink}
+      >
+        ⬇️ Download for Mac (intel and silicon)
+      </a>
+    </p>
+    <p>
+      • <a
+        on:click={() => {
+          fetch("/hello?m=📭 Join Linux wait list");
+        }}
+        id="download-windows"
+        target="_blank"
+        href={LINUX_WAIT_LIST}
+        class="underline"
+      >
+        📭 Linux - get notified when released
+      </a>
+    </p>
+  </div>
+
   <br />
-
-  <p>not available yet:</p>
-  <p>
-    • <a
-      id="download-windows"
-      target="_blank"
-      href={LINUX_WAIT_LIST}
-      class="underline"
-    >
-      📭 Linux - get notified when released
-    </a>
-  </p>
-
   <br />
   <p>hope you enjoy it,</p>
   <p>-- the OneFolder team 🌼</p>
@@ -121,26 +126,26 @@
   <h1 class="title-font text-5xl drop-shadow-lg font-bold text-[#333] mb-2">
     Time for Questions?
   </h1>
-  <form action="">
+  <form method="POST" action="" use:enhance>
     <div class="flex flex-col mb-4">
-      <label for="how-did-you-hear" class="text-[#333] mb-2"
+      <label for="what_are_you_using" class="text-[#333] mb-2"
         >What are you using now to store an sort your files?</label
       >
       <textarea
-        name="how-did-you-hear"
-        id="how-did-you-hear"
+        name="what_are_you_using"
+        id="what_are_you_using"
         cols="30"
         rows="6"
         class="border-2 border-[#333] p-2 rounded-lg"
       />
     </div>
     <div class="flex flex-col mb-4">
-      <label for="how-did-you-hear" class="text-[#333] mb-2"
-        >How did you hear from us?</label
+      <label for="how_did_you_hear" class="text-[#333] mb-2"
+        >How did you landed on our website?</label
       >
       <textarea
-        name="how-did-you-hear"
-        id="how-did-you-hear"
+        name="how_did_you_hear"
+        id="how_did_you_hear"
         cols="30"
         rows="2"
         class="border-2 border-[#333] p-2 rounded-lg"
@@ -162,12 +167,22 @@
 
     <button
       type="submit"
+      disabled={form?.success}
+      formaction="?/submitForm"
       class="bg-[#333] text-[#fff] p-2 px-4 rounded-lg mt-4 hover:bg-[#444] transition-all"
     >
-      Send
+      {#if form?.success}
+        Thanks! 🎉
+      {:else}
+        Send
+      {/if}
     </button>
   </form>
 </div>
+<br />
+<br />
+<br />
+<br />
 
 <!-- <div class="  flex flex-col justify-between">
   <div class="px-4">
