@@ -6,3 +6,5 @@ export const CALENDLY_URL =
 export const CANNY_URL = "https://onefolder.canny.io/feedback";
 
 export const GITHUB_LINK = "https://github.com/OneFolderApp/OneFolder";
+
+export const LINUX_WAILIST_URL = "https://forms.gle/UyBp8ScuyBJZwnMF8";

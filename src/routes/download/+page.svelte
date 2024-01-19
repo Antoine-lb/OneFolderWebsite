@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { CTA_URL, LINUX_WAILIST_URL } from "$lib/constants";
   import { onMount } from "svelte";
 
   const REPO_LINK = "https://github.com/PhotoFolder/OneFolder/releases/latest";
@@ -56,8 +57,10 @@
   Dowload Page
 </h2>
 
-<div class="flex flex-col items-center gap-5 max-w-xs w-full m-auto">
-  <div class="bg-[#FDDEDE] text-center p-2 rounded">
+<div
+  class="flex flex-col items-center gap-6 max-w-md w-full m-auto text-[#333]"
+>
+  <div class="bg-[#FDDEDE] text-center p-4 rounded">
     <p class="font-bold">Warning before using OneFolder</p>
     <p class="font-light">
       No matter how battle tested a software can be, always have backups.
@@ -69,6 +72,11 @@
   <a
     id="download-windows"
     href={windowsLink}
+    on:click={() => {
+      if (window) {
+        window?.open(CTA_URL, "_blank")?.focus();
+      }
+    }}
     class="cta-button w-full flex justify-center !text-white !no-underline px-3 py-3 text-xl hover:bg-[#ff5643e2] transition-all"
   >
     <img src="/windows.svg" alt="OneFolder logo" class="mr-1" />
@@ -78,6 +86,11 @@
     class="cta-button w-full flex justify-center !text-white !no-underline px-3 py-3 text-xl hover:bg-[#ff5643e2] transition-all"
     id="download-mac"
     href={macLink}
+    on:click={() => {
+      if (window) {
+        window?.open(CTA_URL, "_blank")?.focus();
+      }
+    }}
   >
     <img src="/mac.svg" alt="OneFolder logo" class="mr-1" />
 
@@ -88,7 +101,9 @@
 
   <a
     id="download-linux"
-    class="cta-button-off w-full flex justify-center !no-underline px-3 py-3 text-xl hover:bg-[#ff5643e2] transition-all"
+    href={LINUX_WAILIST_URL}
+    target="_blank"
+    class="rounded-full border-2 border-[#888] border-dashed !text-[#333] w-full flex justify-center !no-underline px-3 py-3 text-xl hover:bg-[#e9e9e9] transition-all"
   >
     Get notified when Linux is ready
   </a>
