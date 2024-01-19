@@ -14,7 +14,7 @@
   <p class=" text-gray-700 my-3">{description}</p>
 
   {#if thumbnail}
-    <img src={thumbnail} alt={altThumbnail} />
+    <img class="w-full" src={thumbnail} alt={altThumbnail} />
   {/if}
   <br />
   <a

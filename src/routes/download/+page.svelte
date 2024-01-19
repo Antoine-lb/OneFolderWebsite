@@ -41,12 +41,16 @@
   }
 </script>
 
+<br />
+<br />
+<br />
 <div class="px-4">
-  <img
+  <!-- <img
     src="/hero-image-7.webp"
     alt="OneFolder logo"
     class="-mt-[1.5rem] md:-mt-[18rem] m-auto w-[600px]"
-  />
+  /> -->
+  <img src="/favicon.svg" alt="OneFolder logo" class=" m-auto w-[100px]" />
 </div>
 <h1
   class="text-center title-font text-4xl md:text-7xl drop-shadow-lg px-4 font-bold text-[#333]"

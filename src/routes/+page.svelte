@@ -36,7 +36,7 @@
     >
       Give it a try 🌼
     </a>
-    <p class="mt-3 text-gray-500 italic">(free and open source)</p>
+    <p class="mt-3 text-gray-500 italic">(open source)</p>
     <br />
 
     <p class="text-3xl text-[#333] px-4 mt-5">
@@ -59,40 +59,40 @@
 <br />
 <br />
 
-<div class="grid md:grid-cols-2 gap-6 max-w-5xl m-auto p-2">
+<div class="grid md:grid-cols-2 gap-6 max-w-3xl m-auto p-2">
   <LandingBlock
     title="All in your file's metadata"
-    description="Tags, faces and locations are not in a separate database. They are stored in the file's metadata. OneFolder runs locally, but you can sync your files with any cloud provider or on a USB drive. You can do everything with your files, they are yours!"
+    description="Tags, faces and locations are stored in the file's metadata. Your organisation belongs to you and stay with your files."
     thumbnail="/landing-v3-thumbnails/metadata.webp"
     alt="Screenshot of the app a bike with tags 'Bike', 'Santiago', 'Summer'."
   />
   <LandingBlock
     title="Tags organization"
-    description="Tags allow you to store and find your images faster. No more waste of time to decide which folder is the best, or create copies. All of that without losing your hierarchy organization."
+    description="Tags allow you to store and find your images faster. You can also create your own hierarchy between tags."
     thumbnail="/landing-v3-thumbnails/tags.webp"
     alt="Screenshot of multiple images with tags"
   />
   <LandingBlock
     title="Faces identification"
-    description="You can add faces to your image's metadata. Soon, you could even automate face detection. The same as Google or Apple do, but without losing privacy and full control."
+    description="You will be abble to add faces to your image's metadata. Soon, you could even automate face detection."
     thumbnail="/landing-v3-thumbnails/faces.webp"
     alt="A dog (pug) with a selection of his face"
   />
   <LandingBlock
     title="Additional description"
-    description="All the information that doesn't fit in the file's metadata (following the standard), can be stored in an additional description. Like that, you will never forget a story or an anecdote attached to a memory."
+    description="All the information that doesn't fit in the file's metadata, can be stored in an additional description."
     thumbnail="/landing-v3-thumbnails/description.webp"
     alt="Old Photo with multiple people and a description of 'tate in hall au vin 1920"
   />
   <LandingBlock
     title="Calendar view"
-    description="Add more depth to your file storage with this Calendar view. Another way to store and find our photos, closer to the way we live."
+    description="This Calendar view gives you a new way to find your photos, closer to the way we live."
     thumbnail="/landing-v3-thumbnails/calendar.webp"
     alt="A calndar with December 2023 and multiple stacks of images to show when they were taken"
   />
   <LandingBlock
     title="Map view"
-    description="Enjoy the map view to find your files at the same where they were created. OneFolder gives you the perfect box to store your memories."
+    description="Enjoy the map view to find your files at the same where they were created, thanks to file's metadata."
     thumbnail="/landing-v3-thumbnails/map.webp"
     alt="A map of Chile with multiple stack of images to show where they were taken"
   />
@@ -130,7 +130,7 @@
   >
     Give it a try 🌼
   </a>
-  <p class=" text-gray-500 italic">(free and open source)</p>
+  <p class=" text-gray-500 italic">(open source)</p>
   <br />
 </div>
 

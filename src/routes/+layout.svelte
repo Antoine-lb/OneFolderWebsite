@@ -6,6 +6,14 @@
   export let data;
 </script>
 
+<!-- <header class="fixed flex justify-between w-full px-3">
+  <a class=" flex items-center gap-2" href="/">
+    <img src="/favicon.svg" class="h-8" alt="a small flower" />
+    <span class="text-2xl">OneFolder</span>
+  </a>
+  <div>github</div>
+</header> -->
+
 <main>
   <slot />
 </main>
