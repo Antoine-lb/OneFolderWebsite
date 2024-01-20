@@ -92,22 +92,16 @@
 
   <div class="grid md:grid-cols-2 gap-6 max-w-3xl m-auto p-2">
     <LandingBlock
-      title="All in your file's metadata"
+      title="File Metadata"
       description="Tags, faces and locations are stored in the file's metadata. Your organisation belongs to you and stay with your files."
       thumbnail="/landing-v3-thumbnails/metadata.webp"
       alt="Screenshot of the app a bike with tags 'Bike', 'Santiago', 'Summer'."
     />
     <LandingBlock
-      title="Tags organization"
+      title="Tags"
       description="Tags allow you to store and find your images faster. You can also create your own hierarchy between tags."
       thumbnail="/landing-v3-thumbnails/tags.webp"
       alt="Screenshot of multiple images with tags"
-    />
-    <LandingBlock
-      title="Face identification"
-      description="You will be abble to add faces to your image's metadata. Soon, you could even automate face detection."
-      thumbnail="/landing-v3-thumbnails/faces.webp"
-      alt="A dog (pug) with a selection of his face"
     />
     <LandingBlock
       title="Description"
@@ -116,16 +110,25 @@
       alt="Old Photo with multiple people and a description of 'tate in hall au vin 1920"
     />
     <LandingBlock
+      title="Faces"
+      description="You will be abble to add faces to your image's metadata. Soon, you could even automate face detection."
+      thumbnail="/landing-v3-thumbnails/faces.webp"
+      alt="A dog (pug) with a selection of his face"
+      wip={true}
+    />
+    <LandingBlock
       title="Calendar"
       description="This Calendar view gives you a new way to find your photos, closer to the way we live."
       thumbnail="/landing-v3-thumbnails/calendar.webp"
       alt="A calndar with December 2023 and multiple stacks of images to show when they were taken"
+      wip={true}
     />
     <LandingBlock
       title="Map"
       description="Enjoy the map view to find your files at the same where they were created, thanks to file's metadata."
       thumbnail="/landing-v3-thumbnails/map.webp"
       alt="A map of Chile with multiple stack of images to show where they were taken"
+      wip={true}
     />
   </div>
 
