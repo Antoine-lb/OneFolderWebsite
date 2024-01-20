@@ -14,10 +14,6 @@
   letter-spacing: -0.07em;
 }
 
-p.customfont {
-  font-family: "My Custom Font", Verdana, Tahoma;
-}
-
 html {
   scroll-behavior: smooth;
   background-color: #f5f6f3;
