@@ -1,4 +1,5 @@
 export const CTA_URL = "https://forms.gle/UPmNKp9FncKYnvcW7";
+export const CHECK_OUT_FORM = "https://forms.gle/e2BJ64m5gL8E6Pjp7";
 export const YOUTUBE_URL = "https://www.youtube.com/watch?v=paH_91aXrc4";
 export const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@AntoineLeBaux";
 export const CALENDLY_URL =

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { CTA_URL, LINUX_WAILIST_URL } from "$lib/constants";
+  import { CHECK_OUT_FORM, LINUX_WAILIST_URL } from "$lib/constants";
   import { onMount } from "svelte";
 
   const REPO_LINK = "https://github.com/PhotoFolder/OneFolder/releases/latest";
@@ -85,7 +85,7 @@
     href={windowsLink}
     on:click={() => {
       if (window) {
-        window?.open(CTA_URL, "_blank")?.focus();
+        window?.open(CHECK_OUT_FORM, "_blank")?.focus();
       }
     }}
     class="cta-button w-full flex justify-center !text-white !no-underline px-3 py-3 text-xl hover:bg-[#ff5643e2] transition-all"
@@ -99,7 +99,7 @@
     href={macLink}
     on:click={() => {
       if (window) {
-        window?.open(CTA_URL, "_blank")?.focus();
+        window?.open(CHECK_OUT_FORM, "_blank")?.focus();
       }
     }}
   >
