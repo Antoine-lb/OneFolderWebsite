@@ -52,7 +52,6 @@
       <a
         class="cta-button !text-white !no-underline px-5 py-3 text-2xl hover:px-6 transition-all"
         href={CTA_URL}
-        target="_blank"
       >
         Give it a try 🌼
       </a>
@@ -160,7 +159,6 @@
     <a
       class="cta-button !text-white !no-underline px-5 py-3 text-2xl hover:px-6 transition-all"
       href={CTA_URL}
-      target="_blank"
     >
       Give it a try 🌼
     </a>
