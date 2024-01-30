@@ -5,9 +5,9 @@
   import {
     CTA_URL,
     CANNY_URL,
-    YOUTUBE_URL,
     YOUTUBE_CHANNEL_URL,
     GITHUB_LINK,
+    YOUTUBE_MAIN_VIDEO_EMBEDED,
   } from "$lib/constants";
   // import Navbar from "$lib/Navbar.svelte";
 
@@ -18,7 +18,7 @@
   const showModal = () =>
     modal.set(
       bind(YoutubeVideo, {
-        link: "https://www.youtube.com/embed/paH_91aXrc4?si=V8ubgS-uMeLt114q",
+        link: YOUTUBE_MAIN_VIDEO_EMBEDED,
       })
     );
 </script>
