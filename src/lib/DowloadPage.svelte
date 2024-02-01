@@ -134,22 +134,20 @@
 
       Download for Mac
     </a>
-
-    <div class="h-[1.5px] bg-[#bbb] w-full" />
-
     <a
-      id="download-linux"
-      href={LINUX_WAILIST_URL}
-      target="_blank"
-      class="rounded-full border-2 border-[#888] border-dashed !text-[#333] w-full flex justify-center !no-underline px-3 py-3 text-xl hover:bg-[#e9e9e9] transition-all"
+      class="cta-button w-full flex justify-center !text-white !no-underline px-3 py-3 text-xl hover:bg-[#ff5643e2] transition-all"
+      id="download-mac"
+      href={linuxLink}
+      on:click={() => {
+        if (redirectToForm && window) {
+          window?.open(CHECK_OUT_FORM, "_blank")?.focus();
+        }
+      }}
     >
-      Get notified when Linux is ready
-    </a>
-    <div class="h-[1.5px] bg-[#bbb] w-full" />
+      <img src="/linux.svg" alt="OneFolder logo" class="mr-1" />
 
-    <button on:click={showModal} class="!text-[#0290EC] font-bold"
-      >See the presentation video</button
-    >
+      Download for Linux
+    </a>
   </div>
 
   <br />
