@@ -20,7 +20,7 @@
   <a
     href={link}
     target="_blank"
-    class="inline-flex items-center border border-gray-500 shadow border-full px-2 py-1 rounded-full font-semibold !no-underline hover:px-3 transition-all"
+    class="inline-flex items-center border border-gray-500 shadow border-full px-3 py-1 rounded-full font-semibold !no-underline hover:px-4 transition-all"
   >
     <img src="/arrow.svg" alt="OneFolder logo" class=" mx-1 h-4 fill-black" /> Visit</a
   >

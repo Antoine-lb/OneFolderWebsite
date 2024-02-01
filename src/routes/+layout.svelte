@@ -37,7 +37,7 @@
     >
       <div class=" md:max-w-md">
         <h3 class="text-5xl font-extrabold mb-3">
-          Built for the <br /><span class="italic font-medium">long term</span>
+          Built for the <br /> long term
         </h3>
         <p class="text-lg">
           All software comes to an end, it's inevitable. But files have to last

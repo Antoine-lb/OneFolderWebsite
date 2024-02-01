@@ -178,7 +178,7 @@
   <br />
   <p class="text-center text-2xl font-semibold text-[#333]">Learn more</p>
   <br />
-  <div class="grid md:grid-cols-2 gap-6 max-w-2xl m-auto p-2">
+  <div class="grid md:grid-cols-2 gap-7 max-w-2xl m-auto p-2">
     <LearnMoreBlock
       headerImage="/landing-v3-learn-more/youtube.svg"
       altHeader="Youtube logo and icon"
@@ -190,7 +190,7 @@
     <LearnMoreBlock
       headerImage="/landing-v3-learn-more/github.svg"
       altHeader="Github logo and icon"
-      description="Our code and our roadmap are public, and you can even contribute to them."
+      description="Our code and our roadmap are public."
       thumbnail="/landing-v3-learn-more/github-contributions.svg"
       altThumbnail="A subset of a Github contribution graph"
       link={GITHUB_LINK}

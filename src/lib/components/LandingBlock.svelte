@@ -6,7 +6,7 @@
   export let wip: boolean = false;
 </script>
 
-<div class="border border-gray-300 rounded-lg shadow p-3 pb-5">
+<div class=" rounded-lg p-3 pb-5">
   {#if thumbnail}
     <img src={thumbnail} {alt} />
   {/if}
