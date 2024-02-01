@@ -1,6 +1,11 @@
 <script lang="ts">
   import { page } from "$app/stores";
-  import { CTA_URL, GITHUB_LINK, YOUTUBE_CHANNEL_URL } from "$lib/constants";
+  import {
+    CTA_URL,
+    GITHUB_LINK,
+    TWITTER_LINK,
+    YOUTUBE_CHANNEL_URL,
+  } from "$lib/constants";
   import "../app.css";
 
   export let data;
@@ -113,7 +118,7 @@
         </div>
         <div>
           <a
-            href={GITHUB_LINK}
+            href={TWITTER_LINK}
             target="_blank"
             class="flex items-center gap-1 !text-[#fff]"
           >
