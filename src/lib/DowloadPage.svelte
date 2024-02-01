@@ -145,7 +145,6 @@
       }}
     >
       <img src="/linux.svg" alt="OneFolder logo" class="mr-1" />
-
       Download for Linux
     </a>
   </div>
