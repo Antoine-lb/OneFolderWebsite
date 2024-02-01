@@ -147,6 +147,12 @@
       <img src="/linux.svg" alt="OneFolder logo" class="mr-1" />
       Download for Linux
     </a>
+
+    <div class="h-[1.5px] bg-[#bbb] w-full" />
+
+    <button on:click={showModal} class="!text-[#0290EC] font-bold"
+      >See the presentation video</button
+    >
   </div>
 
   <br />

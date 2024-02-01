@@ -141,10 +141,10 @@
   <br />
   <br />
 
-  <p class="title-font text-5xl text-center text-[#444]">
+  <!-- <p class="title-font text-5xl text-center text-[#444]">
     Are you missing <br />
     something ?
-  </p>
+  </p> -->
 
   <div class="flex justify-center">
     <a
@@ -152,14 +152,16 @@
       href={CANNY_URL}
       target="_blank"
     >
-      Share my dream feature
+      <img src="/icons/thumb-up.svg" alt="Thumb up hand" class="mr-1" />
+
+      Vote for your most needed feature
     </a>
   </div>
 
   <br />
   <br />
 
-  <p class="title-font text-3xl text-center text-[#444] mb-3">
+  <!-- <p class="title-font text-3xl text-center text-[#444] mb-3">
     May be you should still
   </p>
   <div class="flex items-center flex-col">
@@ -171,7 +173,7 @@
     </a>
     <p class=" text-gray-500 italic">(open source)</p>
     <br />
-  </div>
+  </div> -->
 
   <br />
   <p class="text-center text-2xl font-semibold text-[#333]">Learn more</p>
