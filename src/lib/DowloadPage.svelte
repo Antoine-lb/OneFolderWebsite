@@ -28,6 +28,13 @@
   let macLink = REPO_LINK;
   let linuxLink = REPO_LINK;
 
+  let windowsLinkRaw =
+    "https://github.com/OneFolderApp/OneFolder/releases/download/1.0.0/OneFolder-Setup-1.0.0.exe";
+  let macLinkRaw =
+    "https://github.com/OneFolderApp/OneFolder/releases/download/1.0.0/OneFolder-1.0.0.dmg";
+  let linuxLinkRaw =
+    "https://github.com/OneFolderApp/OneFolder/releases/download/1.0.0/OneFolder-1.0.0.AppImage";
+
   onMount(() => {
     setDownloadLinks();
   });
@@ -109,7 +116,7 @@
 
     <a
       id="download-windows"
-      href={windowsLink}
+      href={windowsLinkRaw}
       on:click={() => {
         if (redirectToForm && window) {
           window?.open(CHECK_OUT_FORM, "_blank")?.focus();
@@ -123,7 +130,7 @@
     <a
       class="cta-button w-full flex justify-center !text-white !no-underline px-3 py-3 text-xl hover:bg-[#ff5643e2] transition-all"
       id="download-mac"
-      href={macLink}
+      href={macLinkRaw}
       on:click={() => {
         if (redirectToForm && window) {
           window?.open(CHECK_OUT_FORM, "_blank")?.focus();
@@ -137,7 +144,7 @@
     <a
       class="cta-button w-full flex justify-center !text-white !no-underline px-3 py-3 text-xl hover:bg-[#ff5643e2] transition-all"
       id="download-mac"
-      href={linuxLink}
+      href={linuxLinkRaw}
       on:click={() => {
         if (redirectToForm && window) {
           window?.open(CHECK_OUT_FORM, "_blank")?.focus();
