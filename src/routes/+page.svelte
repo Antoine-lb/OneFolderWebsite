@@ -111,7 +111,7 @@
     <LandingBlock
       title="Faces"
       description="You will be abble to add faces to your image's metadata. Soon, you could even automate face detection."
-      thumbnail="/landing-v4-thumbnails/faces.webp"
+      thumbnail="/landing-v4-thumbnails/face.webp"
       alt="A dog (pug) with a selection of his face"
       wip={true}
     />
