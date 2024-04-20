@@ -9,7 +9,7 @@ After watching this beatifully made video by CyanVoxel, we wanted to compare it 
 
 If you haven't watched the video please do it, is really cool:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wTQeMkYRMcw?si=mtXoj6QyAkhDMYkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe class="w-full" width="560" height="315" src="https://www.youtube.com/embed/wTQeMkYRMcw?si=mtXoj6QyAkhDMYkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <br />
 The app is not released, so all of this comparison will be made based on the video.
