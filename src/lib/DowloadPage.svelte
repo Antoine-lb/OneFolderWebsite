@@ -29,9 +29,9 @@
   let linuxLink = REPO_LINK;
 
   let windowsLinkRaw =
-    "https://github.com/OneFolderApp/OneFolder/releases/download/1.0.0/OneFolder-Setup-1.0.0.exe";
+    "https://github.com/OneFolderApp/OneFolder/releases/download/1.0.2/OneFolder-Setup-1.0.2.exe";
   let macLinkRaw =
-    "https://github.com/OneFolderApp/OneFolder/releases/download/1.0.0/OneFolder-1.0.0.dmg";
+    "https://github.com/OneFolderApp/OneFolder/releases/download/1.0.2/OneFolder-1.0.2.dmg";
   let linuxLinkRaw =
     "https://github.com/OneFolderApp/OneFolder/releases/download/1.0.0/OneFolder-1.0.0.AppImage";
 
