@@ -16,3 +16,5 @@ export const GITHUB_LINK = "https://github.com/OneFolderApp/OneFolder";
 export const TWITTER_LINK = "https://twitter.com/AntoineLeBaux";
 
 export const LINUX_WAILIST_URL = "https://forms.gle/UyBp8ScuyBJZwnMF8";
+
+export const DISCORD_CHANNEl = "https://discord.gg/qqAFQSXs";
