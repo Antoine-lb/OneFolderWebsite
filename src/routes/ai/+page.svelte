@@ -8,7 +8,6 @@
 
 <svelte:head>
   <title>MetaTagger - File Explorer for AI artist</title>
-  <meta property="og:image" content="/banner.webp" />
 </svelte:head>
 
 <main class=" relative z-0">
