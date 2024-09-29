@@ -6,6 +6,7 @@ export const YOUTUBE_MAIN_VIDEO_EMBEDED =
   "https://www.youtube.com/embed/paH_91aXrc4?si=V8ubgS-uMeLt114q";
 export const YOUTUBE_URL = "https://www.youtube.com/watch?v=paH_91aXrc4";
 export const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@AntoineLeBaux";
+export const YOUTUBE_PRESENTATION_VIDEO = 'https://www.youtube.com/watch?v=paH_91aXrc4'
 
 export const CALENDLY_URL =
   "https://calendly.com/photofolder/photofolder-feedback";

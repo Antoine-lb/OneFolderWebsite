@@ -3,7 +3,6 @@
   import { CTA_URL, DISCORD_CHANNEl, GITHUB_LINK } from "$lib/constants";
 
   import YoutubeThumbnail from "$lib/components/YoutubeThumbnail.svelte";
-  import DowloadPage from "$lib/DowloadPage.svelte";
 </script>
 
 <svelte:head>
