@@ -6,17 +6,9 @@
     "deploy": "vite build && git add . && git commit -m 'deploy' && git push",
     "dev": "vite dev",
     "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "test:unit": "vitest",
-    "test:playwright": "playwright test",
-    "test": "pnpm test:unit run && pnpm test:playwright",
-    "lint": "prettier --plugin-search-dir . --check . && eslint .",
-    "format": "prettier --plugin-search-dir . --write ."
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "@playwright/test": "^1.28.1",
     "@sveltejs/adapter-static": "^1.0.0",
     "@sveltejs/kit": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
@@ -35,8 +27,7 @@
     "svelte-check": "^2.9.2",
     "tslib": "^2.4.1",
     "typescript": "^4.9.3",
-    "vite": "^4.0.0",
-    "vitest": "^0.25.3"
+    "vite": "^4.0.0"
   },
   "type": "module",
   "dependencies": {
