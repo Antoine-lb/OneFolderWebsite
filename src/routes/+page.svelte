@@ -48,6 +48,16 @@
       </h1>
 
       <br />
+
+      <button
+        class="figma_video-button hover:bg-[#EDEFE9] transition-all"
+        on:click={showModal}
+      >
+        <img src="/play.svg" alt="OneFolder logo" class="mr-1 fill-[#333]" />
+
+        Everything explain in video
+      </button>
+      <br />
       <br />
       <a
         class="cta-button !text-white !no-underline px-5 py-3 text-2xl hover:px-6 transition-all"
@@ -58,21 +68,8 @@
       <p class="mt-3 text-gray-500 italic">(open source)</p>
       <br />
 
-      <p class="text-3xl text-[#333] px-4 mt-5">
-        File explorer made for <br /> pictures. No more Google
-        <br class="hidden md:block" /> Photos lock-in.
-      </p>
-
       <br />
       <br />
-      <button
-        class="figma_video-button hover:bg-[#EDEFE9] transition-all"
-        on:click={showModal}
-      >
-        <img src="/play.svg" alt="OneFolder logo" class="mr-1 fill-[#333]" />
-
-        Everything explain in video
-      </button>
     </div>
 
     <div class="px-4 -md:-mr-14">
@@ -85,6 +82,81 @@
     </div>
   </div>
 
+  <br />
+  <br />
+  <br />
+
+  <!-- MANIFESTO SECTION -->
+  <div class="max-w-4xl m-auto px-4 text-center">
+    <h2 class="title-font text-5xl font-bold text-[#333] mb-4">Manifesto</h2>
+    <p class="text-xl text-gray-600 italic mb-8">
+      Your files, your folder, forever.
+    </p>
+
+    <div class="text-left max-w-3xl m-auto space-y-6">
+      <div class="border-l-4 border-orange-400 pl-6">
+        <h3 class="text-xl font-bold text-[#333] mb-2">1. File-Over-App</h3>
+        <p class="text-gray-700">
+          Your pictures live as ordinary image files—no proprietary library, no
+          lock-in.
+        </p>
+      </div>
+
+      <div class="border-l-4 border-orange-400 pl-6">
+        <h3 class="text-xl font-bold text-[#333] mb-2">
+          2. One Source of Truth
+        </h3>
+        <p class="text-gray-700">
+          Every photo you care about sits in a single folder you control. Back
+          it up or sync it anywhere; the structure stays intact.
+        </p>
+      </div>
+
+      <div class="border-l-4 border-orange-400 pl-6">
+        <h3 class="text-xl font-bold text-[#333] mb-2">
+          3. Built-In Organization
+        </h3>
+        <p class="text-gray-700">
+          Dates, duplicates, and other housekeeping are solved <em>inside</em> the
+          files themselves—so even without our app, your collection stays clean.
+        </p>
+      </div>
+
+      <div class="border-l-4 border-orange-400 pl-6">
+        <h3 class="text-xl font-bold text-[#333] mb-2">
+          4. Open Standards First
+        </h3>
+        <p class="text-gray-700">
+          We read and write well-known metadata (EXIF / XMP) instead of
+          inventing new formats. Any modern viewer can understand your photos
+          today—and in 20 years.
+        </p>
+      </div>
+
+      <div class="border-l-4 border-orange-400 pl-6">
+        <h3 class="text-xl font-bold text-[#333] mb-2">
+          5. Integrity, Not Optimism
+        </h3>
+        <p class="text-gray-700">
+          Edits never overwrite originals without your say-so. Your folder
+          remains a reliable archive, not a guessing game.
+        </p>
+      </div>
+
+      <div class="border-l-4 border-orange-400 pl-6">
+        <h3 class="text-xl font-bold text-[#333] mb-2">
+          6. Future-Proof Freedom
+        </h3>
+        <p class="text-gray-700">
+          Because the rules live in the files, you can switch tools, change
+          clouds, or hand the folder to your grand-kids—and everything still
+          works.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <br />
   <br />
   <br />
   <br />
