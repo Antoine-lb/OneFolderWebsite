@@ -114,17 +114,7 @@
 
       <div class="border-l-4 border-orange-400 pl-6">
         <h3 class="text-xl font-bold text-[#333] mb-2">
-          3. Built-In Organization
-        </h3>
-        <p class="text-gray-700">
-          Dates, duplicates, and other housekeeping are solved <em>inside</em> the
-          files themselves—so even without our app, your collection stays clean.
-        </p>
-      </div>
-
-      <div class="border-l-4 border-orange-400 pl-6">
-        <h3 class="text-xl font-bold text-[#333] mb-2">
-          4. Open Standards First
+          3. Open Standards First
         </h3>
         <p class="text-gray-700">
           We read and write well-known metadata (EXIF / XMP) instead of
@@ -135,7 +125,7 @@
 
       <div class="border-l-4 border-orange-400 pl-6">
         <h3 class="text-xl font-bold text-[#333] mb-2">
-          5. Integrity, Not Optimism
+          4. No Silent Overwrites
         </h3>
         <p class="text-gray-700">
           Edits never overwrite originals without your say-so. Your folder
@@ -145,7 +135,7 @@
 
       <div class="border-l-4 border-orange-400 pl-6">
         <h3 class="text-xl font-bold text-[#333] mb-2">
-          6. Future-Proof Freedom
+          5. Future-Proof Freedom
         </h3>
         <p class="text-gray-700">
           Because the rules live in the files, you can switch tools, change
@@ -157,6 +147,100 @@
   </div>
 
   <br />
+  <br />
+
+  <!-- METHOD SECTION -->
+  <div class="max-w-4xl m-auto px-4 text-center">
+    <h2 class="title-font text-4xl font-bold text-[#333] mb-4">
+      The OneFolder Method — in 60 seconds
+    </h2>
+    <p class="text-xl text-gray-700 mb-6">
+      A simple framework for keeping every picture safe, searchable and
+      portable:
+    </p>
+
+    <div class="text-left max-w-3xl m-auto space-y-4 mb-8">
+      <div class="flex items-start">
+        <span class="text-orange-500 text-2xl mr-3">•</span>
+        <div>
+          <strong class="text-[#333]">One folder</strong> holds your entire library.
+        </div>
+      </div>
+
+      <div class="flex items-start">
+        <span class="text-orange-500 text-2xl mr-3">•</span>
+        <div>
+          <strong class="text-[#333]">Plain image files</strong> (JPEG, HEIC, RAW…)
+          stay untouched.
+        </div>
+      </div>
+
+      <div class="flex items-start">
+        <span class="text-orange-500 text-2xl mr-3">•</span>
+        <div>
+          <strong class="text-[#333]">Open metadata</strong> (EXIF / XMP) carries
+          dates, places and faces so any tool can read them.
+        </div>
+      </div>
+
+      <div class="flex items-start">
+        <span class="text-orange-500 text-2xl mr-3">•</span>
+        <div>
+          <strong class="text-[#333]"
+            >No duplicates, no dead links, no vendor lock-in.</strong
+          >
+        </div>
+      </div>
+    </div>
+
+    <a
+      href="/method"
+      class="inline-flex items-center px-6 py-3 text-lg font-semibold text-orange-600 border-2 border-orange-400 rounded-full hover:bg-orange-50 transition-all !no-underline"
+    >
+      Learn the full method →
+    </a>
+  </div>
+
+  <br />
+  <br />
+
+  <!-- Divider -->
+  <div class="max-w-4xl m-auto px-4">
+    <hr class="border-gray-300" />
+  </div>
+
+  <br />
+  <br />
+
+  <!-- APP SECTION -->
+  <div class="max-w-4xl m-auto px-4 text-center">
+    <h2 class="title-font text-4xl font-bold text-[#333] mb-4">
+      The OneFolder App — the power tool
+    </h2>
+    <p class="text-xl text-gray-700 mb-6">
+      Our open-source desktop app automates the boring bits:
+    </p>
+
+    <div class="text-left max-w-3xl m-auto space-y-4">
+      <div class="flex items-start">
+        <span class="text-orange-500 text-2xl mr-3">•</span>
+        <div>Scans your folder, flags duplicates and missing dates.</div>
+      </div>
+
+      <div class="flex items-start">
+        <span class="text-orange-500 text-2xl mr-3">•</span>
+        <div>
+          Writes clean EXIF / XMP tags so every viewer shows the right info.
+        </div>
+      </div>
+
+      <div class="flex items-start">
+        <span class="text-orange-500 text-2xl mr-3">•</span>
+        <div>Keeps originals intact while you sort, tag and export.</div>
+      </div>
+    </div>
+  </div>
+
   <br />
   <br />
   <br />
