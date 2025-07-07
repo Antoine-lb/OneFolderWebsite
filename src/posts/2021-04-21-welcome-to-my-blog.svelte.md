@@ -18,7 +18,7 @@ Here's a random Svelte component thrown into my MDsveX markdown:
 
 ## Link to other page
 
-[A second blog post](/blog/a-second-post)
+[A second blog post](/blog/2021-05-03-a-second-blog-post)
 
 ## Example heading
 

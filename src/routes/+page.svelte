@@ -152,7 +152,7 @@
   <!-- METHOD SECTION -->
   <div class="max-w-4xl m-auto px-4 text-center">
     <h2 class="title-font text-4xl font-bold text-[#333] mb-4">
-      The OneFolder Method — in 60 seconds
+      The OneFolder Method
     </h2>
     <p class="text-xl text-gray-700 mb-6">
       A simple framework for keeping every picture safe, searchable and
