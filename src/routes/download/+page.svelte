@@ -45,7 +45,7 @@
       </p>
     </div>
 
-    <div class="h-[1.5px] bg-[#bbb] w-full" />
+    <div class="h-[1.5px] bg-[#bbb] w-full"></div>
 
     <a
       id="download-windows"
@@ -88,7 +88,7 @@
       Download for Linux
     </a>
 
-    <div class="h-[1.5px] bg-[#bbb] w-full" />
+    <div class="h-[1.5px] bg-[#bbb] w-full"></div>
 
     <a href={YOUTUBE_PRESENTATION_VIDEO} target="_blank" class="!text-[#0290EC] font-bold"
       >See the presentation video</a

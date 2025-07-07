@@ -15,7 +15,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 
   // Check if this is a request for an old blog post URL
   if (blogRedirects[pathname]) {
-    throw redirect(301, blogRedirects[pathname]);
+    redirect(301, blogRedirects[pathname]);
   }
 
   return await resolve(event);

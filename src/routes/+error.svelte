@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
   import { page } from "$app/stores";
 
   $: status = $page.status;
   $: message = $page.error?.message;
 
   // Get user-friendly error messages
-  function getErrorMessage(status) {
+  function getErrorMessage(status: number): string {
     switch (status) {
       case 404:
         return "Page Not Found";
@@ -18,7 +18,7 @@
     }
   }
 
-  function getErrorDescription(status) {
+  function getErrorDescription(status: number): string {
     switch (status) {
       case 404:
         return "Sorry, the page you're looking for doesn't exist.";
@@ -49,10 +49,10 @@
       </details>
     {/if}
 
-    <div class="error-actions">
-      <a href="/" class="btn-home">Go Home</a>
-      <button onclick="history.back()" class="btn-back">Go Back</button>
-    </div>
+    		<div class="error-actions">
+			<a href="/" class="btn-home">Go Home</a>
+			<button on:click={() => history.back()} class="btn-back">Go Back</button>
+		</div>
   </div>
 </div>
 

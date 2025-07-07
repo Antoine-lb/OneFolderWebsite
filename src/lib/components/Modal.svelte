@@ -402,7 +402,7 @@
     on:mousedown={handleOuterMousedown}
     on:mouseup={handleOuterMouseup}
     bind:this={background}
-    transition:currentTransitionBg={state.transitionBgProps}
+    transition:currentTransitionBg|global={state.transitionBgProps}
     style={cssBg}
   >
     <div
@@ -419,7 +419,7 @@
         aria-label={state.ariaLabelledBy ? null : state.ariaLabel || null}
         aria-labelledby={state.ariaLabelledBy || null}
         bind:this={modalWindow}
-        transition:currentTransitionWindow={state.transitionWindowProps}
+        transition:currentTransitionWindow|global={state.transitionWindowProps}
         on:introstart={onOpen}
         on:outrostart={onClose}
         on:introend={onOpened}
