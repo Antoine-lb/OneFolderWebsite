@@ -51,7 +51,7 @@
           href={CTA_URL}
           target="_blank"
         >
-          Give it a try 🌼
+          Download 🌼
         </a>
       </div>
     </div>

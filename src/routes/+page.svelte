@@ -45,7 +45,7 @@
         class="cta-button !text-white !no-underline px-5 py-3 text-2xl hover:px-6 transition-all"
         href={CTA_URL}
       >
-        Give it a try 🌼
+        Download 🌼
       </a>
       <p class="mt-3 text-gray-500 italic">(open source)</p>
       <br />
@@ -63,66 +63,66 @@
     </div>
   </div>
 
-  <br />
-  <br />
-  <br />
-
   <!-- MANIFESTO SECTION -->
-  <div class="max-w-4xl m-auto px-4 text-center">
-    <h2 class="title-font text-5xl font-bold text-[#333] mb-4">Manifesto</h2>
-    <p class="text-xl text-gray-600 italic mb-8">
-      Your files, your folder, forever.
-    </p>
+  <div class="paper-sheet max-w-2xl mx-auto my-8">
+    <div class="px-8 py-8 text-center">
+      <h2 class="title-font text-5xl font-bold text-[#333] mb-4">Manifesto</h2>
+      <p class="text-xl text-gray-600 italic mb-8">
+        Your files, your folder, forever.
+      </p>
 
-    <div class="text-left max-w-3xl m-auto space-y-6">
-      <div class="border-l-4 border-orange-400 pl-6">
-        <h3 class="text-xl font-bold text-[#333] mb-2">1. File-Over-App</h3>
-        <p class="text-gray-700">
-          Your pictures live as ordinary image files—no proprietary library, no
-          lock-in.
-        </p>
-      </div>
+      <div class="text-left max-w-3xl m-auto space-y-6">
+        <div>
+          <h3 class="title-font text-3xl font-bold text-[#333] mb-2">
+            File-Over-App
+          </h3>
+          <p class="text-gray-700">
+            Your pictures live as ordinary image files—no proprietary library,
+            no lock-in.
+          </p>
+        </div>
 
-      <div class="border-l-4 border-orange-400 pl-6">
-        <h3 class="text-xl font-bold text-[#333] mb-2">
-          2. One Source of Truth
-        </h3>
-        <p class="text-gray-700">
-          Every photo you care about sits in a single folder you control. Back
-          it up or sync it anywhere; the structure stays intact.
-        </p>
-      </div>
+        <div>
+          <h3 class="title-font text-3xl font-bold text-[#333] mb-2">
+            One Source of Truth
+          </h3>
+          <p class="text-gray-700">
+            Every photo you care about sits in a single folder you control. Back
+            it up or sync it anywhere; the structure stays intact.
+          </p>
+        </div>
 
-      <div class="border-l-4 border-orange-400 pl-6">
-        <h3 class="text-xl font-bold text-[#333] mb-2">
-          3. Open Standards First
-        </h3>
-        <p class="text-gray-700">
-          We read and write well-known metadata (EXIF / XMP) instead of
-          inventing new formats. Any modern viewer can understand your photos
-          today—and in 20 years.
-        </p>
-      </div>
+        <div>
+          <h3 class="title-font text-3xl font-bold text-[#333] mb-2">
+            Open Standards First
+          </h3>
+          <p class="text-gray-700">
+            We read and write well-known metadata (EXIF / XMP) instead of
+            inventing new formats. Any modern viewer can understand your photos
+            today—and in 20 years.
+          </p>
+        </div>
 
-      <div class="border-l-4 border-orange-400 pl-6">
-        <h3 class="text-xl font-bold text-[#333] mb-2">
-          4. No Silent Overwrites
-        </h3>
-        <p class="text-gray-700">
-          Edits never overwrite originals without your say-so. Your folder
-          remains a reliable archive, not a guessing game.
-        </p>
-      </div>
+        <div>
+          <h3 class="title-font text-3xl font-bold text-[#333] mb-2">
+            No Silent Overwrites
+          </h3>
+          <p class="text-gray-700">
+            Edits never overwrite originals without your say-so. Your folder
+            remains a reliable archive, not a guessing game.
+          </p>
+        </div>
 
-      <div class="border-l-4 border-orange-400 pl-6">
-        <h3 class="text-xl font-bold text-[#333] mb-2">
-          5. Future-Proof Freedom
-        </h3>
-        <p class="text-gray-700">
-          Because the rules live in the files, you can switch tools, change
-          clouds, or hand the folder to your grand-kids—and everything still
-          works.
-        </p>
+        <div>
+          <h3 class="title-font text-3xl font-bold text-[#333] mb-2">
+            Future-Proof Freedom
+          </h3>
+          <p class="text-gray-700">
+            Because the rules live in the files, you can switch tools, change
+            clouds, or hand the folder to your grand-kids—and everything still
+            works.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -131,95 +131,68 @@
   <br />
 
   <!-- METHOD SECTION -->
-  <div class="max-w-4xl m-auto px-4 text-center">
-    <h2 class="title-font text-4xl font-bold text-[#333] mb-4">
-      The OneFolder Method
-    </h2>
-    <p class="text-xl text-gray-700 mb-6">
-      A simple framework for keeping every picture safe, searchable and
-      portable:
-    </p>
+  <div class="paper-sheet-purple max-w-2xl mx-auto my-8">
+    <div class="px-8 py-8 text-center">
+      <h2 class="title-font text-4xl font-bold text-[#333] mb-6">
+        How should you organize your files?
+      </h2>
 
-    <div class="text-left max-w-3xl m-auto space-y-4 mb-8">
-      <div class="flex items-start">
-        <span class="text-orange-500 text-2xl mr-3">•</span>
-        <div>
-          <strong class="text-[#333]">One folder</strong> holds your entire library.
+      <p class="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
+        The OneFolder method is a opinionated framework for keeping every
+        picture safe, searchable and portable. It helps to answer questions
+        like:
+      </p>
+
+      <div
+        class="text-left md:text-center max-w-2xl m-auto space-y-1 mb-8 text-xl md:text-3xl"
+      >
+        <div class="title-font text-[#555]">
+          what folder structure should I follow?
         </div>
+
+        <div class="title-font text-[#555]">
+          what should I do with duplicated photos?
+        </div>
+
+        <div class="title-font text-[#555]">
+          should I keep the HEIC or transform to JPEG?
+        </div>
+
+        <div class="title-font text-[#555]">what is the best video format?</div>
       </div>
 
-      <div class="flex items-start">
-        <span class="text-orange-500 text-2xl mr-3">•</span>
-        <div>
-          <strong class="text-[#333]">Plain image files</strong> (JPEG, HEIC, RAW…)
-          stay untouched.
-        </div>
-      </div>
-
-      <div class="flex items-start">
-        <span class="text-orange-500 text-2xl mr-3">•</span>
-        <div>
-          <strong class="text-[#333]">Open metadata</strong> (EXIF / XMP) carries
-          dates, places and faces so any tool can read them.
-        </div>
-      </div>
-
-      <div class="flex items-start">
-        <span class="text-orange-500 text-2xl mr-3">•</span>
-        <div>
-          <strong class="text-[#333]"
-            >No duplicates, no dead links, no vendor lock-in.</strong
-          >
-        </div>
-      </div>
+      <a
+        href="/method"
+        class=" inline-flex items-center px-6 py-3 text-lg md:text-2xl font-semibold text-purple-600 border-2 border-purple-400 rounded-full hover:bg-purple-50 transition-all !no-underline"
+      >
+        Learn the full method →
+      </a>
     </div>
-
-    <a
-      href="/method"
-      class="inline-flex items-center px-6 py-3 text-lg font-semibold text-orange-600 border-2 border-orange-400 rounded-full hover:bg-orange-50 transition-all !no-underline"
-    >
-      Learn the full method →
-    </a>
   </div>
 
   <br />
   <br />
-
-  <!-- Divider -->
-  <div class="max-w-4xl m-auto px-4">
-    <hr class="border-gray-300" />
-  </div>
 
   <br />
   <br />
 
   <!-- APP SECTION -->
   <div class="max-w-4xl m-auto px-4 text-center">
-    <h2 class="title-font text-4xl font-bold text-[#333] mb-4">
-      The OneFolder App — the power tool
+    <h2 class="title-font text-5xl font-bold text-[#333] mb-4">
+      The OneFolder App
     </h2>
-    <p class="text-xl text-gray-700 mb-6">
-      Our open-source desktop app automates the boring bits:
+    <p class="text-xl text-gray-700 mb-4 max-w-xl mx-auto leading-relaxed">
+      Our open-source desktop app automates the boring bits by scanning your
+      folder to flag duplicates and missing dates, writing clean EXIF and XMP
+      tags so every viewer shows the right info, and keeping your originals
+      intact while you sort, tag, and export.
     </p>
 
-    <div class="text-left max-w-3xl m-auto space-y-4">
-      <div class="flex items-start">
-        <span class="text-orange-500 text-2xl mr-3">•</span>
-        <div>Scans your folder, flags duplicates and missing dates.</div>
-      </div>
-
-      <div class="flex items-start">
-        <span class="text-orange-500 text-2xl mr-3">•</span>
-        <div>
-          Writes clean EXIF / XMP tags so every viewer shows the right info.
-        </div>
-      </div>
-
-      <div class="flex items-start">
-        <span class="text-orange-500 text-2xl mr-3">•</span>
-        <div>Keeps originals intact while you sort, tag and export.</div>
-      </div>
-    </div>
+    <p
+      class="text-xl text-gray-700 mb-6 max-w-3xl mx-auto leading-relaxed font-medium"
+    >
+      Focus on your memories, not the maintenance.
+    </p>
   </div>
 
   <br />
@@ -272,6 +245,38 @@
       alt="A map of Chile with multiple stack of images to show where they were taken"
       wip={true}
     />
+  </div>
+
+  <br />
+  <br />
+
+  <!-- DOWNLOAD SECTION -->
+  <div class="max-w-2xl mx-auto text-center px-4">
+    <h2 class="title-font text-4xl font-bold text-[#333] mb-4">
+      Ready to try OneFolder?
+    </h2>
+    <p class="text-lg text-gray-700 mb-6">
+      Download our free, open-source app for Windows, Mac, and Linux.
+    </p>
+
+    <div class="flex flex-col gap-3 justify-center items-center">
+      <a
+        href={CTA_URL}
+        class="cta-button !text-white !no-underline px-6 py-3 text-xl hover:px-7 transition-all inline-flex items-center"
+      >
+        <span class="mr-2">📥</span>
+        Download Now
+      </a>
+
+      <a
+        href="https://github.com/OneFolderApp/OneFolder"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center justify-center text-gray-600 hover:text-gray-800 transition-colors !no-underline"
+      >
+        View source code
+      </a>
+    </div>
   </div>
 
   <br />
@@ -346,6 +351,53 @@
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  .paper-sheet {
+    background-color: #fffef5;
+    background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
+    border-radius: 2px;
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      0 0 0 1px rgba(0, 0, 0, 0.05);
+    transform: rotate(-0.5deg);
+    transition: transform 0.2s ease;
+  }
+
+  .paper-sheet:hover {
+    transform: rotate(0deg);
+  }
+
+  .paper-sheet-purple {
+    background-color: #f8ebfb;
+    background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
+    border-radius: 2px;
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      0 0 0 1px rgba(0, 0, 0, 0.05);
+    transform: rotate(0.5deg);
+    transition: transform 0.2s ease;
+  }
+
+  .paper-sheet-purple:hover {
+    transform: rotate(0deg);
+  }
+
+  /* Mobile responsive styles */
+  @media (max-width: 768px) {
+    .paper-sheet,
+    .paper-sheet-purple {
+      transform: rotate(0deg) !important;
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+    }
+
+    .paper-sheet:hover,
+    .paper-sheet-purple:hover {
+      transform: rotate(0deg) !important;
+    }
   }
 
   .figma_video-button {
