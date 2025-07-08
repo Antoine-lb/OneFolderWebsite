@@ -4,7 +4,7 @@ description: "
 The article critiques current digital storage systems for their lack of personalization and accessibility, calling for a user-centric approach to file management. This insightful piece challenges us to rethink how we store and value our possessions in an increasingly digital world"
 author: "Niko"
 date: "2023-12-02"
-published: true
+published: false
 ---
 
 <script>
@@ -12,17 +12,18 @@ published: true
 </script>
 
 # How should we organize our files?
-I just saw *Perfect Days* at the movie theater Louxor. This movie presents the life of a cleaner from the foundation The Tokyo Toilet (amazing design reference, by the way). One thing you have to know about this movie is how space matters—the space we occupy and the space around us. 
+
+I just saw _Perfect Days_ at the movie theater Louxor. This movie presents the life of a cleaner from the foundation The Tokyo Toilet (amazing design reference, by the way). One thing you have to know about this movie is how space matters—the space we occupy and the space around us.
 
 <ArticleImage rotation={1} caption="Perfect days generic" src="/blog/how-to-improve-our-digital-storage/perfect-days-generic.png" alt="movie generic photo" extraClasses="rotate-5"/>
 
 I was touched by how the main character stores his personal stuff. All the objects have their utility or sentimental value. They are all essential, which is why there are not too many.
 
-This philosophy leads to valuable storage organization. Each object deserves its own dedicated space. 
+This philosophy leads to valuable storage organization. Each object deserves its own dedicated space.
 
 ## How do we organize our storage?
 
-Storage is about accessibility through time. 
+Storage is about accessibility through time.
 
 Each object has its time value, just like we as human beings have ours. That time value is defined by the use case the object serves and the sentimental value we attach to it. A short-time value object doesn't need the same space as a long-time value object. However, two objects with opposite time values may be stored near each other in some cases, such as a precious lighter and a pack of cigarettes. This notion of time also implies that storage needs to be resilient through time, at least as long as the time value of the objects that need to be stored.
 
