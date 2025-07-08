@@ -7,39 +7,20 @@
     CANNY_URL,
     YOUTUBE_CHANNEL_URL,
     GITHUB_LINK,
-    YOUTUBE_MAIN_VIDEO_EMBEDED,
+    YOUTUBE_URL,
   } from "$lib/constants";
   // import Navbar from "$lib/Navbar.svelte";
-
-  import { writable } from "svelte/store";
-  import Modal, { bind } from "$lib/components/Modal.svelte";
-  import YoutubeVideo from "$lib/components/YoutubeVideo.svelte";
-  const modal = writable(null);
-  const showModal = () =>
-    modal.set(
-      bind(YoutubeVideo, {
-        link: YOUTUBE_MAIN_VIDEO_EMBEDED,
-      })
-    );
 </script>
 
 <svelte:head>
   <title>OneFolder</title>
 </svelte:head>
 
-<Modal
-  show={$modal}
-  unstyled={true}
-  classBg=" z-10 fixed top-0 left-0 w-screen h-screen flex flex-col justify-center bg-orange-100/[.9]"
-  classWindowWrap="relative  "
-  classWindow="relative max-w-full  mx-auto bg-indigo-900"
-  classContent="relative  overflow-auto"
-  closeButton={false}
->
+<div class="noise-background">
   <!-- HERO -->
   <!-- HERO -->
   <!-- HERO -->
-  <div class="flex flex-col-reverse max-w-6xl mt-5 m-auto justify-center">
+  <div class="flex flex-col-reverse max-w-6xl m-auto justify-center">
     <div class="md:-mt-4 m-auto text-center">
       <h1
         class="title-font z-0 text-7xl md:text-9xl drop-shadow-lg px-4 font-bold text-[#333]"
@@ -49,14 +30,15 @@
 
       <br />
 
-      <button
-        class="figma_video-button hover:bg-[#EDEFE9] transition-all"
-        on:click={showModal}
+      <a
+        class="figma_video-button hover:bg-[#EDEFE9] transition-all !no-underline"
+        href={YOUTUBE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <img src="/play.svg" alt="OneFolder logo" class="mr-1 fill-[#333]" />
-
         Everything explain in video
-      </button>
+      </a>
       <br />
       <br />
       <a
@@ -73,7 +55,6 @@
     </div>
 
     <div class="px-4 -md:-mr-14">
-      <!-- <img src="/landing/hero-image.webp" class=" mt-10 m-auto" alt="example of a plate" /> -->
       <img
         src="/hero-image-7.webp"
         alt="OneFolder logo"
@@ -353,11 +334,20 @@
       link={GITHUB_LINK}
     />
   </div>
-</Modal>
-<br />
-<br />
+  <br />
+  <br />
+  <br />
+</div>
 
 <style>
+  .noise-background {
+    background-color: #fcfcfc;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
   .figma_video-button {
     display: inline-flex;
     padding: 10px var(--Section-Margin, 24px);
