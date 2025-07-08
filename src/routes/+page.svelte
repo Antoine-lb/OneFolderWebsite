@@ -367,7 +367,8 @@
     gap: var(--Element-Spacing, 8px);
     border-radius: 32px;
     border: 1px solid var(--Colors-Grey-400, #bcc3c8);
-    box-shadow: 0px 0px 4px 2px rgba(22, 22, 22, 0.057),
+    box-shadow:
+      0px 0px 4px 2px rgba(22, 22, 22, 0.057),
       0px -1px 2px 2px rgba(22, 22, 22, 0.08) inset,
       0px 1px 2px 2px rgba(255, 255, 255, 0.12) inset;
   }
