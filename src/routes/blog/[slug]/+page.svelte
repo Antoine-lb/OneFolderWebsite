@@ -5,6 +5,7 @@
   import PageHead from "$lib/components/PageHead.svelte";
   import ArticleTitle from "$lib/components/ArticleTitle.svelte";
   import ArticleMeta from "$lib/components/ArticleMeta.svelte";
+  import BlogCallToAction from "$lib/components/BlogCallToAction.svelte";
 
   export let data: PageData;
 </script>
@@ -24,6 +25,8 @@
 
 <br />
 <br />
+
+<BlogCallToAction />
 
 <!-- <div class="m-auto text-center">
   <a
