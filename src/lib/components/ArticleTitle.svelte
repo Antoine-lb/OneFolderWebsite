@@ -6,42 +6,27 @@
     .toLowerCase()
     .replace(/[^a-zA-Z ]/g, "")
     .replace(/\s/g, "-");
-
-  const href = slug ? `/blog/${slug}` : "#" + id;
 </script>
 
 {#if slug}
   <h3
-    class="heading text-xl md:text-2xl drop-shadow font-bold text-[#333]"
+    class=" text-xl md:text-2xl drop-shadow font-bold text-[#333]"
     class:large={!slug}
     {id}
   >
-    <a {href}>
-      {title}
-    </a>
+    {title}
   </h3>
 {:else}
   <h1
-    class="heading heading text-2xl md:text-4xl drop-shadow font-bold text-[#333]"
+    class="  text-2xl md:text-4xl drop-shadow font-bold text-[#333]"
     class:large={!slug}
     {id}
   >
-    <a {href}>
-      {title}
-    </a>
+    {title}
   </h1>
 {/if}
 
 <style>
-  h1 {
-    margin: 0;
-  }
-
-  .heading {
-    margin: 0;
-    font-size: 1.8rem;
-  }
-
   .large {
     margin-top: calc(var(--spacing-unit) * 12);
     font-size: 2.2rem;
