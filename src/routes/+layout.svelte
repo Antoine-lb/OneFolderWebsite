@@ -27,6 +27,10 @@
 	<img src="/bottom-images.webp" alt="images stack" class="w-full -mt-24" />
 </footer> -->
 
+<br />
+<br />
+<br />
+<br />
 <footer class="flex text-white justify-center bg-black py-14">
   <div class="px-8 w-full">
     <!-- FIRST CHUNK -->
