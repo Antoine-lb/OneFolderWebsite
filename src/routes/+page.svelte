@@ -184,14 +184,7 @@
     <p class="text-xl text-gray-700 mb-4 max-w-xl mx-auto leading-relaxed">
       Our open-source desktop app automates the boring bits by scanning your
       folder to flag duplicates and missing dates, writing clean EXIF and XMP
-      tags so every viewer shows the right info, and keeping your originals
-      intact while you sort, tag, and export.
-    </p>
-
-    <p
-      class="text-xl text-gray-700 mb-6 max-w-3xl mx-auto leading-relaxed font-medium"
-    >
-      Focus on your memories, not the maintenance.
+      tags so every viewer shows the right info.
     </p>
   </div>
 
