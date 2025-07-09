@@ -1,57 +1,51 @@
 ---
-title: "Jack Nichols Photography on Building a Post-Processing Workflow"
-description: "A breakdown of Jack Nichols' comprehensive workflow for organizing, editing, and archiving landscape photography using Lightroom and metadata-driven organization."
+title: "Jack Nichols Photography on building a post-processing workflow"
+description: "Jack Nichols' comprehensive workflow for organizing, editing, and archiving landscape photography using Lightroom and metadata-driven organization."
 author: "OneFolder Team"
 date: "2025-07-07"
 published: true
+tags: ["research", "professional photography"]
 ---
 
 <script>
   import ArticleImage from '$lib/components/ArticleImage.svelte'
 </script>
 
-# Jack Nichols Photography on Building a Post-Processing Workflow
+<ArticleImage rotation={2} caption="Jack Nichols" src="https://images.squarespace-cdn.com/content/v1/57749cddf7e0ab3b882b17eb/55f82a5b-f87b-42c5-b765-f9d302bb908f/Iceland%2C+Ice+Cave+-+Man+with+ironing+board+and+iron+inspecting+an+iceberg+deep+in+the+cave-20240205.jpg?format=1500w" alt="Screenshot from PCMag showing File Explorer organization for digital photos" extraClasses="rotate-2"/>
 
-<ArticleImage rotation={1} caption="Rainy Pass. Maple Pass - Liberty Bell group in the snow above a larch forest" src="https://images.squarespace-cdn.com/content/v1/57749cddf7e0ab3b882b17eb/1576162523488-K8FVDI7JXD7W9DA3RKDX/Rainy+Pass.+Maple+Pass+-+Liberty+Bell+group+in+the+snow+above+a+larch+forest-20191009.jpg?format=2500w" alt="Landscape photography example from Jack Nichols showing Rainy Pass and Maple Pass with Liberty Bell group mountains in snow above a larch forest" extraClasses="rotate-1"/>
+Jack Nichols is a landscape and night-sky photographer who writes detailed how-tos on his personal site. In this article he breaks down the entire journey _after_ you click the shutter—moving files off the card, choosing keepers, editing, and archiving—into a repeatable "soup-to-nuts" workflow. The emphasis is on consistency and finding photos quickly years later, rather than inventing clever tricks every time you shoot.
 
-Jack Nichols Photography is a personal blog focused on landscape and outdoor photography, sharing both images and in-depth workflow advice. In this article, Jack details his entire post-processing workflow—from transferring photos off the camera, through culling, editing, metadata management, exporting, and long-term archiving. The guide is aimed at helping photographers (especially those using Lightroom) stay organized, efficient, and future-proof as their photo libraries grow.
+If you shoot large batches (multi-day hikes, client jobs, astro outings) and already use Lightroom or similar DAM software, this system is squarely aimed at you. Hobbyists with only a handful of phone pics might find it overkill; working photographers will probably nod along.
 
-The method described is primarily aimed at serious hobbyists and professional photographers who shoot frequently and need a robust, repeatable system for managing large volumes of images. It's especially useful for those working with RAW files and interested in maintaining an organized archive for years to come.
+## Tools mentioned
 
-## Tools Mentioned
+- **Lightroom** – handles transfer, folder creation, collections, and every later stage of the workflow
+- **Adobe Bridge** – optional alternative for RAW conversion if you skip a full DAM
+- **Card reader / USB cable** – two options for getting files off the camera; a dedicated reader is faster
+- **OneDrive** – home for finished JPEG/TIFF exports and long-term storage folders
+- **SmugMug** – Nichols' stock-site publisher, synced from a dedicated Lightroom catalog
 
-- **Lightroom**: Handles transfer, import, organization (collections), editing, metadata management, and moving files between drives.
-- **Adobe Bridge**: Mentioned as an alternative for raw conversion and organization, but the author prefers Lightroom for its convenience.
-- **OneDrive**: Used for syncing finished/exported photos and stock images across devices.
-- **External hard drives**: For archiving original RAW files and saving space on the main computer.
+## Steps to follow
 
-## Folder and Collection Structure
+1. **Capture & Transfer** – shoot as usual, then pull the card and copy to one master _Photos_ directory. Each shoot lives in a folder named `YYYY-MM-DD Title of Shoot`.
+2. **Import** – bring the folder into Lightroom (or Bridge), letting Lightroom create the date folder automatically.
+3. **Organise in Collections** – under two top-level sets (`AA To Process` and `ZZ Published`), make a collection set for the shoot plus an _All_ collection containing every frame.
+4. **Select/Cull** – iterate through the _All_ collection:
+   - First pass: flag technically acceptable shots (`P`).
+   - Second, third, fourth passes: raise the bar, copying picks into _Best_, _Best 2_, etc. (or use star ratings).
 
-- All photos go into a single "Photos" folder, with each shoot in its own dated subfolder (e.g., `Photos\2019-12-10 Mt. Awesome`).
-- In Lightroom, two top-level collection sets are created in every catalog: `AA To Process` and `ZZ Published`.
-- New shoots are added under `AA To Process` as a collection set named after the folder, for example: `AA To Process\2019-12-10 Mt. Awesome`.
-- Within each collection set, collections like `All`, `Best`, `Best 2`, etc., are created to track the editing process and culling rounds.
+5. **Develop** – edit chosen images; finished files go into a `ZZ To Pub` collection (or _To Stock_ / _To Fam_ variants).
+6. **Metadata** – add a structured Title / Caption / Keywords set, aiming for 10-20 keywords; Lightroom's bulk keyword tool speeds this up.
+7. **Export** – create four presets (web-watermarked, promo-JPEG, high-quality JPEG, archival TIFF) into sub-folders under `Finished Photos/YYYY-MM-DD Shoot Name`.
+8. **Archive** – move RAWs to external storage via Lightroom so links stay valid, and ingest stock-worthy images into a separate "master stock" catalog that syncs to SmugMug.
 
-## Metadata Details
+## Advice (extras called out)
 
-- **Title:** Uses the format `Major Location, Minor Location – Description of image` (e.g., `Snoqualmie Pass, Ski Area – T-rex ironing under the stars`).
-- **Caption:** Currently left blank, as the author found it too time-consuming and prefers to use the title for location details.
-- **Keywords:** Includes descriptive (trees, mountains, sunset, night sky), location-based, and conceptual tags, aiming for 10–20 keywords per image and using Lightroom's bulk keywording tool for efficiency.
+- Use the **`YYYY-MM-DD Title`** folder convention—never mix shoots in one folder.
+- Keep everything for a shoot inside that single folder; Lightroom collections do the virtual grouping.
+- Progressive culling (multiple passes) is easier than one brutal pass; disk space is cheap, so Nichols doesn't delete rejects.
+- Keyword every finished batch immediately to avoid a backlog.
+- Export multiple sizes once, then reuse them—saves reopening Lightroom later.
+- External SSD/HDD + separate catalogs keep active work snappy and archives safe.
 
-## Things to Do
-
-- Put all your photos into a single "Photos" folder, each shoot in a dated subfolder (e.g., `2019-12-10 Mt. Awesome`).
-- Use Lightroom's collections and collection sets for organization and workflow tracking.
-- Cull images in multiple passes, creating collections for each round of selection.
-- Add detailed metadata: title (with location and description), keywords, and (optionally) captions.
-- Export finished images in multiple formats (web, promo, high-quality JPEG, archival TIFF), each to its own folder.
-- Move original RAWs to external storage after editing, and import select images into a dedicated stock catalog.
-
-## Don'ts
-
-- Avoid letting images scatter across random folders or drives.
-- Don't overwrite original files—always keep the untouched RAWs.
-- Don't skip metadata and keywording; it's essential for long-term organization.
-- Avoid deleting rejected photos unless you're sure; storage is cheap, and you might want them later.
-
-For a detailed, step-by-step breakdown and more workflow ideas, visit the [original article](https://www.jacknicholsphoto.com/building-a-postprocessing-workflow) or explore more at [Jack Nichols Photography](https://www.jacknicholsphoto.com/).
+Read the full post for screenshots and detailed Lightroom dialogs: [https://www.jacknicholsphoto.com/building-a-postprocessing-workflow](https://www.jacknicholsphoto.com/building-a-postprocessing-workflow) (no explicit publication date; content accessed July 2025). More tutorials are under the site's _Learn_ section.

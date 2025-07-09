@@ -6,7 +6,7 @@ export const tagColors: Record<string, string> = {
   "file management":
     "bg-green-100 text-green-700 hover:bg-green-200 border-2 border-green-300",
   tags: "bg-purple-100 text-purple-700 hover:bg-purple-200 border-2 border-purple-300",
-  productivity:
+  "professional photography":
     "bg-orange-100 text-orange-700 hover:bg-orange-200 border-2 border-orange-300",
   comparison:
     "bg-pink-100 text-pink-700 hover:bg-pink-200 border-2 border-pink-300",
