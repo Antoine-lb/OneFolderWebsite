@@ -2,20 +2,46 @@
   import type { PageData } from "./$types";
   import { CTA_URL, YOUTUBE_URL } from "$lib/constants";
 
-  import PageHead from "$lib/components/PageHead.svelte";
-  import ArticleTitle from "$lib/components/ArticleTitle.svelte";
-  import ArticleMeta from "$lib/components/ArticleMeta.svelte";
   import BlogCallToAction from "$lib/components/BlogCallToAction.svelte";
   import { getTagColor } from "$lib/tagColors";
 
   export let data: PageData;
+
+  // PageHead logic
+  const siteTitle = "OneFolder";
+  const formattedTitle = data.frontmatter.title
+    ? `${data.frontmatter.title} | ${siteTitle}`
+    : siteTitle;
+
+  // ArticleTitle logic
+  const titleId = data.frontmatter.title
+    .toLowerCase()
+    .replace(/[^a-zA-Z ]/g, "")
+    .replace(/\s/g, "-");
+
+  // ArticleMeta logic
+  const formattedDate = new Date(data.frontmatter.date).toLocaleDateString(
+    "en-GB",
+    {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    }
+  );
 </script>
 
-<PageHead
-  title={data.frontmatter.title}
-  description={data.frontmatter.description}
-/>
-<ArticleTitle title={data.frontmatter.title} />
+<!-- PageHead inline -->
+<svelte:head>
+  <title>{formattedTitle}</title>
+  <meta property="og:site_name" content={siteTitle} />
+  <meta property="og:title" content={data.frontmatter.title} />
+  <meta property="og:description" content={data.frontmatter.description} />
+</svelte:head>
+
+<!-- ArticleTitle inline -->
+<h1 class="text-2xl md:text-4xl drop-shadow font-bold text-[#333]" id={titleId}>
+  {data.frontmatter.title}
+</h1>
 
 <!-- Tags section - moved here between title and date -->
 {#if data.frontmatter.tags && data.frontmatter.tags.length > 0}
@@ -35,7 +61,10 @@
   </div>
 {/if}
 
-<ArticleMeta author={data.frontmatter.author} date={data.frontmatter.date} />
+<!-- ArticleMeta inline -->
+<p class="mb-3">
+  <span class="text-[#666] font-mono pl-1">{formattedDate}</span>
+</p>
 
 <article
   class="prose prose-lg max-w-none prose-a:text-orange-600 prose-code:bg-orange-50 prose-code:text-orange-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none"
@@ -47,17 +76,3 @@
 <br />
 
 <BlogCallToAction />
-
-<!-- <div class="m-auto text-center">
-  <a
-    href="/#downloadDiv"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="inline-flex bg-[#313131] !text-[#f3f3ec] !no-underline p-2 px-3 hover:px-4 transition-all rounded-xl text-2xl items-center shadow-xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1489EC] to-[#0569d3]"
-  >
-    Try OneFolder for free
-    <img src="/arrow.svg" alt="OneFolder logo" class=" ml-2 rounded" />
-  </a>
-  <br />
-  <br />
-</div> -->

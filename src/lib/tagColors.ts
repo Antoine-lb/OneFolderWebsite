@@ -12,13 +12,17 @@ export const tagColors: Record<string, string> = {
     "bg-pink-100 text-pink-700 hover:bg-pink-200 border-2 border-pink-300",
   onefolder:
     "bg-indigo-100 text-indigo-700 hover:bg-indigo-200 border-2 border-indigo-300",
-  tagstudio:
+  "analog photography":
     "bg-cyan-100 text-cyan-700 hover:bg-cyan-200 border-2 border-cyan-300",
   software:
     "bg-yellow-100 text-yellow-700 hover:bg-yellow-200 border-2 border-yellow-300",
   design: "bg-red-100 text-red-700 hover:bg-red-200 border-2 border-red-300",
   "digital storage":
     "bg-emerald-100 text-emerald-700 hover:bg-emerald-200 border-2 border-emerald-300",
+  research:
+    "bg-teal-100 text-teal-700 hover:bg-teal-200 border-2 border-teal-300",
+  "personal project":
+    "bg-violet-100 text-violet-700 hover:bg-violet-200 border-2 border-violet-300",
 };
 
 // Default color for tags not in the mapping

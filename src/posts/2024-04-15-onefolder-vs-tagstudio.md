@@ -3,14 +3,21 @@ title: "OneFolder vs TagStudio"
 description: "A comparison or alternative to the not yet released TagStudio by CyanVoxel"
 date: "2024-04-15"
 published: true
-tags: ["file management", "comparison"]
+tags: ["software", "comparison"]
 ---
+
+<script>
+  import YoutubeEmbeddedVideo from '$lib/components/YoutubeEmbeddedVideo.svelte'
+</script>
 
 After watching this beatifully made video by CyanVoxel, we wanted to compare it to OneFolder.
 
 If you haven't watched the video please do it, is really cool:
 
-<iframe class="w-full" width="560" height="315" src="https://www.youtube.com/embed/wTQeMkYRMcw?si=mtXoj6QyAkhDMYkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<YoutubeEmbeddedVideo 
+  src="https://www.youtube.com/embed/wTQeMkYRMcw?si=mtXoj6QyAkhDMYkM" 
+  title="YouTube video player" 
+/>
 
 <br />
 The app is not released, so all of this comparison will be made based on the video.

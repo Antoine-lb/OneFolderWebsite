@@ -21,7 +21,7 @@
 />
 
 <!-- Paper note introduction -->
-<BlogCallToAction />
+<BlogCallToAction showBlogLink={false} />
 
 <!-- Tag filter indicator -->
 {#if data.currentTag}

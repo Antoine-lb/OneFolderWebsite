@@ -1,3 +1,7 @@
+<script lang="ts">
+  export let showBlogLink = true;
+</script>
+
 <div class="paper-sheet max-w-2xl mx-auto my-8">
   <div class="px-8 py-6 text-center">
     <h2 class="title-font text-2xl md:text-3xl font-bold text-[#333] mb-3">
@@ -14,6 +18,15 @@
     >
       Learn more about OneFolder →
     </a>
+    {#if showBlogLink}
+      <br />
+      <a
+        href="/blog"
+        class="text-base text-gray-600 hover:text-gray-800 transition-colors underline underline-offset-4 font-medium mt-2 inline-block"
+      >
+        or see other articles
+      </a>
+    {/if}
   </div>
 </div>
 
