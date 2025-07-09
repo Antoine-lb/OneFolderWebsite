@@ -1,7 +1,7 @@
 import type { PageServerLoad } from "./$types";
 import { slugFromPath } from "$lib/slugFromPath";
 
-const MAX_POSTS = 10;
+const MAX_POSTS = 50;
 
 export const load: PageServerLoad = async ({ url }) => {
   const modules = import.meta.glob(`/src/posts/*.{md,svx,svelte.md}`);
@@ -27,8 +27,9 @@ export const load: PageServerLoad = async ({ url }) => {
     );
   }
 
-  publishedPosts = publishedPosts.slice(0, MAX_POSTS);
+  // Sort by date first (newest first), then slice to get the most recent posts
   publishedPosts.sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1));
+  publishedPosts = publishedPosts.slice(0, MAX_POSTS);
 
   return {
     posts: publishedPosts,

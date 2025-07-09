@@ -1,48 +1,40 @@
 ---
-title: "Iris Works on Organizing Your Photos"
-description: "Analysis of Iris Works ultimate guide to organizing photos, offering practical steps for taming digital photo chaos for both everyday users and professional photographers."
+title: "Iris Works on organizing your photos"
+description: "Iris Works' practical guide to taming digital and printed photo chaos with simple housekeeping tips for both everyday users and professional photographers."
 author: "OneFolder Team"
 date: "2025-07-07"
 published: true
+tags: ["research", "software"]
 ---
 
-<script>
-  import ArticleImage from '$lib/components/ArticleImage.svelte';
-</script>
+Iris Works is a studio-management platform for photographers, and its blog occasionally dives into workflow topics. In this 28 June 2023 post, author **Megan Al-Hassani** walks through a plain-language "ultimate guide" to taming both digital and printed pictures. The focus is on simple housekeeping—folders, tags, backups—rather than heavy catalog-software theory.
 
-<ArticleImage
-  src="https://lirp.cdn-website.com/cd9d4f22/dms3rep/multi/opt/Pic-Time_graphics-scaled-1920w.jpg"
-  alt="Organizing digital and printed photos"
-  caption="Iris Works' approach to organizing digital and printed photos"
-  rotation={1}
-/>
-
-Iris Works is a platform geared toward professional photographers and photography businesses, offering workflow solutions and gallery integrations. In their "Ultimate Guide to Organizing Your Photos," they break down the process of taming your digital (and printed) photo chaos with practical, approachable steps. The article is conversational and focused on making the task less overwhelming, with tips for both everyday users and pros managing client galleries.
-
-This method is suitable for anyone feeling overwhelmed by a growing digital photo collection—whether you're a parent, hobbyist, or professional photographer. It's especially helpful for those using multiple devices and cloud services, and for photographers looking to streamline client delivery.
+The piece repeatedly leans on consumer-friendly cloud apps but also name-checks pro services to keep things expandable as your needs grow.
 
 ## Tools mentioned
 
-- **Google Photos** → Great for automatic syncing and organizing across devices.
-- **iCloud Photos** → Seamless for Apple users to keep everything in sync.
-- **Adobe Lightroom** → Powerful for managing, editing, and tagging large libraries—ideal for pros.
-- **ShootProof / Pic-Time** → For photographers delivering client galleries, with Iris Works integration.
+- **Adobe Lightroom** – example of software that can automate sorting, tagging, and duplicate removal
+- **Google Photos** – suggested all-in-one cloud manager for viewing and culling large libraries
+- **iCloud Photos** – listed alongside Google Photos as a mainstream option
+- **ShootProof** – client-gallery service that hooks into Iris for automatic delivery
+- **Pic-Time** – another gallery service supported by Iris integrations
 
-## Things to do
+## Steps to follow (if any)
 
-- Put all your files into one place before you start organizing (gather from phones, drives, cloud).
-- Create folders and subfolders by year, event, or location.
-- Use consistent naming conventions, like `YYYY-MM-DD_Event`.
-- Tag photos with keywords (year, place, people).
-- Delete duplicates and bad photos regularly.
-- Back up your collection locally (external drive) and remotely (cloud).
-- Print and display your favorites, or create albums.
+1. **Block out regular clean-up time**, then build a folder tree by _year / event / location_ with consistent names.
+2. **Import into a photo-manager** (Lightroom, Google Photos, iCloud) to auto-sort, detect duplicates, and speed up culling.
+3. **Rename files for clarity**—fold in dates or places instead of leaving `IMG_001`.
+4. **Tag with keywords** (year, people, subject) so searches stay fast even as the archive grows.
+5. **Cull duplicates / bad shots** right away and schedule a yearly purge to keep clutter down.
+6. **Back up twice**: one local copy on an external drive and one remote copy in the cloud.
+7. **Print, display, or book-ify favorites** and box up physical prints by year or event for tidy analog storage.
 
-## Don'ts
+## Advice (extras called out)
 
-- Avoid duplicating pictures across multiple folders.
-- Don't use generic filenames like `IMG_001`.
-- Don't create too many nested subfolders—it can make finding photos harder.
+- Don't bury photos under too many sub-sub-folders; shallower structures are easier to browse.
+- Skip generic filenames—searching later for "Paris 2024" beats scrolling past `IMG_2743`.
+- Tag sooner rather than later; catching up on keywords for thousands of images is brutal.
+- Backups aren't optional—hardware failure or accidental deletes happen.
+- If you deliver client galleries, tapping **ShootProof** or **Pic-Time** via Iris can save setup time.
 
-Check out the original article for the full guide and more tips: [The Ultimate Guide to Organizing Your Photos: Tips and Tricks](https://www.iris-works.com/the-ultimate-guide-to-organizing-photos-tips-and-tricks) (June 28, 2023).  
-Explore more on the [Iris Works website](https://www.iris-works.com/).
+Take a spin through the full article for the complete rundown and screenshots: [https://www.iris-works.com/the-ultimate-guide-to-organizing-photos-tips-and-tricks](https://www.iris-works.com/the-ultimate-guide-to-organizing-photos-tips-and-tricks) (posted 28 Jun 2023). The broader Iris Works blog has additional workflow pieces if you want to dig deeper.

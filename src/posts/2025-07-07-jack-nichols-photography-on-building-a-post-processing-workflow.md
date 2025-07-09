@@ -8,10 +8,15 @@ tags: ["research", "professional photography"]
 ---
 
 <script>
-  import ArticleImage from '$lib/components/ArticleImage.svelte'
+  import ArticleImage from '$lib/components/ArticleImage.svelte';
 </script>
 
-<ArticleImage rotation={2} caption="Jack Nichols" src="https://images.squarespace-cdn.com/content/v1/57749cddf7e0ab3b882b17eb/55f82a5b-f87b-42c5-b765-f9d302bb908f/Iceland%2C+Ice+Cave+-+Man+with+ironing+board+and+iron+inspecting+an+iceberg+deep+in+the+cave-20240205.jpg?format=1500w" alt="Screenshot from PCMag showing File Explorer organization for digital photos" extraClasses="rotate-2"/>
+<ArticleImage
+  src="https://images.squarespace-cdn.com/content/v1/57749cddf7e0ab3b882b17eb/55f82a5b-f87b-42c5-b765-f9d302bb908f/Iceland%2C+Ice+Cave+-+Man+with+ironing+board+and+iron+inspecting+an+iceberg+deep+in+the+cave-20240205.jpg?format=1500w"
+  alt="Jack Nichols in Iceland ice cave with ironing board"
+  caption="Jack Nichols in a glaciar"
+  rotation={-2}
+/>
 
 Jack Nichols is a landscape and night-sky photographer who writes detailed how-tos on his personal site. In this article he breaks down the entire journey _after_ you click the shutter—moving files off the card, choosing keepers, editing, and archiving—into a repeatable "soup-to-nuts" workflow. The emphasis is on consistency and finding photos quickly years later, rather than inventing clever tricks every time you shoot.
 

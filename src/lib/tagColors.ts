@@ -6,13 +6,13 @@ export const tagColors: Record<string, string> = {
   "file management":
     "bg-green-100 text-green-700 hover:bg-green-200 border-2 border-green-300",
   tags: "bg-purple-100 text-purple-700 hover:bg-purple-200 border-2 border-purple-300",
-  "professional photography":
+  productivity:
     "bg-orange-100 text-orange-700 hover:bg-orange-200 border-2 border-orange-300",
   comparison:
     "bg-pink-100 text-pink-700 hover:bg-pink-200 border-2 border-pink-300",
   onefolder:
     "bg-indigo-100 text-indigo-700 hover:bg-indigo-200 border-2 border-indigo-300",
-  "analog photography":
+  tagstudio:
     "bg-cyan-100 text-cyan-700 hover:bg-cyan-200 border-2 border-cyan-300",
   software:
     "bg-yellow-100 text-yellow-700 hover:bg-yellow-200 border-2 border-yellow-300",
@@ -23,6 +23,8 @@ export const tagColors: Record<string, string> = {
     "bg-teal-100 text-teal-700 hover:bg-teal-200 border-2 border-teal-300",
   "personal project":
     "bg-violet-100 text-violet-700 hover:bg-violet-200 border-2 border-violet-300",
+  "professional photography":
+    "bg-slate-100 text-slate-700 hover:bg-slate-200 border-2 border-slate-300",
 };
 
 // Default color for tags not in the mapping

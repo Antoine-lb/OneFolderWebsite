@@ -2,7 +2,7 @@
 title: "Kicking off my personal photo-organization deep dive"
 description: "Starting a deep dive into every article, video, and resource about photo organization to find the best methods for managing digital photo archives."
 author: "Niko"
-date: "2025-07-06"
+date: "2025-07-05"
 published: true
 tags: ["research"]
 ---
