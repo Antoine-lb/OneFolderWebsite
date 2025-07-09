@@ -19,13 +19,13 @@ This video is from _How To Archive_, a series by photographer Michael Grecco whe
 
 - **Pro Storage foam containers** → (self-promo) used to archive and organize up to 24 hard drives
 
-## Steps to follow (if any)
+## Steps to follow
 
 1. Label your external hard drives clearly for future access
 2. If possible, keep a second set of backups
 3. Use search terms like "cloud storage" or "remote storage solutions" to compare providers
 
-## Advice (things to do and not do that were not said in the steps)
+## Advice
 
 - Cloud storage is slow for large files (photos, video, etc.), so not ideal for photographers or videographers
 - Local drives are cheaper and faster, and give you more control
