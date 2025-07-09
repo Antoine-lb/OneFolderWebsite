@@ -13,7 +13,7 @@ tags: ["research"]
 
 <YoutubeEmbeddedVideo src="https://www.youtube.com/embed/y-LeibeXAog" title="Thomas Frank - How to Organize Paper Files" />
 
-Thomas Frank (yep, the same productivity guy I covered in the [computer-files post](/blog/thomas-frank-on-the-best-way-to-organize-your-computer-files)) backs up a step here and tackles _physical_ paperwork. The system itself is dead simple: three homes for every sheet of paper, plus a quick digitisation routine so most sheets never need a home at all. If your desk is a mail avalanche, this feels like low-friction triage.
+Thomas Frank (yep, the same productivity guy I covered in the [computer-files post](/blog/2025-07-12-thomas-frank-on-the-best-way-to-organize-your-computer-files)) backs up a step here and tackles _physical_ paperwork. The system itself is dead simple: three homes for every sheet of paper, plus a quick digitisation routine so most sheets never need a home at all. If your desk is a mail avalanche, this feels like low-friction triage.
 
 ## Tools mentioned
 
