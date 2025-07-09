@@ -1,6 +1,8 @@
 <script lang="ts">
-  import type { PageData } from "../$types";
+  import type { PageData } from "./$types";
   import PageHead from "$lib/components/PageHead.svelte";
+  import BlogCallToAction from "$lib/components/BlogCallToAction.svelte";
+  import { getTagColor } from "$lib/tagColors";
 
   export let data: PageData;
 
@@ -19,26 +21,33 @@
 />
 
 <!-- Paper note introduction -->
-<div class="paper-sheet max-w-2xl mx-auto my-8">
-  <div class="px-8 py-6 text-center">
-    <h2 class="title-font text-2xl md:text-3xl font-bold text-[#333] mb-3">
-      Welcome to our blog! 🌼
-    </h2>
-    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-      OneFolder is an open-source desktop app that helps you organize your
-      photos using tags, faces, and metadata — all stored directly in your files
-      so your organization travels with your photos forever.
-    </p>
-    <a
-      href="/"
-      class="text-lg text-[#333] hover:text-[#555] transition-colors underline underline-offset-4 font-medium"
-    >
-      Learn more about OneFolder →
-    </a>
-  </div>
-</div>
+<BlogCallToAction />
 
-{#each data.posts as { slug, title, author, description, date }}
+<!-- Tag filter indicator -->
+{#if data.currentTag}
+  <div class="max-w-2xl mx-auto mb-6 px-4">
+    <div
+      class="bg-purple-50 border border-purple-200 rounded-lg px-4 py-3 flex items-center justify-between"
+    >
+      <div class="flex items-center gap-2">
+        <span class="text-purple-700 font-medium">Filtered by tag:</span>
+        <span
+          class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+        >
+          {data.currentTag}
+        </span>
+      </div>
+      <a
+        href="/blog"
+        class="text-purple-600 hover:text-purple-800 text-sm font-medium !no-underline"
+      >
+        Clear filter ×
+      </a>
+    </div>
+  </div>
+{/if}
+
+{#each data.posts as { slug, title, author, description, date, tags }}
   <a
     href="/blog/{slug}"
     class="block py-6 hover:bg-purple-50 hover:border-purple-100 transition-all duration-200 rounded-lg px-4 !no-underline border-4 border-transparent"
@@ -63,6 +72,23 @@
             {description}
           </p>
         {/if}
+
+        <!-- Tags below description -->
+        {#if tags && tags.length > 0}
+          <div class="mt-3 flex flex-wrap gap-2">
+            {#each tags as tag}
+              <button
+                class="tag-button {getTagColor(
+                  tag
+                )} px-3 py-1 rounded-full text-sm font-medium transition-colors"
+                on:click|preventDefault|stopPropagation={() =>
+                  (window.location.href = `/blog?tag=${encodeURIComponent(tag)}`)}
+              >
+                {tag}
+              </button>
+            {/each}
+          </div>
+        {/if}
       </div>
     </article>
   </a>
@@ -71,20 +97,10 @@
 <slot />
 
 <style>
-  .paper-sheet {
-    background-color: #fffef5;
-    background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
-    border-radius: 2px;
-    box-shadow:
-      0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06),
-      0 0 0 1px rgba(0, 0, 0, 0.05);
-    transform: rotate(-0.8deg);
-    transition: transform 0.2s ease;
-  }
-
-  .paper-sheet:hover {
-    transform: rotate(0deg);
+  .tag-button {
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
   }
 
   /* Mobile responsive styles */

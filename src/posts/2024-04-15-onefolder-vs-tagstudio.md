@@ -3,6 +3,7 @@ title: "OneFolder vs TagStudio"
 description: "A comparison or alternative to the not yet released TagStudio by CyanVoxel"
 date: "2024-04-15"
 published: true
+tags: ["file management", "comparison"]
 ---
 
 After watching this beatifully made video by CyanVoxel, we wanted to compare it to OneFolder.

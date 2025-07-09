@@ -6,6 +6,7 @@
   import ArticleTitle from "$lib/components/ArticleTitle.svelte";
   import ArticleMeta from "$lib/components/ArticleMeta.svelte";
   import BlogCallToAction from "$lib/components/BlogCallToAction.svelte";
+  import { getTagColor } from "$lib/tagColors";
 
   export let data: PageData;
 </script>
@@ -15,6 +16,25 @@
   description={data.frontmatter.description}
 />
 <ArticleTitle title={data.frontmatter.title} />
+
+<!-- Tags section - moved here between title and date -->
+{#if data.frontmatter.tags && data.frontmatter.tags.length > 0}
+  <div class="mt-4 mb-4">
+    <div class="flex flex-wrap gap-2 items-center">
+      {#each data.frontmatter.tags as tag}
+        <a
+          href="/blog?tag={encodeURIComponent(tag)}"
+          class="inline-block {getTagColor(
+            tag
+          )} px-3 py-1 rounded-full text-sm font-medium transition-colors !no-underline"
+        >
+          {tag}
+        </a>
+      {/each}
+    </div>
+  </div>
+{/if}
+
 <ArticleMeta author={data.frontmatter.author} date={data.frontmatter.date} />
 
 <article
