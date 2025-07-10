@@ -6,7 +6,10 @@
     "deploy": "vite build && git add . && git commit -m 'deploy' && git push",
     "dev": "vite dev",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.0",
@@ -15,6 +18,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
+    "drizzle-kit": "^0.31.4",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-svelte": "^2.0.0",
@@ -33,7 +37,9 @@
   },
   "type": "module",
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.1",
     "autoprefixer": "^10.4.21",
+    "drizzle-orm": "^0.44.2",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17"
   },

@@ -1,8 +1,6 @@
 import type { PageServerLoad } from "$types";
 import { slugFromPath } from "$lib/slugFromPath";
 
-export const prerender = true;
-
 const MAX_POSTS = 10;
 
 export const load: PageServerLoad = async ({ url }) => {
@@ -14,7 +12,7 @@ export const load: PageServerLoad = async ({ url }) => {
         ({
           slug: slugFromPath(path),
           ...(post as unknown as App.MdsvexFile).metadata,
-        } as App.BlogPost)
+        }) as App.BlogPost
     )
   );
 

@@ -31,7 +31,7 @@
 <br />
 <br />
 <br />
-<footer class="flex text-white justify-center bg-black py-14">
+<footer class="flex text-white justify-center bg-[#44316d] py-14">
   <div class="px-8 w-full">
     <!-- FIRST CHUNK -->
     <div
