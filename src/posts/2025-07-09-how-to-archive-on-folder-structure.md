@@ -21,7 +21,7 @@ This is another follow-up video from _How To Archive_, continuing the ideas from
 
 ## Steps to follow
 
-1. Name your folders with the format: `yyyy_lastname_firstname_MGP`
+1. Name your folders with the format: `yyyymmdd_lastname_firstname_MGP`
 2. Inside each folder, store:
    - RAW or DNG files
    - JPEG previews for quick viewing
