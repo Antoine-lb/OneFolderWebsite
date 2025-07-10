@@ -13,9 +13,6 @@ const config = {
 
   kit: {
     adapter: adapter(),
-    prerender: {
-      default: true, // Prerender all pages by default
-    },
   },
 };
 
