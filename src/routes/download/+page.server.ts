@@ -3,6 +3,7 @@ import { fail } from "@sveltejs/kit";
 import { db } from "$lib/db/db";
 import { mailingList, formSubmissions } from "$lib/db/schema";
 import { eq } from "drizzle-orm";
+import { resendService } from "$lib/services/resend";
 
 export const load = async () => {
   const BACKUP_VERSION_IF_FETCH_FAILS = "1.0.19";
@@ -56,11 +57,14 @@ export const actions = {
 
       // If email is provided, handle mailing list subscription separately
       if (email && email.trim()) {
+        const trimmedEmail = email.trim();
+        let shouldAddToResend = false;
+
         // Check if email already exists in mailing list
         const existingEntry = await db
           .select()
           .from(mailingList)
-          .where(eq(mailingList.email, email.trim()))
+          .where(eq(mailingList.email, trimmedEmail))
           .limit(1);
 
         if (existingEntry.length > 0) {
@@ -74,13 +78,37 @@ export const actions = {
                 updatedAt: new Date(),
               })
               .where(eq(mailingList.id, existingEntry[0].id));
+
+            shouldAddToResend = true; // Re-add to Resend
           }
+          // If already subscribed, no need to add to Resend again
         } else {
           // Email doesn't exist, create new mailing list entry
           await db.insert(mailingList).values({
-            email: email.trim(),
+            email: trimmedEmail,
             isSubscribed: true,
           });
+
+          shouldAddToResend = true; // New subscriber, add to Resend
+        }
+
+        // Add to Resend if needed (new subscriber or re-subscriber)
+        if (shouldAddToResend) {
+          try {
+            const resendResult = await resendService.addContact(trimmedEmail);
+            if (!resendResult.success) {
+              console.error(
+                "Failed to add contact to Resend:",
+                resendResult.error
+              );
+              // Don't fail the form submission, just log the error
+            } else {
+              console.log("Successfully synced email to Resend:", trimmedEmail);
+            }
+          } catch (error) {
+            console.error("Error syncing with Resend:", error);
+            // Don't fail the form submission
+          }
         }
       }
 
