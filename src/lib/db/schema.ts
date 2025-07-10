@@ -1,12 +1,10 @@
-import { pgTable, serial, text, timestamp, boolean } from "drizzle-orm/pg-core";
+import { pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
 
 // Mailing list table - stores email subscriptions
 export const mailingList = pgTable("mailing_list", {
   id: serial("id").primaryKey(),
   email: text("email").notNull().unique(),
-  isSubscribed: boolean("is_subscribed").default(true).notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
-  updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
 // Form submissions table - stores all form submissions (independent from mailing list)

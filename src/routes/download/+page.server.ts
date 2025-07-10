@@ -58,7 +58,6 @@ export const actions = {
       // If email is provided, handle mailing list subscription separately
       if (email && email.trim()) {
         const trimmedEmail = email.trim();
-        let shouldAddToResend = false;
 
         // Check if email already exists in mailing list
         const existingEntry = await db
@@ -67,48 +66,29 @@ export const actions = {
           .where(eq(mailingList.email, trimmedEmail))
           .limit(1);
 
-        if (existingEntry.length > 0) {
-          // Email exists, ensure they're subscribed
-          if (!existingEntry[0].isSubscribed) {
-            // Re-subscribe them if they were unsubscribed
-            await db
-              .update(mailingList)
-              .set({
-                isSubscribed: true,
-                updatedAt: new Date(),
-              })
-              .where(eq(mailingList.id, existingEntry[0].id));
-
-            shouldAddToResend = true; // Re-add to Resend
-          }
-          // If already subscribed, no need to add to Resend again
-        } else {
+        if (existingEntry.length === 0) {
           // Email doesn't exist, create new mailing list entry
           await db.insert(mailingList).values({
             email: trimmedEmail,
-            isSubscribed: true,
           });
-
-          shouldAddToResend = true; // New subscriber, add to Resend
         }
+        // If email already exists, don't create duplicate
 
-        // Add to Resend if needed (new subscriber or re-subscriber)
-        if (shouldAddToResend) {
-          try {
-            const resendResult = await resendService.addContact(trimmedEmail);
-            if (!resendResult.success) {
-              console.error(
-                "Failed to add contact to Resend:",
-                resendResult.error
-              );
-              // Don't fail the form submission, just log the error
-            } else {
-              console.log("Successfully synced email to Resend:", trimmedEmail);
-            }
-          } catch (error) {
-            console.error("Error syncing with Resend:", error);
-            // Don't fail the form submission
+        // Always try to add to Resend (Resend will handle duplicates)
+        try {
+          const resendResult = await resendService.addContact(trimmedEmail);
+          if (!resendResult.success) {
+            console.error(
+              "Failed to add contact to Resend:",
+              resendResult.error
+            );
+            // Don't fail the form submission, just log the error
+          } else {
+            console.log("Successfully synced email to Resend:", trimmedEmail);
           }
+        } catch (error) {
+          console.error("Error syncing with Resend:", error);
+          // Don't fail the form submission
         }
       }
 
