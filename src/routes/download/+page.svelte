@@ -9,6 +9,7 @@
   // State for the interactive download flow
   let showDownloadButtons = true;
   let showForm = false;
+  let isSubmitting = false;
 
   // Function to handle download clicks
   async function handleDownload(url: string, platform: string) {
@@ -92,7 +93,16 @@
 
 {#if showForm}
   <!-- Mailing List Form -->
-  <div class="max-w-md w-full m-auto mt-12 px-4">
+  <div class="max-w-md w-full m-auto mt-2 px-4">
+    <p class="text-center text-sm text-gray-600 mb-4">
+      The download will start in a couple of seconds. If it doesn't work, reload
+      the page or reach out to
+      <a
+        href="mailto:antoine@onefolder.app"
+        class="text-[#ff5643] hover:underline">antoine@onefolder.app</a
+      >
+    </p>
+
     <h3 class="text-center font-bold text-2xl mb-6 text-[#333]">
       Time for questions?
     </h3>
@@ -111,7 +121,18 @@
       </div>
     {/if}
 
-    <form method="POST" action="?/subscribe" use:enhance class="space-y-6">
+    <form
+      method="POST"
+      action="?/subscribe"
+      use:enhance={() => {
+        isSubmitting = true;
+        return async ({ update }) => {
+          isSubmitting = false;
+          await update();
+        };
+      }}
+      class="space-y-6"
+    >
       <div>
         <label
           for="currentlyUsing"
@@ -159,9 +180,19 @@
 
       <button
         type="submit"
-        class="w-full bg-[#ff5643] text-white py-3 px-4 rounded-md hover:bg-[#ff5643e2] transition-all font-medium"
+        disabled={isSubmitting}
+        class="w-full bg-[#ff5643] text-white py-3 px-4 rounded-md hover:bg-[#ff5643e2] transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Submit
+        {#if isSubmitting}
+          <div class="inline-flex items-center gap-2">
+            <div
+              class="animate-spin w-4 h-4 border-2 border-white border-t-transparent rounded-full"
+            ></div>
+            Submitting...
+          </div>
+        {:else}
+          Submit
+        {/if}
       </button>
     </form>
   </div>

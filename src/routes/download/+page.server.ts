@@ -4,6 +4,7 @@ import { db } from "$lib/db/db";
 import { mailingList, formSubmissions } from "$lib/db/schema";
 import { eq } from "drizzle-orm";
 import { resendService } from "$lib/services/resend";
+import { telegram } from "$lib/services/telegram";
 
 export const load = async () => {
   const BACKUP_VERSION_IF_FETCH_FAILS = "1.0.19";
@@ -90,6 +91,19 @@ export const actions = {
           console.error("Error syncing with Resend:", error);
           // Don't fail the form submission
         }
+      }
+
+      // Send Telegram notification
+      const telegramMessage =
+        `📧 ${email || "Not provided"}\n` +
+        `🔧 Currently using: ${currentlyUsing || "Not provided"}\n` +
+        `📍 How they heard about us: ${howDidYouHear || "Not provided"}\n` +
+        `New form submission`;
+      try {
+        await telegram(telegramMessage);
+      } catch (error) {
+        console.error("Error sending Telegram notification:", error);
+        // Don't fail the form submission if Telegram fails
       }
 
       return {
