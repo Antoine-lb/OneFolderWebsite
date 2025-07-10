@@ -12,7 +12,7 @@
     "db:studio": "drizzle-kit studio"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^3.0.0",
+    "@sveltejs/adapter-netlify": "^5.0.2",
     "@sveltejs/kit": "^2.22.3",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
     "@tailwindcss/typography": "^0.5.16",
