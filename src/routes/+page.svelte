@@ -332,9 +332,6 @@
       link={GITHUB_LINK}
     />
   </div>
-  <br />
-  <br />
-  <br />
 </div>
 
 <style>

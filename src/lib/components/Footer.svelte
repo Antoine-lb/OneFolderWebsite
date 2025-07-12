@@ -24,7 +24,7 @@
   >
     <div
       class="w-full bg-repeat-x"
-      style="height: 60px; background-image: url('/backgrounds/wave-with-border.svg'); background-size: auto 100%;"
+      style="height: 80px; background-image: url('/backgrounds/wave-with-border.svg'); background-size: auto 100%;"
     ></div>
   </div>
 </div>
@@ -49,7 +49,9 @@
   </div>
 </div>
 
-<footer class="flex text-white justify-center bg-[#44316d] py-14">
+<footer
+  class="flex text-white justify-center bg-[#44316d] py-14 relative footer-with-noise"
+>
   <div class="px-8 w-full">
     <!-- FIRST CHUNK -->
     <div
@@ -153,3 +155,18 @@
   <br />
   <br />
 </footer>
+
+<style>
+  .footer-with-noise::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/backgrounds/noise.png");
+    background-repeat: repeat;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+</style>
