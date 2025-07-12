@@ -15,6 +15,40 @@
 <br />
 <br />
 <br />
+
+<!-- Wave pattern above newsletter section -->
+<div class="relative">
+  <div
+    class="absolute z-10 w-full overflow-hidden"
+    style="top: -9px; height: 15px;"
+  >
+    <div
+      class="w-full bg-repeat-x"
+      style="height: 60px; background-image: url('/backgrounds/wave-with-border.svg'); background-size: auto 100%;"
+    ></div>
+  </div>
+</div>
+
+<!-- Newsletter Section - Above Footer -->
+<div class="bg-[#FFFCEC] text-[#44316d] py-12">
+  <div class="px-8 w-full max-w-4xl mx-auto">
+    <NewsletterSignup initialCount={subscriberCount} />
+  </div>
+</div>
+
+<!-- Wave pattern at bottom of newsletter section -->
+<div class="relative">
+  <div
+    class="absolute z-10 w-full overflow-hidden"
+    style="bottom: -9px; height: 15px;"
+  >
+    <div
+      class="w-full bg-repeat-x"
+      style="height: 60px; background-image: url('/backgrounds/wave-no-border.svg'); background-size: auto 100%; transform: translateY(-45px);"
+    ></div>
+  </div>
+</div>
+
 <footer class="flex text-white justify-center bg-[#44316d] py-14">
   <div class="px-8 w-full">
     <!-- FIRST CHUNK -->
@@ -34,8 +68,6 @@
 
       <br />
       <div class="flex flex-col justify-center items-center mt-6">
-        <NewsletterSignup initialCount={subscriberCount} />
-
         <a
           class="cta-button !text-white !no-underline px-5 py-2 text-2xl hover:px-6 transition-all"
           href={CTA_URL}

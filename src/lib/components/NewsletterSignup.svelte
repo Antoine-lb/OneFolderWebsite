@@ -44,13 +44,13 @@
 
 <!-- Newsletter Signup -->
 <div class="mb-6 text-center">
-  <p class="text-sm mb-3 opacity-80">Get news about OneFolder (~2 months)</p>
+  <p class="text-sm mb-3 opacity-70">Get news about OneFolder (~2 months)</p>
 
   {#if feedbackMessage}
     <div
       class="text-sm mb-3"
-      class:text-green-300={isSuccess}
-      class:text-red-300={!isSuccess}
+      class:text-green-600={isSuccess}
+      class:text-red-600={!isSuccess}
     >
       {feedbackMessage}
     </div>
