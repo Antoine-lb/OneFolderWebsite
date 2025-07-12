@@ -1,9 +1,10 @@
-import type { PageServerLoad } from "$types";
+import type { LayoutLoad } from "./$types";
 import { slugFromPath } from "$lib/slugFromPath";
 
 const MAX_POSTS = 10;
 
-export const load: PageServerLoad = async ({ url }) => {
+export const load: LayoutLoad = async ({ data }) => {
+  // Load blog posts (must be done in universal load due to import.meta.glob)
   const modules = import.meta.glob(`/src/posts/*.{md,svx,svelte.md}`);
 
   const postPromises = Object.entries(modules).map(([path, resolver]) =>
@@ -23,5 +24,9 @@ export const load: PageServerLoad = async ({ url }) => {
 
   publishedPosts.sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1));
 
-  return { posts: publishedPosts };
+  return {
+    posts: publishedPosts,
+    // Pass through server data (subscriberCount from +layout.server.ts)
+    ...data,
+  };
 };
