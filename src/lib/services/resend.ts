@@ -64,6 +64,47 @@ export class ResendService {
       };
     }
   }
+
+  async sendEmail({
+    to,
+    subject,
+    html,
+    from = "Antoine <antoine@m.onefolder.app>",
+    replyTo = "antoine@onefolder.app",
+  }: {
+    to: string;
+    subject: string;
+    html: string;
+    from?: string;
+    replyTo?: string;
+  }): Promise<{ success: boolean; id?: string; error?: string }> {
+    try {
+      if (!RESEND_API_KEY) {
+        console.log("Resend API key not configured, skipping email sending");
+        return { success: true }; // Don't fail the form submission
+      }
+
+      const email = await resend.emails.send({
+        from,
+        to,
+        subject,
+        html,
+        replyTo,
+      });
+
+      console.log("Successfully sent email to:", to);
+      return {
+        success: true,
+        id: email.data?.id,
+      };
+    } catch (error: any) {
+      console.error("Error sending email via Resend:", error);
+      return {
+        success: false,
+        error: error.message || "Failed to send email",
+      };
+    }
+  }
 }
 
 // Export a default instance

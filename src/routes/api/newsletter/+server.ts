@@ -5,6 +5,7 @@ import { mailingList } from "$lib/db/schema";
 import { eq } from "drizzle-orm";
 import { resendService } from "$lib/services/resend";
 import { telegram } from "$lib/services/telegram";
+import { getNewsletterConfirmationEmail } from "$lib/services/emailTemplates";
 
 export const POST: RequestHandler = async ({ request }) => {
   const data = await request.formData();
@@ -51,6 +52,26 @@ export const POST: RequestHandler = async ({ request }) => {
       // Don't fail the form submission
     }
 
+    // Send confirmation email to the user
+    try {
+      const emailHtml = getNewsletterConfirmationEmail(trimmedEmail);
+      const emailResult = await resendService.sendEmail({
+        to: trimmedEmail,
+        subject: "Welcome to OneFolder's newsletter! ✨",
+        html: emailHtml,
+      });
+
+      if (!emailResult.success) {
+        console.error("Failed to send confirmation email:", emailResult.error);
+        // Don't fail the form submission, just log the error
+      } else {
+        console.log("Successfully sent confirmation email to:", trimmedEmail);
+      }
+    } catch (error) {
+      console.error("Error sending confirmation email:", error);
+      // Don't fail the form submission
+    }
+
     // Send Telegram notification
     const telegramMessage = `📧 ${trimmedEmail}\n` + `New newsletter signup`;
 
@@ -63,7 +84,8 @@ export const POST: RequestHandler = async ({ request }) => {
 
     return json({
       success: true,
-      message: "Thank you! You're now subscribed to our newsletter.",
+      message:
+        "🎉 You're subscribed! Check your email for a confirmation message. ⚠️ Important: Check your spam folder too!",
     });
   } catch (error) {
     console.error("Error processing newsletter signup:", error);

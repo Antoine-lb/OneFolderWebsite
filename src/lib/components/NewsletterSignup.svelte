@@ -44,13 +44,25 @@
 
 <!-- Newsletter Signup -->
 <div class="mb-6 text-center">
-  <p class="text-sm mb-3 opacity-70">Get news about OneFolder (~2 months)</p>
+  <!-- Main Title -->
+  <h3
+    class="title-font text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-[#44316d] to-[#6b4e9d] bg-clip-text text-transparent"
+  >
+    Tips, tricks and updates?
+  </h3>
+
+  <!-- Subtitle -->
+  <p class="text-sm mb-6 text-[#44316d]/70 font-light">
+    Get news about OneFolder (~2 months)
+  </p>
 
   {#if feedbackMessage}
     <div
-      class="text-sm mb-3"
-      class:text-green-600={isSuccess}
-      class:text-red-600={!isSuccess}
+      class="text-sm mb-4 px-4 py-2 rounded-lg max-w-xs mx-auto"
+      class:text-green-700={isSuccess}
+      class:text-red-700={!isSuccess}
+      class:bg-green-100={isSuccess}
+      class:bg-red-100={!isSuccess}
     >
       {feedbackMessage}
     </div>
@@ -59,20 +71,20 @@
   <form
     bind:this={newsletterForm}
     on:submit={handleNewsletterSubmit}
-    class="flex flex-col sm:flex-row gap-2 max-w-xs mx-auto"
+    class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4"
   >
     <input
       type="email"
       name="email"
       placeholder="your@email.com"
-      class="px-3 py-2 rounded text-[#333] text-sm flex-1 min-w-0"
+      class="px-4 py-3 rounded-lg text-[#333] text-sm flex-1 min-w-0 border-2 border-[#44316d]/20 bg-white backdrop-blur-sm focus:border-[#ff5643] focus:outline-none transition-all shadow-sm"
       required
       disabled={isSubmitting}
     />
     <button
       type="submit"
       disabled={isSubmitting}
-      class="bg-[#ff5643] text-white px-4 py-2 rounded text-sm hover:bg-[#ff5643e2] transition-all whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+      class="cta-button bg-gradient-to-r from-[#ff5643] to-[#ff4030] text-white px-6 py-3 rounded-lg text-lg font-medium hover:from-[#ff4030] hover:to-[#ff5643] transition-all whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 w-auto sm:w-auto mx-auto sm:mx-0"
     >
       {#if isSubmitting}
         <div class="inline-flex items-center gap-2">
@@ -82,13 +94,19 @@
           Signing up...
         </div>
       {:else}
-        Sign up
+        <span class="flex items-center gap-2">
+          Sign up
+          <span class="text-lg">✨</span>
+        </span>
       {/if}
     </button>
   </form>
 
-  <p class="text-xs opacity-60 mt-3">
-    {subscriberCount} people have signed up for it. This number refreshes automatically,
+  <p class="text-xs text-[#44316d]/60 font-light">
+    <span class="font-medium text-[#44316d]">{subscriberCount}</span> people
+    have signed up for it. This number refreshes automatically,<br
+      class="hidden sm:block"
+    />
     don't believe me? Try it!
   </p>
 </div>
