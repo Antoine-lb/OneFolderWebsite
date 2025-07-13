@@ -57,7 +57,7 @@ export const POST: RequestHandler = async ({ request }) => {
       const emailHtml = getNewsletterConfirmationEmail(trimmedEmail);
       const emailResult = await resendService.sendEmail({
         to: trimmedEmail,
-        subject: "Welcome to OneFolder's newsletter! ✨",
+        subject: "Welcome to OneFolder's newsletter!",
         html: emailHtml,
       });
 
