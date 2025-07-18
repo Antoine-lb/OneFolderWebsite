@@ -13,6 +13,23 @@
 
   // Function to handle download clicks
   async function handleDownload(url: string, platform: string) {
+    // Track the download via API
+    try {
+      await fetch('/api/download-track', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          platform: platform,
+          userAgent: navigator.userAgent
+        })
+      });
+    } catch (error) {
+      console.error('Error tracking download:', error);
+      // Don't prevent download if tracking fails
+    }
+
     // Start the download on same page
     const link = document.createElement("a");
     link.href = url;
