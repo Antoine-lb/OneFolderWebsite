@@ -8,11 +8,7 @@ export const POST: RequestHandler = async ({ request }) => {
     const { platform, userAgent } = data;
 
     // Send Telegram notification for download tracking
-    const telegramMessage =
-      `💾 Download Started\n` +
-      `🖥️ Platform: ${platform}\n` +
-      `🌐 User Agent: ${userAgent || "Not provided"}\n` +
-      `📊 Download tracking`;
+    const telegramMessage = `${platform} download`;
     
     try {
       await telegram(telegramMessage);
