@@ -18,7 +18,7 @@
   <slot />
 </main>
 
-<Footer posts={data.posts} subscriberCount={data.subscriberCount || 0} />
+<Footer posts={data.posts} />
 
 <style>
   :global(:root) {

@@ -8,7 +8,6 @@
   import NewsletterSignup from "./NewsletterSignup.svelte";
 
   export let posts: App.BlogPost[];
-  export let subscriberCount: number;
 </script>
 
 <br />
@@ -32,7 +31,7 @@
 <!-- Newsletter Section - Above Footer -->
 <div class="bg-[#FFFCEC] text-[#44316d] py-12">
   <div class="px-8 w-full max-w-4xl mx-auto">
-    <NewsletterSignup initialCount={subscriberCount} />
+    <NewsletterSignup />
   </div>
 </div>
 

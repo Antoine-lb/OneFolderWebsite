@@ -24,18 +24,43 @@ export const POST: RequestHandler = async ({ request }) => {
   try {
     const trimmedEmail = email.trim();
 
-    // Check if email already exists in mailing list
-    const existingEntry = await db
-      .select()
-      .from(mailingList)
-      .where(eq(mailingList.email, trimmedEmail))
-      .limit(1);
+    // Try to add to database with fallback to Telegram
+    let dbSuccess = false;
+    let existingEntry: any[] = [];
+    
+    try {
+      // Check if email already exists in mailing list
+      existingEntry = await db
+        .select()
+        .from(mailingList)
+        .where(eq(mailingList.email, trimmedEmail))
+        .limit(1);
 
-    if (existingEntry.length === 0) {
-      // Email doesn't exist, create new mailing list entry
-      await db.insert(mailingList).values({
-        email: trimmedEmail,
-      });
+      if (existingEntry.length === 0) {
+        // Email doesn't exist, create new mailing list entry
+        await db.insert(mailingList).values({
+          email: trimmedEmail,
+        });
+      }
+      dbSuccess = true;
+    } catch (dbError) {
+      console.error("Database operation failed:", dbError);
+      
+      // Send Telegram notification about failed database operation
+      const fallbackMessage = `❌ DATABASE FAILURE - Manual Action Required\n` +
+        `📧 Email: ${trimmedEmail}\n` +
+        `⏰ Time: ${new Date().toISOString()}\n` +
+        `🔥 Error: Failed to add to database - please add manually\n` +
+        `💾 Action: Add this email to the mailing list manually`;
+      
+      try {
+        await telegram(fallbackMessage);
+        console.log("Sent fallback Telegram notification for:", trimmedEmail);
+      } catch (telegramError) {
+        console.error("Failed to send fallback Telegram notification:", telegramError);
+      }
+      
+      dbSuccess = false;
     }
 
     // Always try to add to Resend (Resend will handle duplicates)
@@ -72,14 +97,16 @@ export const POST: RequestHandler = async ({ request }) => {
       // Don't fail the form submission
     }
 
-    // Send Telegram notification
-    const telegramMessage = `📧 ${trimmedEmail}\n` + `New newsletter signup`;
+    // Send Telegram notification only if database operation was successful
+    if (dbSuccess) {
+      const telegramMessage = `📧 ${trimmedEmail}\n` + `New newsletter signup`;
 
-    try {
-      await telegram(telegramMessage);
-    } catch (error) {
-      console.error("Error sending Telegram notification:", error);
-      // Don't fail the form submission if Telegram fails
+      try {
+        await telegram(telegramMessage);
+      } catch (error) {
+        console.error("Error sending Telegram notification:", error);
+        // Don't fail the form submission if Telegram fails
+      }
     }
 
     return json({
