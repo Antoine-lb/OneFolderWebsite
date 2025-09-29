@@ -1,13 +1,10 @@
 <script lang="ts">
   import { tick } from "svelte";
 
-  export let initialCount: number = 0;
-
   let newsletterForm: HTMLFormElement;
   let feedbackMessage = "";
   let isSuccess = false;
   let isSubmitting = false;
-  let subscriberCount = initialCount;
 
   async function handleNewsletterSubmit(event: Event) {
     event.preventDefault();
@@ -28,7 +25,6 @@
         isSuccess = true;
         feedbackMessage = result.message;
         newsletterForm.reset();
-        subscriberCount = subscriberCount + 1; // Update counter
       } else {
         isSuccess = false;
         feedbackMessage = result.error;
@@ -103,10 +99,6 @@
   </form>
 
   <p class="text-xs text-[#44316d]/60 font-light">
-    <span class="font-medium text-[#44316d]">{subscriberCount}</span> people
-    have signed up for it. This number refreshes automatically,<br
-      class="hidden sm:block"
-    />
-    don't believe me? Try it!
+    Join our community of OneFolder users and get the latest updates!
   </p>
 </div>
