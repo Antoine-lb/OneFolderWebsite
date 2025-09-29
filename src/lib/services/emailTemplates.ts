@@ -76,7 +76,6 @@ export function getNewsletterConfirmationEmail(email: string): string {
         <div class="container">
             <div class="header">
                 <div class="logo">📁 OneFolder</div>
-                <h1 class="title">Welcome to our newsletter! ✨</h1>
             </div>
             
             <div class="content">
@@ -90,10 +89,10 @@ export function getNewsletterConfirmationEmail(email: string): string {
                 
                 <p>Here's what you can expect from us:</p>
                 <ul>
-                    <li>📝 Tips and tricks for organizing your digital files</li>
-                    <li>🚀 Updates about new OneFolder features</li>
-                    <li>📚 Insights from our research on digital organization</li>
-                    <li>💡 Best practices from our community</li>
+                    <li>Tips and tricks for organizing your digital files</li>
+                    <li>Updates about new OneFolder features</li>
+                    <li>Insights from our research on digital organization</li>
+                    <li>Best practices from our community</li>
                 </ul>
                 
                 <p>We only send emails every ~2 months, so you won't be overwhelmed with messages.</p>
@@ -101,7 +100,7 @@ export function getNewsletterConfirmationEmail(email: string): string {
                 <p>In the meantime, feel free to explore our blog or download OneFolder if you haven't already!</p>
                 
                 <div style="text-align: center;">
-                    <a href="https://onefolder.app/blog" class="button">📖 Read our blog</a>
+                    <a href="https://onefolder.app/blog" class="button">Read our blog</a>
                 </div>
             </div>
             
