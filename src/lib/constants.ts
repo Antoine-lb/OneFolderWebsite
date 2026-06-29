@@ -14,8 +14,6 @@ export const YOUTUBE_PRESENTATION_VIDEO = 'https://www.youtube.com/watch?v=paH_9
 export const CALENDLY_URL =
   "https://calendly.com/photofolder/photofolder-feedback";
 
-export const CANNY_URL = "https://onefolder.canny.io/feedback";
-
 export const GITHUB_LINK = "https://github.com/OneFolderApp/OneFolder";
 export const TWITTER_LINK = "https://twitter.com/AntoineLeBaux";
 
