@@ -3,8 +3,7 @@
   import LandingBlock from "$lib/components/LandingBlock.svelte";
   import LearnMoreBlock from "$lib/components/LearnMoreBlock.svelte";
   import {
-    CTA_URL,
-    CANNY_URL,
+    ALLUSION_DOWNLOAD_URL,
     YOUTUBE_CHANNEL_URL,
     GITHUB_LINK,
     YOUTUBE_URL,
@@ -43,11 +42,15 @@
       <br />
       <a
         class="cta-button !text-white !no-underline px-5 py-3 text-2xl hover:px-6 transition-all"
-        href={CTA_URL}
+        href={ALLUSION_DOWNLOAD_URL}
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        Download 🌼
+        Download Allusion
       </a>
-      <p class="mt-3 text-gray-500 italic">(open source)</p>
+      <p class="mt-3 text-gray-500 italic">
+        Maintained by RafaUC/Allusion, not by OneFolder.
+      </p>
       <br />
 
       <br />
@@ -242,74 +245,6 @@
 
   <br />
   <br />
-
-  <!-- DOWNLOAD SECTION -->
-  <div class="max-w-2xl mx-auto text-center px-4">
-    <h2 class="title-font text-4xl font-bold text-[#333] mb-4">
-      Ready to try OneFolder?
-    </h2>
-    <p class="text-lg text-gray-700 mb-6">
-      Download our free, open-source app for Windows, Mac, and Linux.
-    </p>
-
-    <div class="flex flex-col gap-3 justify-center items-center">
-      <a
-        href={CTA_URL}
-        class="cta-button !text-white !no-underline px-6 py-3 text-xl hover:px-7 transition-all inline-flex items-center"
-      >
-        <span class="mr-2">📥</span>
-        Download Now
-      </a>
-
-      <a
-        href="https://github.com/OneFolderApp/OneFolder"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="flex items-center justify-center text-gray-600 hover:text-gray-800 transition-colors !no-underline"
-      >
-        View source code
-      </a>
-    </div>
-  </div>
-
-  <br />
-  <br />
-
-  <!-- <p class="title-font text-5xl text-center text-[#444]">
-    Are you missing <br />
-    something ?
-  </p> -->
-
-  <div class="flex justify-center">
-    <a
-      class="m-auto mt-5 inline-flex !no-underline p-2 px-3 hover:px-4 transition-all rounded-full text-xl items-center shadow border border-gray-300"
-      href={CANNY_URL}
-      target="_blank"
-    >
-      <img src="/icons/thumb-up.svg" alt="Thumb up hand" class="mr-1" />
-
-      Vote for your most needed feature
-    </a>
-  </div>
-
-  <br />
-  <br />
-
-  <br />
-  <br />
-  <!-- <p class="title-font text-3xl text-center text-[#444] mb-3">
-    May be you should still
-  </p>
-  <div class="flex items-center flex-col">
-    <a
-      class="cta-button !text-white !no-underline px-5 py-3 text-2xl hover:px-6 transition-all"
-      href={CTA_URL}
-    >
-      Give it a try 🌼
-    </a>
-    <p class=" text-gray-500 italic">(open source)</p>
-    <br />
-  </div> -->
 
   <br />
   <p class="text-center text-2xl font-semibold text-[#333]">Learn more</p>

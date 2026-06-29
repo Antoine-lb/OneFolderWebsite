@@ -1,6 +1,10 @@
 <script lang="ts">
   // import { base } from '$app/paths';
-  import { CTA_URL, DISCORD_CHANNEl, GITHUB_LINK } from "$lib/constants";
+  import {
+    ALLUSION_DOWNLOAD_URL,
+    DISCORD_CHANNEl,
+    GITHUB_LINK,
+  } from "$lib/constants";
 
   import YoutubeThumbnail from "$lib/components/YoutubeThumbnail.svelte";
 </script>
@@ -58,11 +62,15 @@
   <div class="flex flex-col justify-center items-center mt-6">
     <a
       class="cta-button !text-white !no-underline px-5 py-2 text-2xl hover:px-6 transition-all"
-      href={CTA_URL}
+      href={ALLUSION_DOWNLOAD_URL}
       target="_blank"
+      rel="noopener noreferrer"
     >
-      Give it a try 🌼
+      Download Allusion
     </a>
+    <p class="mt-3 max-w-md px-4 text-center text-sm text-white/75">
+      This download is maintained by RafaUC/Allusion, not by OneFolder.
+    </p>
   </div>
   <br />
   <div class="text-center underline mt-10 underline-offset-4">

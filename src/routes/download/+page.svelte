@@ -1,220 +1,162 @@
 <script lang="ts">
-  import { enhance } from "$app/forms";
-  import { tick } from "svelte";
-  export let data;
-  export let form;
-
-  import { YOUTUBE_PRESENTATION_VIDEO } from "$lib/constants";
-
-  // State for the interactive download flow
-  let showDownloadButtons = true;
-  let showForm = false;
-  let isSubmitting = false;
-
-  // Function to handle download clicks
-  async function handleDownload(url: string, platform: string) {
-    // Track the download via API
-    try {
-      await fetch('/api/download-track', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          platform: platform,
-          userAgent: navigator.userAgent
-        })
-      });
-    } catch (error) {
-      console.error('Error tracking download:', error);
-      // Don't prevent download if tracking fails
-    }
-
-    // Start the download on same page
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    // Update UI state immediately
-    showDownloadButtons = false;
-    showForm = true;
-
-    // Wait for the form to render, then focus on first field
-    await tick();
-    const firstField = document.getElementById("currentlyUsing");
-    if (firstField) {
-      firstField.focus();
-    }
-  }
+  import { ALLUSION_DOWNLOAD_URL, ALLUSION_REPO_URL } from "$lib/constants";
 </script>
 
-<header class="fixed flex justify-between w-full p-3">
-  <a class=" flex items-center gap-2 !no-underline" href="/">
-    <img src="/favicon.svg" class="h-8" alt="a small flower" />
-    <span class="text-2xl text-[#333] font-light">OneFolder</span>
+<svelte:head>
+  <title>OneFolder downloads moved</title>
+</svelte:head>
+
+<main class="download-page">
+  <a class="brand-link" href="/">
+    <img src="/favicon.svg" class="brand-link__icon" alt="OneFolder flower" />
+    <span>OneFolder</span>
   </a>
-</header>
 
-<br />
-<br />
-<br />
-<div class="px-4">
-  <img src="/logo.webp" alt="OneFolder logo" class=" m-auto w-[100px]" />
-</div>
-<h1
-  class="text-center title-font text-4xl md:text-7xl drop-shadow-lg px-4 font-bold text-[#333]"
->
-  OneFolder
-</h1>
-
-<div
-  class="flex flex-col items-center gap-6 max-w-md w-full m-auto text-[#333]"
->
-  <div class="bg-[#FDDEDE] text-center p-4 rounded">
-    <p class="font-bold">Warning</p>
-    <p class="font-light">
-      No matter how battle tested a software can be, always have backups.
+  <section class="download-panel">
+    <p class="download-panel__label">Project status</p>
+    <h1>OneFolder downloads are no longer maintained</h1>
+    <p>
+      OneFolder is no longer maintained by us. If you are looking for a good
+      alternative, use
+      <a href={ALLUSION_REPO_URL} target="_blank" rel="noopener noreferrer"
+        >RafaUC/Allusion</a
+      >, an independently maintained fork.
     </p>
-  </div>
-  <br />
+    <p>
+      Downloads and ongoing support now come from that project, not from
+      OneFolder. If you are porting an existing library or exports, double-check
+      compatibility before moving important data.
+    </p>
 
-  {#if showDownloadButtons}
-    <button
-      on:click={() => handleDownload(data.windows, "Windows")}
-      class="cta-button w-full flex justify-center !text-white !no-underline px-3 py-3 text-xl hover:bg-[#ff5643e2] transition-all"
-    >
-      <img src="/windows.svg" alt="Windows" class="mr-1" />
-      Download for Windows
-    </button>
-
-    <button
-      on:click={() => handleDownload(data.mac, "Mac")}
-      class="cta-button w-full flex justify-center !text-white !no-underline px-3 py-3 text-xl hover:bg-[#ff5643e2] transition-all"
-    >
-      <img src="/mac.svg" alt="Mac" class="mr-1" />
-      Download for Mac
-    </button>
-
-    <button
-      on:click={() => handleDownload(data.linux, "Linux")}
-      class="cta-button w-full flex justify-center !text-white !no-underline px-3 py-3 text-xl hover:bg-[#ff5643e2] transition-all"
-    >
-      <img src="/linux.svg" alt="Linux" class="mr-1" />
-      Download for Linux
-    </button>
-  {/if}
-</div>
-
-{#if showForm}
-  <!-- Mailing List Form -->
-  <div class="max-w-md w-full m-auto mt-2 px-4">
-    <p class="text-center text-sm text-gray-600 mb-4">
-      The download will start in a couple of seconds. If it doesn't work, reload
-      the page or reach out to
+    <div class="download-actions">
       <a
-        href="mailto:antoine@onefolder.app"
-        class="text-[#ff5643] hover:underline">antoine@onefolder.app</a
+        class="download-actions__primary"
+        href={ALLUSION_DOWNLOAD_URL}
+        target="_blank"
+        rel="noopener noreferrer"
       >
-    </p>
-
-    <h3 class="text-center font-bold text-2xl mb-6 text-[#333]">
-      Time for questions?
-    </h3>
-
-    {#if form?.success}
-      <div
-        class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6 text-center"
+        Open latest Allusion downloads
+      </a>
+      <a
+        class="download-actions__secondary"
+        href={ALLUSION_REPO_URL}
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        {form.message}
-      </div>
-    {:else if form?.error}
-      <div
-        class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6 text-center"
-      >
-        {form.error}
-      </div>
-    {/if}
+        View the Allusion fork
+      </a>
+    </div>
+  </section>
+</main>
 
-    <form
-      method="POST"
-      action="?/subscribe"
-      use:enhance={() => {
-        isSubmitting = true;
-        return async ({ update }) => {
-          isSubmitting = false;
-          await update();
-        };
-      }}
-      class="space-y-6"
-    >
-      <div>
-        <label
-          for="currentlyUsing"
-          class="block text-sm font-medium text-[#333] mb-2"
-        >
-          What are you using now to store and sort your files?
-        </label>
-        <textarea
-          id="currentlyUsing"
-          name="currentlyUsing"
-          placeholder="Tell us about your current workflow..."
-          rows="3"
-          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#ff5643] focus:border-transparent text-[#333]"
-        ></textarea>
-      </div>
+<style>
+  .download-page {
+    align-items: center;
+    background:
+      radial-gradient(circle at top left, rgba(255, 85, 67, 0.12), transparent 32rem),
+      #fcfbf5;
+    color: #312b35;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    min-height: 100vh;
+    padding: clamp(1.5rem, 5vw, 4rem) 1rem;
+  }
 
-      <div>
-        <label
-          for="howDidYouHear"
-          class="block text-sm font-medium text-[#333] mb-2"
-        >
-          How did you land on our website?
-        </label>
-        <input
-          id="howDidYouHear"
-          name="howDidYouHear"
-          type="text"
-          placeholder="Search engine, social media, friend recommendation..."
-          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#ff5643] focus:border-transparent text-[#333]"
-        />
-      </div>
+  .brand-link {
+    align-items: center;
+    display: inline-flex;
+    font-size: 1.35rem;
+    gap: 0.55rem;
+    justify-content: center;
+  }
 
-      <div>
-        <label for="email" class="block text-sm font-medium text-[#333] mb-2">
-          Enter your email if you want news from us (~2 months)
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="your@email.com"
-          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#ff5643] focus:border-transparent text-[#333]"
-        />
-      </div>
+  .brand-link:hover {
+    text-decoration: none;
+  }
 
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        class="w-full bg-[#ff5643] text-white py-3 px-4 rounded-md hover:bg-[#ff5643e2] transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {#if isSubmitting}
-          <div class="inline-flex items-center gap-2">
-            <div
-              class="animate-spin w-4 h-4 border-2 border-white border-t-transparent rounded-full"
-            ></div>
-            Submitting...
-          </div>
-        {:else}
-          Submit
-        {/if}
-      </button>
-    </form>
-  </div>
-{/if}
+  .brand-link__icon {
+    height: 2rem;
+    width: 2rem;
+  }
 
-<br />
-<br />
-<br />
+  .download-panel {
+    background: #fff9e8;
+    border: 1px solid rgba(68, 49, 109, 0.14);
+    border-radius: 0.5rem;
+    box-shadow:
+      0 22px 60px rgba(49, 43, 53, 0.12),
+      0 2px 12px rgba(49, 43, 53, 0.07);
+    max-width: 42rem;
+    padding: clamp(1.5rem, 5vw, 3rem);
+  }
+
+  .download-panel__label {
+    color: #7a392f;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 0 0 0.65rem;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    color: #2e2633;
+    font-size: clamp(2.1rem, 7vw, 4.4rem);
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 0.95;
+    margin: 0 0 1.4rem;
+  }
+
+  p {
+    font-size: 1.08rem;
+    line-height: 1.6;
+    margin: 0 0 1rem;
+  }
+
+  p a {
+    color: #44316d;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  .download-actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 1.8rem;
+  }
+
+  .download-actions__primary,
+  .download-actions__secondary {
+    border-radius: 999px;
+    font-weight: 800;
+    padding: 0.8rem 1.15rem;
+    text-align: center;
+  }
+
+  .download-actions__primary {
+    background: #44316d;
+    color: #fffcec !important;
+  }
+
+  .download-actions__secondary {
+    border: 1px solid rgba(68, 49, 109, 0.24);
+    color: #44316d !important;
+  }
+
+  .download-actions__primary:hover,
+  .download-actions__secondary:hover {
+    text-decoration: none;
+  }
+
+  @media (max-width: 560px) {
+    .download-actions {
+      align-items: stretch;
+      flex-direction: column;
+    }
+  }
+</style>

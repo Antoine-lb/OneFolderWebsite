@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { PageData } from "./$types";
-  import { CTA_URL, YOUTUBE_URL } from "$lib/constants";
 
   import BlogCallToAction from "$lib/components/BlogCallToAction.svelte";
   import { getTagColor } from "$lib/tagColors";

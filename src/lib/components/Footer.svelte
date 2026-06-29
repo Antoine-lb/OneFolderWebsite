@@ -1,6 +1,6 @@
 <script lang="ts">
   import {
-    CTA_URL,
+    ALLUSION_DOWNLOAD_URL,
     GITHUB_LINK,
     TWITTER_LINK,
     YOUTUBE_CHANNEL_URL,
@@ -71,11 +71,16 @@
       <div class="flex flex-col justify-center items-center mt-6">
         <a
           class="cta-button !text-white !no-underline px-5 py-2 text-2xl hover:px-6 transition-all"
-          href={CTA_URL}
+          href={ALLUSION_DOWNLOAD_URL}
           target="_blank"
+          rel="noopener noreferrer"
         >
-          Download 🌼
+          Download Allusion
         </a>
+        <p class="mt-3 max-w-xs text-center text-sm text-white/75">
+          Maintained by RafaUC/Allusion. Check compatibility before porting
+          OneFolder data.
+        </p>
       </div>
     </div>
 

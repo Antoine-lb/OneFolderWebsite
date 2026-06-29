@@ -1,10 +1,8 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-    import type { PageData } from './$types';
-    
-    export let data: PageData;
+  import { onMount } from "svelte";
+  import { ALLUSION_DOWNLOAD_URL } from "$lib/constants";
 
-    onMount(() => {
-        window.location.replace("/download");
-    })
+  onMount(() => {
+    window.location.replace(ALLUSION_DOWNLOAD_URL);
+  });
 </script>

@@ -1,4 +1,7 @@
-export const CTA_URL = "/download";
+export const ALLUSION_REPO_URL = "https://github.com/RafaUC/Allusion";
+export const ALLUSION_DOWNLOAD_URL =
+  "https://github.com/RafaUC/Allusion/releases/latest";
+export const CTA_URL = ALLUSION_DOWNLOAD_URL;
 export const OLD_FORM = "https://forms.gle/UPmNKp9FncKYnvcW7";
 export const CHECK_OUT_FORM = "https://forms.gle/e2BJ64m5gL8E6Pjp7";
 

@@ -90,14 +90,14 @@ export function getNewsletterConfirmationEmail(email: string): string {
                 <p>Here's what you can expect from us:</p>
                 <ul>
                     <li>Tips and tricks for organizing your digital files</li>
-                    <li>Updates about new OneFolder features</li>
+                    <li>Archive notes about OneFolder and local-first file organization</li>
                     <li>Insights from our research on digital organization</li>
                     <li>Best practices from our community</li>
                 </ul>
                 
                 <p>We only send emails every ~2 months, so you won't be overwhelmed with messages.</p>
                 
-                <p>In the meantime, feel free to explore our blog or download OneFolder if you haven't already!</p>
+                <p>In the meantime, feel free to explore our blog. OneFolder is no longer maintained, so we no longer recommend downloading it for new installs.</p>
                 
                 <div style="text-align: center;">
                     <a href="https://onefolder.app/blog" class="button">Read our blog</a>

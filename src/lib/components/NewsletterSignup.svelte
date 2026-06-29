@@ -44,12 +44,12 @@
   <h3
     class="title-font text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-[#44316d] to-[#6b4e9d] bg-clip-text text-transparent"
   >
-    Tips, tricks and updates?
+    File organization notes
   </h3>
 
   <!-- Subtitle -->
   <p class="text-sm mb-6 text-[#44316d]/70 font-light">
-    Get news about OneFolder (~2 months)
+    Occasional notes from the OneFolder archive.
   </p>
 
   {#if feedbackMessage}
@@ -99,6 +99,6 @@
   </form>
 
   <p class="text-xs text-[#44316d]/60 font-light">
-    Join our community of OneFolder users and get the latest updates!
+    No product updates. OneFolder is no longer maintained.
   </p>
 </div>
